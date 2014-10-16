@@ -55,11 +55,48 @@
                             <ct:Real>0.07736</ct:Real>
                         </Row>
                     </Table>
-                    <!--ALTERNATIVE: if the data table is very large one can always store the results in an external data file. 
-                        <ds:ExternalFile oid="ext1">
+                    <!--ALTERNATIVE: external data file reference. 
+                        <ds:ImportData oid="ext1">
                             <ds:path>myData.csv</ds:path>
-                        </ds:ExternalFile>-->
+                            <ds:format>CSV</ds:format>
+                            <ds:delimiter>COMMA</ds:delimiter>
+                        </ds:ImportData>-->
                 </MLEEstimates>
+                <BayesianEstimates>
+                    <PosteriorMean>
+                        <ds:Definition>
+                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                            <!-- omitted other subjects -->
+                        </ds:Table>
+                    </PosteriorMean>
+                    <PosteriorMedian>
+                        <ds:Definition>
+                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                            <!-- omitted other subjects -->
+                        </ds:Table>
+                    </PosteriorMedian>
+                    <PosteriorMode>
+                        <ds:Definition>
+                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                            <!-- omitted other subjects -->
+                        </ds:Table>
+                    </PosteriorMode>
+                </BayesianEstimates>
             </PopulationEstimates>
             
             <PrecisionPopulationEstimates>
@@ -127,69 +164,124 @@
                             <!-- omitted other matrix rows -->
                         </ct:Matrix>
                     </CorrelationMatrix>
-                    <StandardError>
-                        <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="1"/>
-                            <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="POP_V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="BETA_V_WT" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="POP_CL" columnType="so" valueType="real" columnNum="5"/>
-                            <Column columnId="BETA_CL_WT" columnType="so" valueType="real" columnNum="6"/>
-                            <Column columnId="PPV_TLAG" columnType="so" valueType="real" columnNum="7"/>
-                            <Column columnId="PPV_KA" columnType="so" valueType="real" columnNum="8"/>
-                            <Column columnId="PPV_V" columnType="so" valueType="real" columnNum="9"/>
-                            <Column columnId="PPV_CL" columnType="so" valueType="real" columnNum="10"/>
-                            <Column columnId="RUV_ADD" columnType="so" valueType="real" columnNum="11"/>
-                            <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="12"/>
-                            <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="13"/>
-                        </Definition>
-                        <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
-                                <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
-                                <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
-                                <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
-                                <ct:Real>0.07736</ct:Real>
-                            </Row>
-                        </Table>
-                    </StandardError>
                     <RelativeStandardError>
-                        <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="1"/>
-                            <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="POP_V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="BETA_V_WT" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="POP_CL" columnType="so" valueType="real" columnNum="5"/>
-                            <Column columnId="BETA_CL_WT" columnType="so" valueType="real" columnNum="6"/>
-                            <Column columnId="PPV_TLAG" columnType="so" valueType="real" columnNum="7"/>
-                            <Column columnId="PPV_KA" columnType="so" valueType="real" columnNum="8"/>
-                            <Column columnId="PPV_V" columnType="so" valueType="real" columnNum="9"/>
-                            <Column columnId="PPV_CL" columnType="so" valueType="real" columnNum="10"/>
-                            <Column columnId="RUV_ADD" columnType="so" valueType="real" columnNum="11"/>
-                            <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="12"/>
-                            <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="13"/>
-                        </Definition>
-                        <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
-                                <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
-                                <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
-                                <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
-                                <ct:Real>0.07736</ct:Real>
-                            </Row>
-                        </Table>
+                        <ds:Definition>
+                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="RSE" columnType="so" valueType="real" columnNum="3"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                            <!-- omitted other subjects -->
+                        </ds:Table>
                     </RelativeStandardError>
+                    <ConfidenceInterval>
+                        <ds:Definition>
+                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="upperBound" columnType="so" valueType="id" columnNum="3"/>
+                            <!-- omitted other columns -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
+                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real></ds:Row>
+                            <!-- omitted other parameters -->
+                        </ds:Table>
+                    </ConfidenceInterval>
                 </MLE>
+                <Bayesian>
+                    <StandardDeviationPosterior>
+                        <ds:Definition>
+                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="SDP" columnType="so" valueType="real" columnNum="3"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                            <!-- omitted other subjects -->
+                        </ds:Table>
+                    </StandardDeviationPosterior>
+                    <PosteriorDistribution>
+                        <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
+                            <logScale>
+                                <rVal>10</rVal>
+                            </logScale>
+                            <shape>
+                                <prVal>1.5</prVal>
+                            </shape>
+                        </LogNormalDistribution>
+                        <!-- ALTERNATIVE with data set-->
+                        <!-- <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PD" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-\- omitted other subjects -\->
+                            </ds:Table> -->
+                    </PosteriorDistribution>
+                    <ConfidenceInterval>
+                        <ds:Definition>
+                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="upperBound" columnType="so" valueType="id" columnNum="3"/>
+                            <!-- omitted other columns -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
+                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real></ds:Row>
+                            <!-- omitted other parameters -->
+                        </ds:Table>
+                    </ConfidenceInterval>
+                </Bayesian>
+                <Bootstrap>
+                    <StandardDeviation>
+                        <ds:Definition>
+                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="SD" columnType="so" valueType="real" columnNum="3"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                            <!-- omitted other subjects -->
+                        </ds:Table>
+                    </StandardDeviation>
+                    <ParameterDistribution>
+                        <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
+                            <logScale>
+                                <rVal>10</rVal>
+                            </logScale>
+                            <shape>
+                                <prVal>1.5</prVal>
+                            </shape>
+                        </LogNormalDistribution>
+                        <!-- ALTERNATIVE with data set-->
+                        <!-- <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PD" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-\- omitted other subjects -\->
+                            </ds:Table> -->
+                    </ParameterDistribution>
+                    <ConfidenceInterval>
+                        <ds:Definition>
+                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="upperBound" columnType="so" valueType="id" columnNum="3"/>
+                            <!-- omitted other columns -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
+                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real></ds:Row>
+                            <!-- omitted other parameters -->
+                        </ds:Table>
+                    </ConfidenceInterval>
+                </Bootstrap>
                 
-                <ConfidenceInterval>
-                    <ds:Definition>
-                        <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                        <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="CI" columnType="so" valueType="real" columnNum="3"/>
-                    </ds:Definition>
-                    <ds:Table>
-                        <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                        <!-- omitted other subjects -->
-                    </ds:Table>
-                </ConfidenceInterval>
             </PrecisionPopulationEstimates>
             
             <IndividualEstimates>
