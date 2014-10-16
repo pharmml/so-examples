@@ -31,7 +31,7 @@
         
         <Estimation>
             <PopulationEstimates>
-                <MLEEstimates>
+                <MLE>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="1"/>
                         <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="2"/>
@@ -61,8 +61,8 @@
                             <ds:format>CSV</ds:format>
                             <ds:delimiter>COMMA</ds:delimiter>
                         </ds:ImportData>-->
-                </MLEEstimates>
-                <BayesianEstimates>
+                </MLE>
+                <Bayesian>
                     <PosteriorMean>
                         <ds:Definition>
                             <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
@@ -96,7 +96,7 @@
                             <!-- omitted other subjects -->
                         </ds:Table>
                     </PosteriorMode>
-                </BayesianEstimates>
+                </Bayesian>
             </PopulationEstimates>
             
             <PrecisionPopulationEstimates>
@@ -122,7 +122,7 @@
                             <!-- omitted other matrix rows -->
                         </ct:Matrix>
                     </FIM>
-                    <InverseFIM>
+                    <CovarianceMatrix>
                         <ct:Matrix matrixType="Any">
                             <ct:RowNames>
                                 <ct:String>TH1</ct:String><ct:String>TH2</ct:String><ct:String>TH3</ct:String><ct:String>TH4</ct:String>
@@ -142,7 +142,7 @@
                             </ct:MatrixRow>
                             <!-- omitted other matrix rows -->
                         </ct:Matrix>
-                    </InverseFIM>
+                    </CovarianceMatrix>
                     <CorrelationMatrix>
                         <ct:Matrix matrixType="Any">
                             <ct:RowNames>
@@ -175,19 +175,18 @@
                             <!-- omitted other subjects -->
                         </ds:Table>
                     </RelativeStandardError>
-                    <ConfidenceInterval>
+                    <AsymptoticCI>
                         <ds:Definition>
                             <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
                             <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="2"/>
                             <ds:Column columnId="upperBound" columnType="so" valueType="id" columnNum="3"/>
-                            <!-- omitted other columns -->
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
                             <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real></ds:Row>
                             <!-- omitted other parameters -->
                         </ds:Table>
-                    </ConfidenceInterval>
+                    </AsymptoticCI>
                 </MLE>
                 <Bayesian>
                     <StandardDeviationPosterior>
@@ -221,19 +220,18 @@
                                 <!-\- omitted other subjects -\->
                             </ds:Table> -->
                     </PosteriorDistribution>
-                    <ConfidenceInterval>
+                    <QuantilesCI>
                         <ds:Definition>
                             <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
                             <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="2"/>
                             <ds:Column columnId="upperBound" columnType="so" valueType="id" columnNum="3"/>
-                            <!-- omitted other columns -->
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
                             <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real></ds:Row>
                             <!-- omitted other parameters -->
                         </ds:Table>
-                    </ConfidenceInterval>
+                    </QuantilesCI>
                 </Bayesian>
                 <Bootstrap>
                     <StandardDeviation>
@@ -267,7 +265,7 @@
                                 <!-\- omitted other subjects -\->
                             </ds:Table> -->
                     </ParameterDistribution>
-                    <ConfidenceInterval>
+                    <QuantilesCI>
                         <ds:Definition>
                             <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
                             <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="2"/>
@@ -279,123 +277,126 @@
                             <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real></ds:Row>
                             <!-- omitted other parameters -->
                         </ds:Table>
-                    </ConfidenceInterval>
+                    </QuantilesCI>
                 </Bootstrap>
-                
             </PrecisionPopulationEstimates>
             
             <IndividualEstimates>
-                <MLEConditionalEstimates>
-                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="CL" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="V" columnType="so" valueType="real" columnNum="3"/>
-                        <Column columnId="KA" columnType="so" valueType="real" columnNum="4"/>
-                        <Column columnId="TLAG" columnType="so" valueType="real" columnNum="5"/>
-                    </Definition>
-                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
-                        <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
-                        <!-- omitted other subjects -->
-                    </Table>
-                </MLEConditionalEstimates>
-                <BayesianEstimates>
-                    <PosteriorMean>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PW" columnType="so" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                <MLE>
+                    <ConditionalEstimates>
+                        <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                            <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                            <Column columnId="CL" columnType="so" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="so" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="so" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="so" valueType="real" columnNum="5"/>
+                        </Definition>
+                        <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                            <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
+                            <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
                             <!-- omitted other subjects -->
-                        </ds:Table>
-                    </PosteriorMean>
-                    <PosteriorMedian>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                            <!-- omitted other subjects -->
-                        </ds:Table>
-                    </PosteriorMedian>
-                    <PosteriorMode>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                            <!-- omitted other subjects -->
-                        </ds:Table>
-                    </PosteriorMode>
-                </BayesianEstimates>
-                <EtaShirnkage>
-                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Column columnId="CL" columnType="so" valueType="real" columnNum="1"/>
-                        <Column columnId="V" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="KA" columnType="so" valueType="real" columnNum="3"/>
-                        <Column columnId="ALAG1" columnType="so" valueType="real" columnNum="4"/>
-                    </Definition>
-                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
-                    </Table>
-                </EtaShirnkage>
-                <MLERandomEffects>
-                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="ETA.1" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="ETA.2" columnType="so" valueType="real" columnNum="3"/>
-                        <Column columnId="ETA.3" columnType="so" valueType="real" columnNum="4"/>
-                        <Column columnId="ETA.4" columnType="so" valueType="real" columnNum="5"/>
-                    </Definition>
-                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Row>
-                            <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
-                            <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
-                            <!-- omitted other subjects -->
-                        </Row>
-                    </Table>
-                </MLERandomEffects>
-                <BayesianIndividualEffects>
-                    <PosteriorEffectMean>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PEM" columnType="so" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                            <!-- omitted other subjects -->
-                        </ds:Table>
-                    </PosteriorEffectMean>
-                    <PosteriorEffectMedian>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PEM" columnType="so" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                            <!-- omitted other subjects -->
-                        </ds:Table>
-                    </PosteriorEffectMedian>
-                    <PosteriorEffectMode>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PEM" columnType="so" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                            <!-- omitted other subjects -->
-                        </ds:Table>
-                    </PosteriorEffectMode>
-                </BayesianIndividualEffects>
+                        </Table>
+                    </ConditionalEstimates>
+                    <RandomEffects>
+                        <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                            <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                            <Column columnId="ETA.1" columnType="so" valueType="real" columnNum="2"/>
+                            <Column columnId="ETA.2" columnType="so" valueType="real" columnNum="3"/>
+                            <Column columnId="ETA.3" columnType="so" valueType="real" columnNum="4"/>
+                            <Column columnId="ETA.4" columnType="so" valueType="real" columnNum="5"/>
+                        </Definition>
+                        <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                            <Row>
+                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
+                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
+                                <!-- omitted other subjects -->
+                            </Row>
+                        </Table>
+                    </RandomEffects>
+                    <EtaShrinkage>
+                        <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                            <Column columnId="CL" columnType="so" valueType="real" columnNum="1"/>
+                            <Column columnId="V" columnType="so" valueType="real" columnNum="2"/>
+                            <Column columnId="KA" columnType="so" valueType="real" columnNum="3"/>
+                            <Column columnId="ALAG1" columnType="so" valueType="real" columnNum="4"/>
+                        </Definition>
+                        <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                            <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
+                        </Table>
+                    </EtaShrinkage>
+                </MLE>
+                <Bayesian>
+                    <PosteriorEstimates>
+                        <PosteriorMean>
+                            <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PW" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-- omitted other subjects -->
+                            </ds:Table>
+                        </PosteriorMean>
+                        <PosteriorMedian>
+                            <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-- omitted other subjects -->
+                            </ds:Table>
+                        </PosteriorMedian>
+                        <PosteriorMode>
+                            <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PM" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-- omitted other subjects -->
+                            </ds:Table>
+                        </PosteriorMode>
+                    </PosteriorEstimates>
+                    <PosteriorRandomEffects>
+                        <PosteriorEffectMean>
+                            <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PEM" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-- omitted other subjects -->
+                            </ds:Table>
+                        </PosteriorEffectMean>
+                        <PosteriorEffectMedian>
+                            <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PEM" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-- omitted other subjects -->
+                            </ds:Table>
+                        </PosteriorEffectMedian>
+                        <PosteriorEffectMode>
+                            <ds:Definition>
+                                <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                                <ds:Column columnId="PEM" columnType="so" valueType="real" columnNum="3"/>
+                            </ds:Definition>
+                            <ds:Table>
+                                <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
+                                <!-- omitted other subjects -->
+                            </ds:Table>
+                        </PosteriorEffectMode>
+                    </PosteriorRandomEffects>
+                </Bayesian>
             </IndividualEstimates>
             
             <PrecisionIndividualEstimates>
@@ -482,9 +483,6 @@
             <Likelihood>
                 <LogLikelihood>1.234</LogLikelihood>
                 <Deviance>2.345</Deviance>
-                <AIC>3.456</AIC>
-                <BIC>4.567</BIC>
-                <DIC>5.678</DIC>
                 <IndividualContribToLL>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
@@ -497,6 +495,11 @@
                         <!-- omitted other subjects -->
                     </Table>
                 </IndividualContribToLL>
+                <InformationCriteria>
+                    <AIC>3.456</AIC>
+                    <BIC>4.567</BIC>
+                    <DIC>5.678</DIC>
+                </InformationCriteria>
             </Likelihood>
             
             <TargetToolMessages>
