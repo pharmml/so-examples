@@ -554,6 +554,42 @@
                         <!-- omitted other subjects -->
                     </Table>
                 </CWRES>
+                <IWRES>
+                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                        <Column columnId="IWRES" columnType="so" valueType="real" columnNum="3"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>2.892</ct:Real></Row>
+                        <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>3.670</ct:Real></Row>
+                        <!-- omitted other subjects -->
+                    </Table>
+                </IWRES>                
+                <PD>
+                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                        <Column columnId="PD" columnType="so" valueType="real" columnNum="3"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
+                        <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
+                        <!-- omitted other subjects -->
+                    </Table>
+                </PD>
+                <NPDE>
+                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
+                        <Column columnId="NPDE" columnType="so" valueType="real" columnNum="3"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
+                        <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
+                        <!-- omitted other subjects -->
+                    </Table>
+                </NPDE>
             </Residuals>
             
             <Predictions>
