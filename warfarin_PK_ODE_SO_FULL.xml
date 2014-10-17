@@ -11,7 +11,7 @@
     <PharmMLRef name="warfarin_PK_ODE.xml"/>
     
     <SOBlock blkId="SO1">
-        
+
         <RawResults>
             <RawFile oid="r1">
                 <ct:Description>Original output wth pop data</ct:Description> <!-- Description is optional -->
@@ -19,7 +19,7 @@
                 <ds:format>CSV</ds:format>
                 <ds:delimiter>COMMA</ds:delimiter>
             </RawFile>
-            
+
             <RawFile oid="r2">
                 <ds:path>indivEstimates.txt</ds:path>
                 <ds:format>CSV</ds:format>
@@ -47,20 +47,20 @@
                         <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="12"/>
                         <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="13"/>
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+<!--                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                             <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
                             <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
                             <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
                             <ct:Real>0.07736</ct:Real>
                         </Row>
-                    </Table>
-                    <!--ALTERNATIVE: external data file reference. 
-                        <ds:ImportData oid="ext1">
-                            <ds:path>myData.csv</ds:path>
-                            <ds:format>CSV</ds:format>
-                            <ds:delimiter>COMMA</ds:delimiter>
-                        </ds:ImportData>-->
+                    </Table>-->
+<!--                    ALTERNATIVE: external data file reference. -->
+                    <ds:ImportData oid="ext1">
+                        <ds:path>myData.csv</ds:path>
+                        <ds:format>CSV</ds:format>
+                        <ds:delimiter>COMMA</ds:delimiter>
+                    </ds:ImportData>
                 </MLE>
                 <Bayesian>
                     <PosteriorMean>
