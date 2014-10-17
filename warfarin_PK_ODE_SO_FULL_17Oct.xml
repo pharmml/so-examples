@@ -20,7 +20,7 @@
         
         <RawResults>
             <RawFile oid="r1">
-                <ct:Description>Original output wth pop data</ct:Description> <!-- Description is optional -->
+                <ct:Description>Original output wth pop data</ct:Description> <!-- optional -->
                 <ds:path>estimates.txt</ds:path>
                 <ds:format>CSV</ds:format>
                 <ds:delimiter>COMMA</ds:delimiter>
@@ -32,26 +32,26 @@
                 <ds:delimiter>COMMA</ds:delimiter>
             </RawFile>
             
-            <!-- any number of files permited -->
+            <!-- any number of files is permited -->
         </RawResults>
         
         <Estimation>
             <PopulationEstimates>
                 <MLE>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Column columnId="POP_CL" columnType="so" valueType="real" columnNum="1"/>
-                        <Column columnId="POP_V" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="3"/>
-                        <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="4"/>
-                        <Column columnId="BETA_CL_WT" columnType="so" valueType="real" columnNum="5"/>
-                        <Column columnId="BETA_V_WT" columnType="so" valueType="real" columnNum="6"/>
-                        <Column columnId="PPV_CL" columnType="so" valueType="real" columnNum="7"/>
-                        <Column columnId="PPV_V" columnType="so" valueType="real" columnNum="8"/>
-                        <Column columnId="PPV_KA" columnType="so" valueType="real" columnNum="9"/>
-                        <Column columnId="PPV_TLAG" columnType="so" valueType="real" columnNum="10"/>
-                        <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="11"/>
-                        <Column columnId="RUV_ADD" columnType="so" valueType="real" columnNum="12"/>
-                        <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="13"/>
+                        <Column columnId="POP_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="POP_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="POP_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
+                        <Column columnId="BETA_CL_WT" columnType="undefined" valueType="real" columnNum="5"/>
+                        <Column columnId="BETA_V_WT" columnType="undefined" valueType="real" columnNum="6"/>
+                        <Column columnId="PPV_CL" columnType="undefined" valueType="real" columnNum="7"/>
+                        <Column columnId="PPV_V" columnType="undefined" valueType="real" columnNum="8"/>
+                        <Column columnId="PPV_KA" columnType="undefined" valueType="real" columnNum="9"/>
+                        <Column columnId="PPV_TLAG" columnType="undefined" valueType="real" columnNum="10"/>
+                        <Column columnId="RUV_PROP" columnType="undefined" valueType="real" columnNum="11"/>
+                        <Column columnId="RUV_ADD" columnType="undefined" valueType="real" columnNum="12"/>
+                        <Column columnId="CORR_PPV_CL_V" columnType="undefined" valueType="real" columnNum="13"/>
                    </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
@@ -71,19 +71,19 @@
                 <Bayesian>
                     <PosteriorMean>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                                    <Column columnId="POP_CL" columnType="so" valueType="real" columnNum="1"/>
-                                    <Column columnId="POP_V" columnType="so" valueType="real" columnNum="2"/>
-                                    <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="3"/>
-                                    <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="4"/>
-                                    <Column columnId="BETA_CL_WT" columnType="so" valueType="real" columnNum="5"/>
-                                    <Column columnId="BETA_V_WT" columnType="so" valueType="real" columnNum="6"/>
-                                    <Column columnId="PPV_CL" columnType="so" valueType="real" columnNum="7"/>
-                                    <Column columnId="PPV_V" columnType="so" valueType="real" columnNum="8"/>
-                                    <Column columnId="PPV_KA" columnType="so" valueType="real" columnNum="9"/>
-                                    <Column columnId="PPV_TLAG" columnType="so" valueType="real" columnNum="10"/>
-                                    <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="11"/>
-                                    <Column columnId="RUV_ADD" columnType="so" valueType="real" columnNum="12"/>
-                                    <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="13"/>
+                                    <Column columnId="POP_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                                    <Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="2"/>
+                                    <Column columnId="POP_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                                    <Column columnId="POP_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
+                                    <Column columnId="BETA_CL_WT" columnType="undefined" valueType="real" columnNum="5"/>
+                                    <Column columnId="BETA_V_WT" columnType="undefined" valueType="real" columnNum="6"/>
+                                    <Column columnId="PPV_CL" columnType="undefined" valueType="real" columnNum="7"/>
+                                    <Column columnId="PPV_V" columnType="undefined" valueType="real" columnNum="8"/>
+                                    <Column columnId="PPV_KA" columnType="undefined" valueType="real" columnNum="9"/>
+                                    <Column columnId="PPV_TLAG" columnType="undefined" valueType="real" columnNum="10"/>
+                                    <Column columnId="RUV_PROP" columnType="undefined" valueType="real" columnNum="11"/>
+                                    <Column columnId="RUV_ADD" columnType="undefined" valueType="real" columnNum="12"/>
+                                    <Column columnId="CORR_PPV_CL_V" columnType="undefined" valueType="real" columnNum="13"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
@@ -96,19 +96,19 @@
                     </PosteriorMean>
                     <PosteriorMedian>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                                     <Column columnId="POP_CL" columnType="so" valueType="real" columnNum="1"/>
-                                     <Column columnId="POP_V" columnType="so" valueType="real" columnNum="2"/>
-                                     <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="3"/>
-                                     <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="4"/>
-                                     <Column columnId="BETA_CL_WT" columnType="so" valueType="real" columnNum="5"/>
-                                     <Column columnId="BETA_V_WT" columnType="so" valueType="real" columnNum="6"/>
-                                     <Column columnId="PPV_CL" columnType="so" valueType="real" columnNum="7"/>
-                                     <Column columnId="PPV_V" columnType="so" valueType="real" columnNum="8"/>
-                                     <Column columnId="PPV_KA" columnType="so" valueType="real" columnNum="9"/>
-                                     <Column columnId="PPV_TLAG" columnType="so" valueType="real" columnNum="10"/>
-                                     <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="11"/>
-                                     <Column columnId="RUV_ADD" columnType="so" valueType="real" columnNum="12"/>
-                                     <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="13"/>
+                                     <Column columnId="POP_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                                     <Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="2"/>
+                                     <Column columnId="POP_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                                     <Column columnId="POP_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
+                                     <Column columnId="BETA_CL_WT" columnType="undefined" valueType="real" columnNum="5"/>
+                                     <Column columnId="BETA_V_WT" columnType="undefined" valueType="real" columnNum="6"/>
+                                     <Column columnId="PPV_CL" columnType="undefined" valueType="real" columnNum="7"/>
+                                     <Column columnId="PPV_V" columnType="undefined" valueType="real" columnNum="8"/>
+                                     <Column columnId="PPV_KA" columnType="undefined" valueType="real" columnNum="9"/>
+                                     <Column columnId="PPV_TLAG" columnType="undefined" valueType="real" columnNum="10"/>
+                                     <Column columnId="RUV_PROP" columnType="undefined" valueType="real" columnNum="11"/>
+                                     <Column columnId="RUV_ADD" columnType="undefined" valueType="real" columnNum="12"/>
+                                     <Column columnId="CORR_PPV_CL_V" columnType="undefined" valueType="real" columnNum="13"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
@@ -121,19 +121,19 @@
                     </PosteriorMedian>
                     <PosteriorMode>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                                     <Column columnId="POP_CL" columnType="so" valueType="real" columnNum="1"/>
-                                     <Column columnId="POP_V" columnType="so" valueType="real" columnNum="2"/>
-                                     <Column columnId="POP_KA" columnType="so" valueType="real" columnNum="3"/>
-                                     <Column columnId="POP_TLAG" columnType="so" valueType="real" columnNum="4"/>
-                                     <Column columnId="BETA_CL_WT" columnType="so" valueType="real" columnNum="5"/>
-                                     <Column columnId="BETA_V_WT" columnType="so" valueType="real" columnNum="6"/>
-                                     <Column columnId="PPV_CL" columnType="so" valueType="real" columnNum="7"/>
-                                     <Column columnId="PPV_V" columnType="so" valueType="real" columnNum="8"/>
-                                     <Column columnId="PPV_KA" columnType="so" valueType="real" columnNum="9"/>
-                                     <Column columnId="PPV_TLAG" columnType="so" valueType="real" columnNum="10"/>
-                                     <Column columnId="RUV_PROP" columnType="so" valueType="real" columnNum="11"/>
-                                     <Column columnId="RUV_ADD" columnType="so" valueType="real" columnNum="12"/>
-                                     <Column columnId="CORR_PPV_CL_V" columnType="so" valueType="real" columnNum="13"/>
+                                     <Column columnId="POP_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                                     <Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="2"/>
+                                     <Column columnId="POP_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                                     <Column columnId="POP_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
+                                     <Column columnId="BETA_CL_WT" columnType="undefined" valueType="real" columnNum="5"/>
+                                     <Column columnId="BETA_V_WT" columnType="undefined" valueType="real" columnNum="6"/>
+                                     <Column columnId="PPV_CL" columnType="undefined" valueType="real" columnNum="7"/>
+                                     <Column columnId="PPV_V" columnType="undefined" valueType="real" columnNum="8"/>
+                                     <Column columnId="PPV_KA" columnType="undefined" valueType="real" columnNum="9"/>
+                                     <Column columnId="PPV_TLAG" columnType="undefined" valueType="real" columnNum="10"/>
+                                     <Column columnId="RUV_PROP" columnType="undefined" valueType="real" columnNum="11"/>
+                                     <Column columnId="RUV_ADD" columnType="undefined" valueType="real" columnNum="12"/>
+                                     <Column columnId="CORR_PPV_CL_V" columnType="undefined" valueType="real" columnNum="13"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
@@ -232,8 +232,8 @@
                     </CorrelationMatrix>
                     <StandardError>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="SE" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="SE" columnType="undefined" valueType="id" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -243,8 +243,8 @@
                     </StandardError>
                     <RelativeStandardError>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="RSE" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="RSE" columnType="undefined" valueType="id" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -254,10 +254,10 @@
                     </RelativeStandardError>
                     <AsymptoticCI>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="CI" columnType="so" valueType="id" columnNum="2"/>
-                            <ds:Column columnId="lowerBound" columnType="so" valueType="id" columnNum="3"/>
-                            <ds:Column columnId="upperBound" columnType="so" valueType="id" columnNum="4"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="CI" columnType="undefined" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="lowerBound" columnType="undefined" valueType="id" columnNum="3"/>
+                            <ds:Column columnId="upperBound" columnType="undefined" valueType="id" columnNum="4"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:String>95%</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
@@ -269,8 +269,8 @@
                 <Bayesian>
                     <StandardDeviationPosterior>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="SDP" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="SDP" columnType="undefined" valueType="id" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -290,8 +290,8 @@
                         <!-- ALTERNATIVE with data set-->
  <!--                       <DataSet>
                             <ds:Definition>
-                                <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                                <ds:Column columnId="PD" columnType="so" valueType="id" columnNum="2"/>
+                                <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="PD" columnType="undefined" valueType="id" columnNum="2"/>
                             </ds:Definition>
                             <ds:Table>
                                 <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -302,10 +302,10 @@
                     </PosteriorDistribution>
                     <PercentilesCI> 
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="Pctl_2.5th" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="Pctl_2.5th" columnType="undefined" valueType="id" columnNum="2"/>
                             <!-- omitted other percentiles -->
-                            <ds:Column columnId="Pctl_97.5th" columnType="so" valueType="id" columnNum="10"/>
+                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="id" columnNum="10"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-- 2...N-1 --><ct:Real>0.5</ct:Real></ds:Row>
@@ -317,8 +317,8 @@
                 <Bootstrap>
                     <StandardDeviation>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="SD" columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="SD" columnType="undefined" valueType="id" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -338,8 +338,8 @@
                         <!-- ALTERNATIVE with data set-->
 <!--                        <DataSet>
                             <ds:Definition>
-                                <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                                <ds:Column columnId="PD" columnType="so" valueType="id" columnNum="2"/>
+                                <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                                <ds:Column columnId="PD" columnType="undefined" valueType="id" columnNum="2"/>
                             </ds:Definition>
                             <ds:Table>
                                 <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -350,10 +350,10 @@
                     </ParameterDistribution>
                     <PercentilesCI>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="Pctl_2.5th " columnType="so" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="Pctl_2.5th " columnType="undefined" valueType="id" columnNum="2"/>
                             <!-- omitted other percentiles -->
-                            <ds:Column columnId="Pctl_97.5th" columnType="so" valueType="id" columnNum="10"/>
+                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="id" columnNum="10"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-- 2...N-1 --><ct:Real>0.5</ct:Real></ds:Row>
@@ -369,10 +369,10 @@
                     <Mean>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="so" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="undefined" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="undefined" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -384,10 +384,10 @@
                     <Median>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="so" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="undefined" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="undefined" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -399,10 +399,10 @@
                     <Mode>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="so" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="undefined" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="undefined" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -413,10 +413,10 @@
                     </Mode>
                     <Samples>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Column columnId="CL" columnType="so" valueType="real" columnNum="1"/>
-                            <Column columnId="V" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="KA" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="TLAG" columnType="so" valueType="real" columnNum="4"/>
+                            <Column columnId="CL" columnType="undefined" valueType="real" columnNum="1"/>
+                            <Column columnId="V" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="KA" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="TLAG" columnType="undefined" valueType="real" columnNum="4"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -430,10 +430,10 @@
                     <EffectMean>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="ETA_CL" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="ETA_V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="ETA_KA" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="ETA_TLAG" columnType="so" valueType="real" columnNum="5"/>
+                            <Column columnId="ETA_CL" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="ETA_V" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="ETA_KA" columnType="undefined" valueType="real" columnNum="4"/>
+                            <Column columnId="ETA_TLAG" columnType="undefined" valueType="real" columnNum="5"/>
                             <!-- omitted other random effects -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -447,10 +447,10 @@
                     <EffectMedian>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="ETA_CL" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="ETA_V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="ETA_KA" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="ETA_TLAG" columnType="so" valueType="real" columnNum="5"/>
+                            <Column columnId="ETA_CL" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="ETA_V" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="ETA_KA" columnType="undefined" valueType="real" columnNum="4"/>
+                            <Column columnId="ETA_TLAG" columnType="undefined" valueType="real" columnNum="5"/>
                             <!-- omitted other random effects -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -464,10 +464,10 @@
                     <EffectMode>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="ETA_CL" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="ETA_V" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="ETA_KA" columnType="so" valueType="real" columnNum="4"/>
-                            <Column columnId="ETA_TLAG" columnType="so" valueType="real" columnNum="5"/>
+                            <Column columnId="ETA_CL" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="ETA_V" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="ETA_KA" columnType="undefined" valueType="real" columnNum="4"/>
+                            <Column columnId="ETA_TLAG" columnType="undefined" valueType="real" columnNum="5"/>
                             <!-- omitted other random effects -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -480,10 +480,10 @@
                     </EffectMode>
                     <Samples>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Column columnId="ETA_CL" columnType="so" valueType="real" columnNum="1"/>
-                            <Column columnId="ETA_V" columnType="so" valueType="real" columnNum="2"/>
-                            <Column columnId="ETA_KA" columnType="so" valueType="real" columnNum="3"/>
-                            <Column columnId="ETA_TLAG" columnType="so" valueType="real" columnNum="4"/>
+                            <Column columnId="ETA_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                            <Column columnId="ETA_V" columnType="undefined" valueType="real" columnNum="2"/>
+                            <Column columnId="ETA_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                            <Column columnId="ETA_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -495,10 +495,10 @@
                 </RandomEffects>
                 <EtaShrinkage>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                        <Column columnId="ETA_SHRINKAGE_CL" columnType="so" valueType="real" columnNum="1"/>
-                        <Column columnId="ETA_SHRINKAGE_V" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="ETA_SHRINKAGE_KA" columnType="so" valueType="real" columnNum="3"/>
-                        <Column columnId="ETA_SHRINKAGE_TLAG" columnType="so" valueType="real" columnNum="4"/>
+                        <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="ETA_SHRINKAGE_V" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="ETA_SHRINKAGE_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="ETA_SHRINKAGE_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
                         <!-- omitted other random effects shrinkage-->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -519,9 +519,9 @@
                     </LogNormalDistribution>
 <!--                    <DataSet>
                         <ds:Definition>
-                            <ds:Column columnId="ID" columnType="so" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PDIE" columnType="so" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="ID" columnType="undefined" valueType="id" columnNum="1"/>
+                            <ds:Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="PDIE" columnType="undefined" valueType="real" columnNum="3"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
@@ -535,8 +535,8 @@
                 <RES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="RES" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="RES" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
@@ -547,8 +547,8 @@
                 <IRES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="IRES" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="IRES" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>2.892</ct:Real></Row>
@@ -559,8 +559,8 @@
                 <WRES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="WRES" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="WRES" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>3.892</ct:Real></Row>
@@ -571,8 +571,8 @@
                 <CWRES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="CWRES" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="CWRES" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>4.892</ct:Real></Row>
@@ -583,8 +583,8 @@
                 <IWRES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="IWRES" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="IWRES" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>2.892</ct:Real></Row>
@@ -595,8 +595,8 @@
                 <PD>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="PD" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="PD" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
@@ -607,8 +607,8 @@
                 <NPDE>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                        <Column columnId="NPDE" columnType="so" valueType="real" columnNum="3"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="NPDE" columnType="undefined" valueType="real" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
@@ -621,9 +621,9 @@
             <Predictions>
                 <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                     <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                    <Column columnId="TIME" columnType="so" valueType="real" columnNum="2"/>
-                    <Column columnId="PRED" columnType="so" valueType="real" columnNum="3"/>
-                    <Column columnId="IPRED" columnType="so" valueType="real" columnNum="4"/>
+                    <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                    <Column columnId="PRED" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="IPRED" columnType="undefined" valueType="real" columnNum="4"/>
                 </Definition>
                 <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                     <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>7.892</ct:Real><ct:Real>1.892</ct:Real></Row>
@@ -638,7 +638,7 @@
                 <IndividualContribToLL>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="ICtoLL" columnType="so" valueType="real" columnNum="2"/>
+                        <Column columnId="ICtoLL" columnType="undefined" valueType="real" columnNum="2"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>7.892</ct:Real></Row>
