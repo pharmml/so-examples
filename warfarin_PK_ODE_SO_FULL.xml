@@ -5,7 +5,7 @@
     xmlns:ct="http://www.pharmml.org/2013/03/CommonTypes"
     xsi:schemaLocation="http://www.pharmml.org/2013/03/StandardisedOutput 
     http://www.pharmml.org/2013/03/StandardisedOutput" 
-    implementedBy="MJS" writtenVersion="0.1"
+    implementedBy="MJS" writtenVersion="0.1" metadataFile="warfarin_PK_ODE_SO_FULL.rdf"
     id="i1">
     
     <PharmMLRef name="warfarin_PK_ODE.xml"/>
@@ -35,7 +35,7 @@
             <!-- any number of files is permited -->
         </RawResults>
         
-                <Estimation>
+        <Estimation>
             <PopulationEstimates>
                 <MLE>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
