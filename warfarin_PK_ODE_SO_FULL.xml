@@ -592,25 +592,36 @@
                 </PosteriorDistributionIndividualEstimates>
             </PrecisionIndividualEstimates>
             
+            <!-- TEST: NEW FORMAT -->
             <Residuals>
-                <!-- TEST: NEW FORMAT -->
-<!--                <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                    <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                    <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                     <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
                     <Column columnId="RES" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="IRES" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="WRES" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="CWRES" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="IWRES" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="PD" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="NPDE" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="IRES" columnType="undefined" valueType="real" columnNum="4"/>
+                    <Column columnId="WRES" columnType="undefined" valueType="real" columnNum="5"/>
+                    <Column columnId="CWRES" columnType="undefined" valueType="real" columnNum="6"/>
+                    <Column columnId="IWRES" columnType="undefined" valueType="real" columnNum="7"/>
+                    <Column columnId="PD" columnType="undefined" valueType="real" columnNum="8"/>
+                    <Column columnId="NPDE" columnType="undefined" valueType="real" columnNum="9"/>
                 </Definition>
                 <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                    <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
-                    <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
-                    <!-\- omitted other subjects -\->
-                </Table>-->
-                
+                    <Row>
+                        <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                        <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
+                        <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                    </Row>
+                    <Row>
+                        <ct:String>2</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                        <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
+                        <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                    </Row>
+                    <!-- omitted other subjects -->
+                </Table>
+            </Residuals>
+            <!-- /TEST: NEW FORMAT -->
+            
+<!--                
                 <RES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
@@ -620,7 +631,7 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
                 </RES>
                 <IRES>
@@ -632,7 +643,7 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>2.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>3.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
                 </IRES>
                 <WRES>
@@ -644,7 +655,7 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>3.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>4.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
                 </WRES>
                 <CWRES>
@@ -656,7 +667,7 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>4.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>5.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
                 </CWRES>
                 <IWRES>
@@ -668,7 +679,7 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>2.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>3.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
                 </IWRES>                
                 <PD>
@@ -680,7 +691,7 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
                 </PD>
                 <NPDE>
@@ -692,10 +703,9 @@
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
-                        <!-- omitted other subjects -->
+                        <!-\- omitted other subjects -\->
                     </Table>
-                </NPDE>
-            </Residuals>
+                </NPDE>-->
             
             <Predictions>
                 <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
