@@ -302,6 +302,7 @@
                             </ds:Table>
                         </DataSet>-->
                     </PosteriorDistribution>
+                    
                     <!-- TEST: NEW FORMAT -->
                     <PercentilesCI>
                         <ds:Definition>
@@ -325,22 +326,10 @@
                             </ds:Row>
                         </ds:Table>
                     </PercentilesCI>
-                    <!-- TEST: OLD VERSION -->
-<!--                    <PercentilesCI> 
-                        <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="Pctl_2.5th" columnType="undefined" valueType="real" columnNum="2"/>
-                            <!-\- omitted other percentiles -\->
-                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="real" columnNum="10"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.5</ct:Real></ds:Row>
-                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.6</ct:Real></ds:Row>
-                            <!-\- omitted other parameters -\->
-                        </ds:Table>
-                    </PercentilesCI>-->
                 </Bayesian>
-<!--             TEST: TO BE REMOVED
+                <!-- \TEST: NEW FORMAT -->
+                
+                <!--             TEST: TO BE REMOVED
                     <Bootstrap>
                     <StandardDeviation>
                         <ds:Definition>
