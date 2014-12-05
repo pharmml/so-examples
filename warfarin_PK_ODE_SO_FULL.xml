@@ -111,7 +111,8 @@
                                      <Column columnId="CORR_PPV_CL_V" columnType="undefined" valueType="real" columnNum="13"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
+                            <Row>
+                                <ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
                                 <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
                                 <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
@@ -136,7 +137,8 @@
                                      <Column columnId="CORR_PPV_CL_V" columnType="undefined" valueType="real" columnNum="13"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
+                            <Row>
+                                <ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
                                 <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
                                 <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
@@ -232,8 +234,8 @@
                     </CorrelationMatrix>
                     <StandardError>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="SE" columnType="undefined" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="SE" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -243,8 +245,8 @@
                     </StandardError>
                     <RelativeStandardError>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="RSE" columnType="undefined" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="RSE" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -254,10 +256,10 @@
                     </RelativeStandardError>
                     <AsymptoticCI>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="CI" columnType="undefined" valueType="id" columnNum="2"/>
-                            <ds:Column columnId="lowerBound" columnType="undefined" valueType="id" columnNum="3"/>
-                            <ds:Column columnId="upperBound" columnType="undefined" valueType="id" columnNum="4"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="CI" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="lowerBound" columnType="undefined" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="upperBound" columnType="undefined" valueType="real" columnNum="4"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:String>95%</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
@@ -269,8 +271,8 @@
                 <Bayesian>
                     <StandardDeviationPosterior>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="SDP" columnType="undefined" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="SDP" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -290,8 +292,8 @@
                         <!-- ALTERNATIVE with data set-->
  <!--                       <DataSet>
                             <ds:Definition>
-                                <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                                <ds:Column columnId="PD" columnType="undefined" valueType="id" columnNum="2"/>
+                                <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                                <ds:Column columnId="PD" columnType="undefined" valueType="real" columnNum="2"/>
                             </ds:Definition>
                             <ds:Table>
                                 <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -300,30 +302,55 @@
                             </ds:Table>
                         </DataSet>-->
                     </PosteriorDistribution>
-                    <PercentilesCI> 
+                    <!-- TEST: NEW FORMAT -->
+                    <PercentilesCI>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="Pctl_2.5th" columnType="undefined" valueType="id" columnNum="2"/>
-                            <!-- omitted other percentiles -->
-                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="id" columnNum="10"/>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-- omitted other parameters -->
+                            <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
                         </ds:Definition>
                         <ds:Table>
-                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-- 2...N-1 --><ct:Real>0.5</ct:Real></ds:Row>
-                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><!-- 2...N-1 --><ct:Real>0.6</ct:Real></ds:Row>
-                            <!-- omitted other parameters -->
+                            <ds:Row>
+                                <ct:Real>0.05</ct:Real>
+                                <ct:Real>0.1</ct:Real>
+                                <!-- .... -->
+                                <ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                            <ds:Row>
+                                <ct:Real>0.95</ct:Real>
+                                <ct:Real>0.2</ct:Real>
+                                
+                                <ct:Real>0.6</ct:Real>
+                            </ds:Row>
                         </ds:Table>
                     </PercentilesCI>
+                    <!-- TEST: OLD VERSION -->
+<!--                    <PercentilesCI> 
+                        <ds:Definition>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="Pctl_2.5th" columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-\- omitted other percentiles -\->
+                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="real" columnNum="10"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.5</ct:Real></ds:Row>
+                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.6</ct:Real></ds:Row>
+                            <!-\- omitted other parameters -\->
+                        </ds:Table>
+                    </PercentilesCI>-->
                 </Bayesian>
-                <Bootstrap>
+<!--             TEST: TO BE REMOVED
+                    <Bootstrap>
                     <StandardDeviation>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="SD" columnType="undefined" valueType="id" columnNum="2"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="SD" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
                             <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                            <!-- omitted other parameters -->
+                            <!-\- omitted other parameters -\->
                         </ds:Table>
                     </StandardDeviation>
                     <ParameterDistribution>
@@ -335,33 +362,77 @@
                                 <prVal>1.5</prVal>
                             </shape>
                         </LogNormalDistribution>
-                        <!-- ALTERNATIVE with data set-->
-<!--                        <DataSet>
+                        <!-\- ALTERNATIVE with data set-\->
+<!-\-                        <DataSet>
                             <ds:Definition>
-                                <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                                <ds:Column columnId="PD" columnType="undefined" valueType="id" columnNum="2"/>
+                                <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                                <ds:Column columnId="PD" columnType="undefined" valueType="real" columnNum="2"/>
                             </ds:Definition>
                             <ds:Table>
                                 <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
                                 <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
                                 <!-\- omitted other parameters -\->
                             </ds:Table>
-                        </DataSet>-->
+                        </DataSet>-\->
                     </ParameterDistribution>
                     <PercentilesCI>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="Pctl_2.5th " columnType="undefined" valueType="id" columnNum="2"/>
-                            <!-- omitted other percentiles -->
-                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="id" columnNum="10"/>
+                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="Pctl_2.5th " columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-\- omitted other percentiles -\->
+                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="real" columnNum="10"/>
                         </ds:Definition>
                         <ds:Table>
-                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-- 2...N-1 --><ct:Real>0.5</ct:Real></ds:Row>
-                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><!-- 2...N-1 --><ct:Real>0.6</ct:Real></ds:Row>
-                            <!-- omitted other parameters -->
+                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.5</ct:Real></ds:Row>
+                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.6</ct:Real></ds:Row>
+                            <!-\- omitted other parameters -\->
                         </ds:Table>
                     </PercentilesCI>
+                </Bootstrap>-->
+    
+                <Bootstrap>
+                        <ds:Definition>
+                            <ds:Column columnId="StandardDeviation" columnType="stDeviation" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="StandardError" columnType="stError" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="LowerCI" columnType="confInterval" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="UpperCI" columnType="confInterval" valueType="real" columnNum="4"/>
+                            <ds:Column columnId="alpha" columnType="alpha" valueType="real" columnNum="5"/>
+                            <ds:Column columnId="Quantile_X" columnType="quantiles" valueType="real" columnNum="6"/>
+                        </ds:Definition><!--0.95 or 95% - specified in columnType-->
+                        <ds:Table>
+                            <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
+                                <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
                 </Bootstrap>
+                <!-- similar for LLP, SIR, MultiDimLLP -->
+                    
+                <!-- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-->
+                <!-- ColumnNames: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, “Quantile_X%”-->
+
+                <!-- TEST: COPY FROM OINDIVIDUAL SECTION -->
+                <!-- <EtaShrinkage>
+                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="ETA_SHRINKAGE_V" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="ETA_SHRINKAGE_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="ETA_SHRINKAGE_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
+                        <!-\- omitted other random effects shrinkage-\->
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
+                    </Table>
+                </EtaShrinkage>-->
+                <!-- TEST: <EpsShrinkage>
+                    <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Column columnId="EPS_SHRINKAGE_ADD" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="EPS_SHRINKAGE_PROP" columnType="undefined" valueType="real" columnNum="2"/>
+                        <!-\- omitted other residual errror shrinkage-\->
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
+                    </Table>
+                </EpsShrinkage>-->
             </PrecisionPopulationEstimates>
             
             <IndividualEstimates>
@@ -493,18 +564,19 @@
                         </Table>
                     </Samples>
                 </RandomEffects>
-                <EtaShrinkage>
+<!--             TEST: move to population part
+                    <EtaShrinkage>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
                         <Column columnId="ETA_SHRINKAGE_V" columnType="undefined" valueType="real" columnNum="2"/>
                         <Column columnId="ETA_SHRINKAGE_KA" columnType="undefined" valueType="real" columnNum="3"/>
                         <Column columnId="ETA_SHRINKAGE_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
-                        <!-- omitted other random effects shrinkage-->
+                        <!-\- omitted other random effects shrinkage-\->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
                     </Table>
-                </EtaShrinkage>
+                </EtaShrinkage>-->
             </IndividualEstimates>
             
             <PrecisionIndividualEstimates>
@@ -532,6 +604,24 @@
             </PrecisionIndividualEstimates>
             
             <Residuals>
+                <!-- TEST: NEW FORMAT -->
+<!--                <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
+                    <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                    <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                    <Column columnId="RES" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="IRES" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="WRES" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="CWRES" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="IWRES" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="PD" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="NPDE" columnType="undefined" valueType="real" columnNum="3"/>
+                </Definition>
+                <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
+                    <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>1.892</ct:Real></Row>
+                    <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>2.670</ct:Real></Row>
+                    <!-\- omitted other subjects -\->
+                </Table>-->
+                
                 <RES>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
@@ -668,4 +758,27 @@
             </TargetToolMessages>
         </Estimation>
     </SOBlock>
- </SO>
+    
+</SO>
+
+
+
+<!--<Bootstrap>
+    <ds:Definition>
+        <ds:Column columnId="ItemsNames" columnType="undefined" valueType="string" columnNum="1"/>
+        <ds:Column columnId="ItemsValues" columnType="undefined" valueType="real" columnNum="2"/>
+    </ds:Definition><!-\-0.95 or 95% - specified in columnType-\->
+    <ds:Table>
+        <ds:Row><ct:String>StandardDeviation</ct:String><ct:Real>0.1</ct:Real></ds:Row>
+        <ds:Row><ct:String>StandardError</ct:String><ct:Real>0.2</ct:Real></ds:Row>
+        <ds:Row><ct:String>LowerCI</ct:String><ct:Real>0.3</ct:Real></ds:Row>
+        <ds:Row><ct:String>UpperCI</ct:String><ct:Real>0.4</ct:Real></ds:Row>
+        <ds:Row><ct:String>alpha</ct:String><ct:Real>0.5</ct:Real></ds:Row>
+        <ds:Row><ct:String>Quantile_X</ct:String><ct:Real>0.6</ct:Real></ds:Row>
+    </ds:Table>
+</Bootstrap>
+<!-\- similar for LLP, SIR, MultiDimLLP -\->
+
+<!-\- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-\->
+<!-\- ItemsNames: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, “Quantile_X%”-\->
+-->
