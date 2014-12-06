@@ -380,19 +380,19 @@
                 </Bootstrap>-->
     
                 <Bootstrap>
-                        <ds:Definition>
-                            <ds:Column columnId="StandardDeviation" columnType="stDeviation" valueType="real" columnNum="1"/>
-                            <ds:Column columnId="StandardError" columnType="stError" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="LowerCI" columnType="confInterval" valueType="real" columnNum="3"/>
-                            <ds:Column columnId="UpperCI" columnType="confInterval" valueType="real" columnNum="4"/>
-                            <ds:Column columnId="alpha" columnType="alpha" valueType="real" columnNum="5"/>
-                            <ds:Column columnId="Quantile_X" columnType="quantiles" valueType="real" columnNum="6"/>
-                        </ds:Definition><!--0.95 or 95% - specified in columnType-->
-                        <ds:Table>
-                            <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
-                                <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
-                            </ds:Row>
-                        </ds:Table>
+                    <ds:Definition>
+                        <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
+                        <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
+                        <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
+                        <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                        <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
+                        <ds:Column columnId="Quantile_X" columnType="undefined" valueType="real" columnNum="6"/>            <!-- quantiles -->
+                    </ds:Definition><!--0.95 or 95% - specified in columnType-->
+                    <ds:Table>
+                        <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
+                            <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
+                        </ds:Row>
+                    </ds:Table>
                 </Bootstrap>
                 <!-- similar for LLP, SIR, MultiDimLLP -->
                     
@@ -400,28 +400,30 @@
                 <!-- ColumnNames: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, “Quantile_X%”-->
 
                 <!-- TEST: COPY FROM OINDIVIDUAL SECTION -->
-                <!-- <EtaShrinkage>
+                <EtaShrinkage>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
                         <Column columnId="ETA_SHRINKAGE_V" columnType="undefined" valueType="real" columnNum="2"/>
                         <Column columnId="ETA_SHRINKAGE_KA" columnType="undefined" valueType="real" columnNum="3"/>
                         <Column columnId="ETA_SHRINKAGE_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
-                        <!-\- omitted other random effects shrinkage-\->
+                        <!-- omitted other random effects shrinkage-->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
                     </Table>
-                </EtaShrinkage>-->
-                <!-- TEST: <EpsShrinkage>
+                </EtaShrinkage>
+                <!-- TEST -->
+                <EpsShrinkage>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="EPS_SHRINKAGE_ADD" columnType="undefined" valueType="real" columnNum="1"/>
                         <Column columnId="EPS_SHRINKAGE_PROP" columnType="undefined" valueType="real" columnNum="2"/>
-                        <!-\- omitted other residual errror shrinkage-\->
+                        <!-- omitted other residual errror shrinkage-->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
                     </Table>
-                </EpsShrinkage>-->
+                </EpsShrinkage>
+                <!-- /TEST --> 
             </PrecisionPopulationEstimates>
             
             <IndividualEstimates>
