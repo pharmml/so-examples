@@ -31,6 +31,12 @@
                 <ds:format>CSV</ds:format>
                 <ds:delimiter>COMMA</ds:delimiter>
             </RawFile>
+
+            <GraphicsFile oid="g1">
+                <ct:Description>Observation VS prediction plot</ct:Description>
+                <ds:path>ObservationVSprediction.png</ds:path>
+                <ds:format>PNG,WMF,JPEG,BMP,TIFF</ds:format>
+            </GraphicsFile>
             
             <!-- any number of files is permited -->
         </RawResults>
@@ -331,7 +337,9 @@
                 
                 
                 <!-- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-->
-                <!-- ColumnNames: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, “Quantile_X%”-->
+                <!-- ColumnNames: 
+                            - one table, name NEEDED: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, 
+                            - separate TABLE NEEDED “Quantile_X%”-->
                 
                 <!-- similar for BOOTSTRAP, LLP, SIR, MultiDimLLP -->
                 <Bootstrap>
@@ -656,6 +664,17 @@
                 <IterationNumber>123456</IterationNumber>
             </TargetToolMessages>
         </Estimation>
+
+<!--    Model Diagnostic and evaluation
+            1.	Diagnostic
+            2.	Model comparison
+        Simulation & Exploration
+            1.	Simulations
+            2.	Inferences/visualization
+        Optimal design – UNDER ACTIVE DEVELOPMENT
+            1.	OED
+            2.	AOD-->
+
     </SOBlock>
     
 </SO>
