@@ -335,10 +335,10 @@
                     </PercentilesCI>
                 </Bayesian>
                 
-                <!-- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-->
+                <!-- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP” -->
                 <!-- ColumnNames: 
-                            - one table, name NEEDED: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, 
-                            - separate TABLE NEEDED “Quantile_X%”-->
+                    - one table, name NEEDED: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, 
+                    - separate TABLE NEEDED “Quantile_X%” -->
                 <Bootstrap>
                     <PrecisionEstimates>
                         <ds:Definition>
@@ -751,7 +751,8 @@
             </TargetToolMessages>
         </Estimation>
 
-<!--    Model Diagnostic and evaluation
+        <!--    
+        Model Diagnostic and evaluation
             1.	Diagnostic
             2.	Model comparison
         Simulation & Exploration
@@ -759,7 +760,8 @@
             2.	Inferences/visualization
         Optimal design – UNDER ACTIVE DEVELOPMENT
             1.	OED
-            2.	AOD-->
+            2.	AOD
+        -->
 
     </SOBlock>
     
