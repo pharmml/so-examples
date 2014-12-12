@@ -11,6 +11,17 @@
     <PharmMLRef name="warfarin_PK_ODE.xml"/>
     
     <SOBlock blkId="SO1">
+            
+        <!--    Messages from Target Software
+        a.	Termination messages
+        b.	Warnings
+        c.	Errors
+        d.	Run time
+        e.	Original output file path information
+        f.	Number of MCMC chains
+        g.	Number of iterations
+        summary messages (tool specific)-->
+        
         
         <ToolSettings oid="ts1">
             <ds:path>algorithms.xmlx</ds:path>
@@ -26,13 +37,13 @@
                 <ds:delimiter>COMMA</ds:delimiter>
             </RawFile>
             
-            <RawFile oid="r2">
+            <DataFile oid="r2">                                                 <!-- SUGGESTION -->
                 <ds:path>indiv_parameters.txt</ds:path>
                 <ds:format>CSV</ds:format>
                 <ds:delimiter>COMMA</ds:delimiter>
-            </RawFile>
+            </DataFile>
 
-            <GraphicsFile oid="g1">
+            <GraphicsFile oid="g1">                                             <!-- SUGGESTION -->
                 <ct:Description>Observation VS prediction plot</ct:Description>
                 <ds:path>ObservationVSprediction.png</ds:path>
                 <ds:format>PNG,WMF,JPEG,BMP,TIFF</ds:format>
@@ -43,7 +54,7 @@
         
         <Estimation>
             <PopulationEstimates>
-                <MLE>
+                <MLE id="i1">
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="POP_CL" columnType="undefined" valueType="real" columnNum="1"/>
                         <Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="2"/>
@@ -308,8 +319,6 @@
                             </ds:Table>
                         </DataSet>-->
                     </PosteriorDistribution>
-                    
-                    <!-- TEST: NEW FORMAT -->
                     <PercentilesCI>
                         <ds:Definition>
                             <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
@@ -333,29 +342,49 @@
                         </ds:Table>
                     </PercentilesCI>
                 </Bayesian>
-                <!-- \TEST: NEW FORMAT -->
                 
                 
                 <!-- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-->
                 <!-- ColumnNames: 
                             - one table, name NEEDED: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, 
                             - separate TABLE NEEDED “Quantile_X%”-->
-                
-                <!-- similar for BOOTSTRAP, LLP, SIR, MultiDimLLP -->
                 <Bootstrap>
-                    <ds:Definition>
-                        <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
-                        <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
-                        <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
-                        <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                        <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
-                        <ds:Column columnId="Quantile_X" columnType="undefined" valueType="real" columnNum="6"/>            <!-- quantiles -->
-                    </ds:Definition><!--0.95 or 95% - specified in columnType-->
-                    <ds:Table>
-                        <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
-                            <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
-                        </ds:Row>
-                    </ds:Table>
+                    <PrecisionEstimates>
+                        <ds:Definition>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
+                                <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </PrecisionEstimates>
+                    <Percentile>
+                        <ds:Definition>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-- omitted other parameters -->
+                            <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row>
+                                <ct:Real>0.05</ct:Real>
+                                <ct:Real>0.1</ct:Real>
+                                <!-- .... -->
+                                <ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                            <ds:Row>
+                                <ct:Real>0.95</ct:Real>
+                                <ct:Real>0.2</ct:Real>
+                                
+                                <ct:Real>0.6</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </Percentile>
                 </Bootstrap>
                 <LLP>
                     <ds:Definition>
@@ -402,9 +431,7 @@
                         </ds:Row>
                     </ds:Table>
                 </MultiDimLLP>
-                <!-- similar for BOOTSTRAP, LLP, SIR, MultiDimLLP -->
 
-                <!-- TEST: COPY FROM OINDIVIDUAL SECTION -->
                 <EtaShrinkage>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
@@ -417,7 +444,6 @@
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
                     </Table>
                 </EtaShrinkage>
-                <!-- TEST -->
                 <EpsShrinkage>
                     <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                         <Column columnId="EPS_SHRINKAGE_ADD" columnType="undefined" valueType="real" columnNum="1"/>
@@ -428,14 +454,14 @@
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
                     </Table>
                 </EpsShrinkage>
-                <!-- /TEST --> 
+
             </PrecisionPopulationEstimates>
             
             <IndividualEstimates>
                 <Estimates>
                     <Mean>
                         <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
-                            <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
+                            <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                             <Column columnId="CL" columnType="undefined" valueType="real" columnNum="2"/>
                             <Column columnId="V" columnType="undefined" valueType="real" columnNum="3"/>
                             <Column columnId="KA" columnType="undefined" valueType="real" columnNum="4"/>
