@@ -12,15 +12,7 @@
     
     <SOBlock blkId="SO1">
             
-        <!--    Messages from Target Software
-        a.	Termination messages
-        b.	Warnings
-        c.	Errors
-        d.	Run time
-        e.	Original output file path information
-        f.	Number of MCMC chains
-        g.	Number of iterations
-        summary messages (tool specific)-->
+        <!--    Messages from Target Software    -->
         
         
         <ToolSettings oid="ts1">
@@ -343,7 +335,6 @@
                     </PercentilesCI>
                 </Bayesian>
                 
-                
                 <!-- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-->
                 <!-- ColumnNames: 
                             - one table, name NEEDED: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, 
@@ -387,49 +378,118 @@
                     </Percentile>
                 </Bootstrap>
                 <LLP>
-                    <ds:Definition>
-                        <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
-                        <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
-                        <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
-                        <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                        <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
-                        <ds:Column columnId="Quantile_X" columnType="undefined" valueType="real" columnNum="6"/>            <!-- quantiles -->
-                    </ds:Definition><!--0.95 or 95% - specified in columnType-->
-                    <ds:Table>
-                        <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
-                            <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
-                        </ds:Row>
-                    </ds:Table>
+                    <PrecisionEstimates>
+                        <ds:Definition>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
+                                <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </PrecisionEstimates>
+                    <Percentile>
+                        <ds:Definition>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-- omitted other parameters -->
+                            <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row>
+                                <ct:Real>0.05</ct:Real>
+                                <ct:Real>0.1</ct:Real>
+                                <!-- .... -->
+                                <ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                            <ds:Row>
+                                <ct:Real>0.95</ct:Real>
+                                <ct:Real>0.2</ct:Real>
+                                
+                                <ct:Real>0.6</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </Percentile>
                 </LLP>
                 <SIR>
-                    <ds:Definition>
-                        <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
-                        <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
-                        <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
-                        <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                        <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
-                        <ds:Column columnId="Quantile_X" columnType="undefined" valueType="real" columnNum="6"/>            <!-- quantiles -->
-                    </ds:Definition><!--0.95 or 95% - specified in columnType-->
-                    <ds:Table>
-                        <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
-                            <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
-                        </ds:Row>
-                    </ds:Table>
+                    <PrecisionEstimates>
+                        <ds:Definition>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
+                                <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </PrecisionEstimates>
+                    <Percentile>
+                        <ds:Definition>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-- omitted other parameters -->
+                            <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row>
+                                <ct:Real>0.05</ct:Real>
+                                <ct:Real>0.1</ct:Real>
+                                <!-- .... -->
+                                <ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                            <ds:Row>
+                                <ct:Real>0.95</ct:Real>
+                                <ct:Real>0.2</ct:Real>
+                                
+                                <ct:Real>0.6</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </Percentile>
                 </SIR>
                 <MultiDimLLP>
-                    <ds:Definition>
-                        <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
-                        <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
-                        <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
-                        <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                        <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
-                        <ds:Column columnId="Quantile_X" columnType="undefined" valueType="real" columnNum="6"/>            <!-- quantiles -->
-                    </ds:Definition><!--0.95 or 95% - specified in columnType-->
-                    <ds:Table>
-                        <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
-                            <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real><ct:Real>0.6</ct:Real>
-                        </ds:Row>
-                    </ds:Table>
+                    <PrecisionEstimates>
+                        <ds:Definition>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="1"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="2"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="3"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="5"/>                 <!-- alpha -->
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
+                                <ct:Real>0.4</ct:Real><ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </PrecisionEstimates>
+                    <Percentile>
+                        <ds:Definition>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
+                            <!-- omitted other parameters -->
+                            <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row>
+                                <ct:Real>0.05</ct:Real>
+                                <ct:Real>0.1</ct:Real>
+                                <!-- .... -->
+                                <ct:Real>0.5</ct:Real>
+                            </ds:Row>
+                            <ds:Row>
+                                <ct:Real>0.95</ct:Real>
+                                <ct:Real>0.2</ct:Real>
+                                
+                                <ct:Real>0.6</ct:Real>
+                            </ds:Row>
+                        </ds:Table>
+                    </Percentile>
                 </MultiDimLLP>
 
                 <EtaShrinkage>
@@ -726,53 +786,3 @@
 <!-\- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-\->
 <!-\- ItemsNames: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, “Quantile_X%”-\->
 -->
-
-<!--             TEST: TO BE REMOVED
-                    <Bootstrap>
-                    <StandardDeviation>
-                        <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="SD" columnType="undefined" valueType="real" columnNum="2"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                            <!-\- omitted other parameters -\->
-                        </ds:Table>
-                    </StandardDeviation>
-                    <ParameterDistribution>
-                        <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
-                            <logScale>
-                                <rVal>10</rVal>
-                            </logScale>
-                            <shape>
-                                <prVal>1.5</prVal>
-                            </shape>
-                        </LogNormalDistribution>
-                        <!-\- ALTERNATIVE with data set-\->
-<!-\-                        <DataSet>
-                            <ds:Definition>
-                                <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                                <ds:Column columnId="PD" columnType="undefined" valueType="real" columnNum="2"/>
-                            </ds:Definition>
-                            <ds:Table>
-                                <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-                                <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                                <!-\- omitted other parameters -\->
-                            </ds:Table>
-                        </DataSet>-\->
-                    </ParameterDistribution>
-                    <PercentilesCI>
-                        <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="Pctl_2.5th " columnType="undefined" valueType="real" columnNum="2"/>
-                            <!-\- omitted other percentiles -\->
-                            <ds:Column columnId="Pctl_97.5th" columnType="undefined" valueType="real" columnNum="10"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.5</ct:Real></ds:Row>
-                            <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real><!-\- 2...N-1 -\-><ct:Real>0.6</ct:Real></ds:Row>
-                            <!-\- omitted other parameters -\->
-                        </ds:Table>
-                    </PercentilesCI>
-                </Bootstrap>-->
