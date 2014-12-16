@@ -11,10 +11,7 @@
     <PharmMLRef name="warfarin_PK_ODE.xml"/>
     
     <SOBlock blkId="SO1">
-            
-        <!--    Messages from Target Software    -->
-        
-        
+                    
         <ToolSettings oid="ts1">
             <ds:path>algorithms.xmlx</ds:path>
             <ds:format>CSV</ds:format>
@@ -22,12 +19,12 @@
         </ToolSettings>
         
         <RawResults>
-            <RawFile oid="r1">
+            <DataFile oid="r1">
                 <ct:Description>Original output wth pop data</ct:Description>
                 <ds:path>estimates.txt</ds:path>
                 <ds:format>CSV</ds:format>
                 <ds:delimiter>COMMA</ds:delimiter>
-            </RawFile>
+            </DataFile>
             
             <DataFile oid="r2">                                                 <!-- SUGGESTION -->
                 <ds:path>indiv_parameters.txt</ds:path>
@@ -43,6 +40,15 @@
             
             <!-- any number of files is permited -->
         </RawResults>
+        
+        <!--    Messages from Target Software    -->
+        <Message type="ERROR">
+            <toolname>NONMEM</toolname>
+            <name>nmtran error</name>
+            <content>Possibly long text...</content>
+            <severity>2</severity>
+        </Message>
+        <!-- ... -->
         
         <Estimation>
             <PopulationEstimates>
@@ -354,7 +360,7 @@
                             </ds:Row>
                         </ds:Table>
                     </PrecisionEstimates>
-                    <Percentile>
+                    <Percentiles>
                         <ds:Definition>
                             <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
@@ -375,7 +381,7 @@
                                 <ct:Real>0.6</ct:Real>
                             </ds:Row>
                         </ds:Table>
-                    </Percentile>
+                    </Percentiles>
                 </Bootstrap>
                 <LLP>
                     <PrecisionEstimates>
@@ -392,7 +398,7 @@
                             </ds:Row>
                         </ds:Table>
                     </PrecisionEstimates>
-                    <Percentile>
+                    <Percentiles>
                         <ds:Definition>
                             <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
@@ -413,7 +419,7 @@
                                 <ct:Real>0.6</ct:Real>
                             </ds:Row>
                         </ds:Table>
-                    </Percentile>
+                    </Percentiles>
                 </LLP>
                 <SIR>
                     <PrecisionEstimates>
@@ -430,7 +436,7 @@
                             </ds:Row>
                         </ds:Table>
                     </PrecisionEstimates>
-                    <Percentile>
+                    <Percentiles>
                         <ds:Definition>
                             <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
@@ -451,7 +457,7 @@
                                 <ct:Real>0.6</ct:Real>
                             </ds:Row>
                         </ds:Table>
-                    </Percentile>
+                    </Percentiles>
                 </SIR>
                 <MultiDimLLP>
                     <PrecisionEstimates>
@@ -468,7 +474,7 @@
                             </ds:Row>
                         </ds:Table>
                     </PrecisionEstimates>
-                    <Percentile>
+                    <Percentiles>
                         <ds:Definition>
                             <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
@@ -489,7 +495,7 @@
                                 <ct:Real>0.6</ct:Real>
                             </ds:Row>
                         </ds:Table>
-                    </Percentile>
+                    </Percentiles>
                 </MultiDimLLP>
 
                 <EtaShrinkage>
@@ -735,20 +741,6 @@
                     <DIC>5.678</DIC>
                 </InformationCriteria>
             </Likelihood>
-            
-            <TargetToolMessages>
-                <Termination>0PTIMIZATION SUCCESSFUL</Termination>
-                <Warnings>Following warnings detected: ...</Warnings>
-                <Errors>Following errors detected: ...</Errors>
-                <ElapsedTime>1234</ElapsedTime>
-                <OutputFilePath oid="OFPoid">
-                    <ds:path>OutputFilePath.csv</ds:path>
-                    <ds:format>CSV</ds:format>
-                    <ds:delimiter>COMMA</ds:delimiter>
-                </OutputFilePath>
-                <ChainsNumber>3</ChainsNumber>
-                <IterationNumber>123456</IterationNumber>
-            </TargetToolMessages>
         </Estimation>
 
         <!--    
