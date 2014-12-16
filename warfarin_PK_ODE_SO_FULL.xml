@@ -678,7 +678,6 @@
                 </PosteriorDistributionIndividualEstimates>
             </PrecisionIndividualEstimates>
             
-            <!-- TEST: NEW FORMAT -->
             <Residuals>
                 <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
                     <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
@@ -705,7 +704,6 @@
                     <!-- omitted other subjects -->
                 </Table>
             </Residuals>
-            <!-- /TEST: NEW FORMAT -->
             
             <Predictions>
                 <Definition xmlns="http://www.pharmml.org/2013/08/Dataset">
@@ -759,24 +757,3 @@
     
 </SO>
 
-
-
-<!--<Bootstrap>
-    <ds:Definition>
-        <ds:Column columnId="ItemsNames" columnType="undefined" valueType="string" columnNum="1"/>
-        <ds:Column columnId="ItemsValues" columnType="undefined" valueType="real" columnNum="2"/>
-    </ds:Definition><!-\-0.95 or 95% - specified in columnType-\->
-    <ds:Table>
-        <ds:Row><ct:String>StandardDeviation</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-        <ds:Row><ct:String>StandardError</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-        <ds:Row><ct:String>LowerCI</ct:String><ct:Real>0.3</ct:Real></ds:Row>
-        <ds:Row><ct:String>UpperCI</ct:String><ct:Real>0.4</ct:Real></ds:Row>
-        <ds:Row><ct:String>alpha</ct:String><ct:Real>0.5</ct:Real></ds:Row>
-        <ds:Row><ct:String>Quantile_X</ct:String><ct:Real>0.6</ct:Real></ds:Row>
-    </ds:Table>
-</Bootstrap>
-<!-\- similar for LLP, SIR, MultiDimLLP -\->
-
-<!-\- Element names: "Bootstrap”, “LLP”, “SIR”, “MultiDimLLP”-\->
-<!-\- ItemsNames: “StandardDeviation”, “StandardError”, “LowerCI”, “UpperCI”, “alpha”, “Quantile_X%”-\->
--->
