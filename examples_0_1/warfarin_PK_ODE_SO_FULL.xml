@@ -765,7 +765,55 @@
                 </InformationCriteria>
             </Likelihood>
         </Estimation>
-
+        
+        <Simulation>
+            <ct:Description>so far empty</ct:Description>
+            <SimulatedProfiles>
+                <ds:Definition>
+                    <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                    <ds:Column columnId="DVID" columnType="dvid" valueType="int" columnNum="2"/>
+                    <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="3"/>
+                    <ds:Column columnId="Replicate1" columnType="undefined" valueType="real" columnNum="4"/>
+                    <!-- omitted other Replicates -->
+                    <ds:Column columnId="ReplicateN" columnType="undefined" valueType="real" columnNum="4"/>
+                </ds:Definition>
+                <ds:ImportData oid="oid1">
+                    <ds:path>SimulatedProfiles.txt</ds:path>
+                </ds:ImportData>
+            </SimulatedProfiles>
+            <IndivParametersCovariates>
+                <ds:Definition>
+                    <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                    <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
+                    <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
+                    <ds:Column columnId="Param1" columnType="undefined" valueType="real" columnNum="4"/>
+                    <!-- omitted other Parameters -->
+                    <ds:Column columnId="ParamM" columnType="undefined" valueType="real" columnNum="10"/>
+                    <ds:Column columnId="Covariate1" columnType="undefined" valueType="real" columnNum="11"/>
+                    <!-- omitted other Parameters -->
+                    <ds:Column columnId="CovariateN" columnType="undefined" valueType="real" columnNum="20"/>
+                </ds:Definition>
+                <ds:ImportData oid="oid1">
+                    <ds:path>IndivParametersCovariates.txt</ds:path>
+                </ds:ImportData>
+            </IndivParametersCovariates>
+            <PopulationParametersCovariates>
+                <ds:Definition>
+                    <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="1"/>
+                    <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="2"/>
+                    <ds:Column columnId="Param1" columnType="undefined" valueType="real" columnNum="3"/>
+                    <!-- omitted other Parameters -->
+                    <ds:Column columnId="ParamM" columnType="undefined" valueType="real" columnNum="10"/>
+                </ds:Definition>
+                <ds:ImportData oid="oid1">
+                    <ds:path>IndivParametersCovariates.txt</ds:path>
+                </ds:ImportData>
+            </PopulationParametersCovariates>
+            <OriginalDataset oid="oid2">
+                <ds:path>originalDataset.txt</ds:path>
+            </OriginalDataset>
+        </Simulation>
+        
         <!--    
         Model Diagnostic and evaluation
             1.	Diagnostic
