@@ -761,78 +761,101 @@
         </Estimation>
         
         <Simulation>
-            <ct:Description>Simulation results are storted here.</ct:Description>
-            <SimulatedProfiles>
-                <ds:Definition>
-                    <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                    <ds:Column columnId="DVID" columnType="dvid" valueType="int" columnNum="2"/>
-                    <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="3"/>
-                    <ds:Column columnId="Replicate1" columnType="undefined" valueType="real" columnNum="4"/>
-                    <!-- omitted other Replicates -->
-                    <ds:Column columnId="ReplicateN" columnType="undefined" valueType="real" columnNum="5"/>
-                </ds:Definition>
-                <ds:Table>
-                    <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Replicates --><ct:Real>4</ct:Real></ds:Row>
-                    <!-- omitted other ID's -->
-                    <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Replicates --><ct:Real>4</ct:Real></ds:Row>
-                </ds:Table>
-<!--            ALTERNATIVELY as DATASET
+            <ct:Description>Simulation results are storted here.</ct:Description> <!-- Optional -->
+            <OriginalDataset oid="oid40">
+                <ds:path>originalDataset.txt</ds:path>
+            </OriginalDataset>
+            <SimulationBlock replicate="1">
+                <SimulatedProfiles>
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="DVID" columnType="dvid" valueType="int" columnNum="2"/>
+                        <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="Observation" columnType="dv" valueType="real" columnNum="4"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
+                    </ds:Table>
+                    <!-- ALTERNATIVELY as DATASET - omitted in the elements below for simplicity
                 <ds:ImportData oid="oid1">
                     <ds:path>SimulatedProfiles.txt</ds:path>
                 </ds:ImportData>-->
-            </SimulatedProfiles>
-            <IndivParametersCovariates>
-                <ds:Definition>
-                    <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                    <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
-                    <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
-                    <ds:Column columnId="Param1" columnType="undefined" valueType="real" columnNum="4"/>
-                    <!-- omitted other Parameters -->
-                    <ds:Column columnId="ParamM" columnType="undefined" valueType="real" columnNum="5"/>
-                    <ds:Column columnId="Covariate1" columnType="undefined" valueType="real" columnNum="6"/>
-                    <!-- omitted other Covariates -->
-                    <ds:Column columnId="CovariateN" columnType="undefined" valueType="real" columnNum="7"/>
-                </ds:Definition>
-                <ds:Table>
-                    <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>4</ct:Real><ct:Real>5</ct:Real><!-- omitted Covariates --><ct:Real>6</ct:Real></ds:Row>
-                    <!-- omitted other ID's -->
-                    <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>4</ct:Real><ct:Real>5</ct:Real><!-- omitted Covariates --><ct:Real>6</ct:Real></ds:Row>
-                </ds:Table>
-<!--            ALTERNATIVELY as DATASET
-                <ds:ImportData oid="oid2">
-                    <ds:path>IndivParametersCovariates.txt</ds:path>
-                </ds:ImportData>-->
-            </IndivParametersCovariates>
-            <PopulationParametersCovariates>
-                <ds:Definition>
-                    <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="1"/>
-                    <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="2"/>
-                    <ds:Column columnId="Param1" columnType="undefined" valueType="real" columnNum="3"/>
-                    <!-- omitted other Parameters -->
-                    <ds:Column columnId="ParamM" columnType="undefined" valueType="real" columnNum="4"/>
-                </ds:Definition>
-                <ds:Table>
-                    <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted Parameters --><ct:Real>3</ct:Real></ds:Row>
-                    <!-- omitted other ID's -->
-                    <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted Parameters --><ct:Real>3</ct:Real></ds:Row>
-                </ds:Table>
-<!--            ALTERNATIVELY as DATASET
-                <ds:ImportData oid="oid3">
-                    <ds:path>PopulationParametersCovariates.txt</ds:path>
-                </ds:ImportData>-->
-            </PopulationParametersCovariates>
-            <OriginalDataset oid="oid4">
-                <ds:path>originalDataset.txt</ds:path>
-            </OriginalDataset>
+                </SimulatedProfiles>
+                <IndivParameters>
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="PARAM_1" columnType="undefined" valueType="real" columnNum="4"/>
+                        <!-- omitted other Parameters -->
+                        <ds:Column columnId="PARAM_K" columnType="undefined" valueType="real" columnNum="5"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>4</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>4</ct:Real></ds:Row>
+                    </ds:Table>
+                </IndivParameters>
+                <Covariates>
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="Covariate_1" columnType="undefined" valueType="real" columnNum="4"/>
+                        <!-- omitted other Covariates -->
+                        <ds:Column columnId="Covariate_D" columnType="undefined" valueType="real" columnNum="5"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Covariates --><ct:Real>4</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Covariates --><ct:Real>4</ct:Real></ds:Row>
+                    </ds:Table>
+                </Covariates>
+                <PopulationParameters>
+                    <ds:Definition>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="1"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="POPPARAM_1" columnType="undefined" valueType="real" columnNum="3"/>
+                        <!-- omitted other Parameters -->
+                        <ds:Column columnId="POPPARAM_Z" columnType="undefined" valueType="real" columnNum="4"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted Parameters --><ct:Real>3</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted Parameters --><ct:Real>3</ct:Real></ds:Row>
+                    </ds:Table>
+                </PopulationParameters>
+                <Dosing>
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="AMT" columnType="dose" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="TINF" columnType="duration" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="TYPE" columnType="adm" valueType="real" columnNum="5"/>
+                        <ds:Column columnId="II" columnType="ii" valueType="real" columnNum="6"/>
+                        <!-- other columns possible/omitted -->
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real></ds:Row>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>2</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real></ds:Row>
+                        <!-- omitted other TIMES for ID=1 and other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real></ds:Row>
+                        <!-- omitted other TIMES for ID=10 -->
+                    </ds:Table>
+                </Dosing>
+                <RawResultsFile>
+                    <ds:path>RowResults_replicate1.txt</ds:path>
+                </RawResultsFile>
+            </SimulationBlock>
+            <SimulationBlock replicate="2">
+                ...
+            </SimulationBlock>
         </Simulation>
         
         <!--    
-        Model Diagnostic and evaluation
-            1.	Diagnostic
-            2.	Model comparison
-        Simulation & Exploration
-            1.	Simulations
-            2.	Inferences/visualization
+        Model Diagnostic - final structure agreed, needs to be implemented
         Optimal design – UNDER ACTIVE DEVELOPMENT
             1.	OED
             2.	AOD
