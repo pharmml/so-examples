@@ -765,7 +765,7 @@
             <OriginalDataset oid="oid40">
                 <ds:path>originalDataset.txt</ds:path>
             </OriginalDataset>
-            <SimulationBlock replicate="1">
+            <SimulationBlock replicate="1">         <!-- make OPTIONAL: if only one block required!!!! -->
                 <SimulatedProfiles>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
