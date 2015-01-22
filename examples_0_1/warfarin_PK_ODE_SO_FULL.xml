@@ -761,11 +761,11 @@
         </Estimation>
 
         <Simulation>
-            <ct:Description>Simulation results are storted here.</ct:Description> <!-- Optional -->
+            <ct:Description>Simulation results are storted here.</ct:Description>
             <OriginalDataset oid="oid40">
                 <ds:path>originalDataset.txt</ds:path>
             </OriginalDataset>
-            <SimulationBlock replicate="1">         <!-- make OPTIONAL: if only one block required!!!! -->
+            <SimulationBlock replicate="1">         <!-- OPTIONAL: if only one block required -->
                 <SimulatedProfiles>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
@@ -853,7 +853,97 @@
                 ...
             </SimulationBlock>-->
         </Simulation>
-        
+      
+        <ModelDiagnostic>
+            <DiagnosticPlotsStructuralModel>
+                <IndivFits>
+                    <Table1>
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                            <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
+                            <Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
+                            <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="3"/>
+                        </Definition>
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real></Row>
+                            <!-- omitted other pairs -->
+                            <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real></Row>
+                        </Table>
+                    </Table1>
+                    <Table2>
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                            <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
+                            <Column columnId="TIMEcont" columnType="time" valueType="real" columnNum="2"/>
+                            <Column columnId="PREDICTIONcont" columnType="dv" valueType="real" columnNum="3"/>
+                        </Definition>
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real></Row>
+                            <!-- omitted other pairs -->
+                            <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real></Row>
+                        </Table>
+                    </Table2>
+                </IndivFits>
+                <IndivPredictionVsObserv>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Column columnId="PREDICTIONS" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="OBSERVATIONS" columnType="undefined" valueType="real" columnNum="2"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real></Row>
+                        <!-- omitted other pairs -->
+                        <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real></Row>
+                    </Table>
+                </IndivPredictionVsObserv>
+<!--                TIME, BinLow, BinHigh, Percentile_1, OBSERVED_PERCENTILE, LowerBound, UpperBound, …, Percentile_X, OBSERVED_PERCENTILE, LowerBound, UpperBound-->
+                <VPC>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="BinLow" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="BinHigh" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="Percentile_1" columnType="undefined" valueType="real" columnNum="4"/>
+                        <Column columnId="OBSERVED_PERCENTILE" columnType="undefined" valueType="real" columnNum="5"/>
+                        <Column columnId="LowerBound" columnType="undefined" valueType="real" columnNum="6"/>
+                        <Column columnId="UpperBound" columnType="undefined" valueType="real" columnNum="7"/>
+                        <!-- omitted columns -->
+                        <Column columnId="Percentile_X" columnType="undefined" valueType="real" columnNum="20"/>
+                        <Column columnId="OBSERVED_PERCENTILE" columnType="undefined" valueType="real" columnNum="21"/>
+                        <Column columnId="LowerBound" columnType="undefined" valueType="real" columnNum="22"/>
+                        <Column columnId="UpperBound" columnType="undefined" valueType="real" columnNum="23"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>23</ct:Real></Row>
+                        <!-- omitted rows -->
+                    </Table>
+                </VPC>
+            </DiagnosticPlotsStructuralModel>
+            <DiagnosticPlotsIndividualParams>
+<!--                RANDOM_EFFECTS_1,...,RANDOM_EFFECTS_R, PARAMETER_1,...,PARAMETER_J, Covariate_1,...,Covariate_D -->
+                <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Column columnId="ETA_V" columnType="undefined" valueType="real" columnNum="1"/>
+                    <Column columnId="ETA_CL" columnType="undefined" valueType="real" columnNum="2"/>
+                    <!-- ETA_i -->
+                    <Column columnId="ETA_KA" columnType="undefined" valueType="real" columnNum="10"/>
+                    <Column columnId="V" columnType="undefined" valueType="real" columnNum="11"/>
+                    <Column columnId="CL" columnType="undefined" valueType="real" columnNum="12"/>
+                    <!-- X_i -->
+                    <Column columnId="KA" columnType="undefined" valueType="real" columnNum="20"/>
+                    <Column columnId="WT" columnType="undefined" valueType="real" columnNum="21"/>
+                    <Column columnId="SEX" columnType="undefined" valueType="real" columnNum="22"/>
+                    <!-- C_i -->
+                    <Column columnId="AGE" columnType="undefined" valueType="real" columnNum="30"/>
+                </Definition>
+                <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Row><ct:Real>1</ct:Real><!-- omitted columns -->
+                        <ct:Real>20</ct:Real><!-- omitted columns -->
+                        <ct:Real>30</ct:Real>
+                    </Row>
+                </Table>
+                <!--ALTERNATIVE: external data file reference. -->
+                <!-- <ds:ExternalFile oid="ext1"> 
+                        <ds:path>myData.csv</ds:path>
+                    </ds:ExternalFile>-->
+            </DiagnosticPlotsIndividualParams>
+        </ModelDiagnostic>
+       
         <!--    
         Model Diagnostic - final structure agreed, needs to be implemented
         Optimal design – UNDER ACTIVE DEVELOPMENT
