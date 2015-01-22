@@ -93,11 +93,11 @@
                         </Row>
                     </Table>
                     <!--ALTERNATIVE: external data file reference. -->
-<!--                    <ds:ImportData oid="ext1">
+<!--                    <ds:ExternalFile oid="ext1">            <!-\- name change: ExternalFile instead of ImportFile -\->
                         <ds:path>myData.csv</ds:path>
                         <ds:format>CSV</ds:format> <!-\- OPTIONAL -\->
                         <ds:delimiter>COMMA</ds:delimiter> <!-\- OPTIONAL -\->
-                    </ds:ImportData>-->
+                    </ds:ExternalFile>-->
                 </MLE>
                 <Bayesian>
                     <PosteriorMean>
@@ -759,13 +759,13 @@
                 </InformationCriteria>
             </Likelihood>
         </Estimation>
-        
-<!--        <Simulation>
-            <ct:Description>Simulation results are storted here.</ct:Description> <!-\- Optional -\->
+
+        <Simulation>
+            <ct:Description>Simulation results are storted here.</ct:Description> <!-- Optional -->
             <OriginalDataset oid="oid40">
                 <ds:path>originalDataset.txt</ds:path>
             </OriginalDataset>
-            <SimulationBlock replicate="1">         <!-\- make OPTIONAL: if only one block required!!!! -\->
+            <SimulationBlock replicate="1">         <!-- make OPTIONAL: if only one block required!!!! -->
                 <SimulatedProfiles>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
@@ -775,13 +775,13 @@
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
-                        <!-\- omitted other ID's -\->
+                        <!-- omitted other ID's -->
                         <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
                     </ds:Table>
-                    <!-\- ALTERNATIVELY as DATASET - omitted in the elements below for simplicity
-                <ds:ImportData oid="oid1">
+                    <!-- ALTERNATIVELY as DATASET - omitted in the elements below for simplicity
+                <ds:ExternalFile oid="oid1">
                     <ds:path>SimulatedProfiles.txt</ds:path>
-                </ds:ImportData>-\->
+                </ds:ExternalFile>-->
                 </SimulatedProfiles>
                 <IndivParameters>
                     <ds:Definition>
@@ -789,13 +789,13 @@
                         <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
                         <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
                         <ds:Column columnId="PARAM_1" columnType="undefined" valueType="real" columnNum="4"/>
-                        <!-\- omitted other Parameters -\->
+                        <!-- omitted other Parameters -->
                         <ds:Column columnId="PARAM_K" columnType="undefined" valueType="real" columnNum="5"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-\- omitted Parameters -\-><ct:Real>4</ct:Real></ds:Row>
-                        <!-\- omitted other ID's -\->
-                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-\- omitted Parameters -\-><ct:Real>4</ct:Real></ds:Row>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>4</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>4</ct:Real></ds:Row>
                     </ds:Table>
                 </IndivParameters>
                 <Covariates>
@@ -804,13 +804,13 @@
                         <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
                         <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
                         <ds:Column columnId="Covariate_1" columnType="undefined" valueType="real" columnNum="4"/>
-                        <!-\- omitted other Covariates -\->
+                        <!-- omitted other Covariates -->
                         <ds:Column columnId="Covariate_D" columnType="undefined" valueType="real" columnNum="5"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-\- omitted Covariates -\-><ct:Real>4</ct:Real></ds:Row>
-                        <!-\- omitted other ID's -\->
-                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-\- omitted Covariates -\-><ct:Real>4</ct:Real></ds:Row>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Covariates --><ct:Real>4</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><!-- omitted Covariates --><ct:Real>4</ct:Real></ds:Row>
                     </ds:Table>
                 </Covariates>
                 <PopulationParameters>
@@ -818,13 +818,13 @@
                         <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="1"/>
                         <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="2"/>
                         <ds:Column columnId="POPPARAM_1" columnType="undefined" valueType="real" columnNum="3"/>
-                        <!-\- omitted other Parameters -\->
+                        <!-- omitted other Parameters -->
                         <ds:Column columnId="POPPARAM_Z" columnType="undefined" valueType="real" columnNum="4"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-\- omitted Parameters -\-><ct:Real>3</ct:Real></ds:Row>
-                        <!-\- omitted other ID's -\->
-                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-\- omitted Parameters -\-><ct:Real>3</ct:Real></ds:Row>
+                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted Parameters --><ct:Real>3</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted Parameters --><ct:Real>3</ct:Real></ds:Row>
                     </ds:Table>
                 </PopulationParameters>
                 <Dosing>
@@ -835,24 +835,24 @@
                         <ds:Column columnId="TINF" columnType="duration" valueType="real" columnNum="4"/>
                         <ds:Column columnId="TYPE" columnType="adm" valueType="real" columnNum="5"/>
                         <ds:Column columnId="II" columnType="ii" valueType="real" columnNum="6"/>
-                        <!-\- other columns possible/omitted -\->
+                        <!-- other columns possible/omitted -->
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real></ds:Row>
                         <ds:Row><ct:String>1</ct:String><ct:Real>2</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real></ds:Row>
-                        <!-\- omitted other TIMES for ID=1 and other ID's -\->
+                        <!-- omitted other TIMES for ID=1 and other ID's -->
                         <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real></ds:Row>
-                        <!-\- omitted other TIMES for ID=10 -\->
+                        <!-- omitted other TIMES for ID=10 -->
                     </ds:Table>
                 </Dosing>
-                <RawResultsFile>
+                <RawResultsFile oid="rawR">
                     <ds:path>RowResults_replicate1.txt</ds:path>
                 </RawResultsFile>
             </SimulationBlock>
-            <SimulationBlock replicate="2">
+<!--            <SimulationBlock replicate="2">
                 ...
-            </SimulationBlock>
-        </Simulation>-->
+            </SimulationBlock>-->
+        </Simulation>
         
         <!--    
         Model Diagnostic - final structure agreed, needs to be implemented
