@@ -10,8 +10,9 @@
     
     <PharmMLRef name="warfarin_PK_ODE.xml"/>                                        <!-- optional -->
     
-    <SOBlock blkId="SO1"> <!-- optional layer if multiple SOblocks are reqiured e.g. for bootstrap -->
+    <SOBlock blkId="SO1"> <!-- optional, needed when multiple SOblocks are reqiured e.g. for bootstrap -->
         
+        <!-- TOOL SETTINGS -->
         <ToolSettings oid="ts1">
             <ds:path>algorithms.xmlx</ds:path>
         </ToolSettings>
@@ -800,9 +801,9 @@
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Column columnId="PREDICTIONS" columnType="dv" valueType="real" columnNum="1"/>
                         <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="2"/>
-                        <Column columnId="STRATA_1" columnType="undefined" valueType="real" columnNum="3"/>
-                        <!-- omitted other STRATA -->
-                        <Column columnId="STRATA_B" columnType="undefined" valueType="real" columnNum="4"/>
+                        <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="3"/>
+                        <!-- omitted STRATA -->
+                        <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="4"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
@@ -812,7 +813,7 @@
                 </IndivPredictionVsObserv>
                 <VPC>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="TIME" columnType="time" valueType="real" columnNum="1"/>
                         <Column columnId="BinLow" columnType="undefined" valueType="real" columnNum="2"/>
                         <Column columnId="BinHigh" columnType="undefined" valueType="real" columnNum="3"/>
                         <Column columnId="Percentile_1" columnType="undefined" valueType="real" columnNum="4"/>
@@ -824,10 +825,12 @@
                         <Column columnId="OBSERVED_PERCENTILE" columnType="undefined" valueType="real" columnNum="21"/>
                         <Column columnId="LowerBound" columnType="undefined" valueType="real" columnNum="22"/>
                         <Column columnId="UpperBound" columnType="undefined" valueType="real" columnNum="23"/>
-                        <Column columnId="STRATA" columnType="undefined" valueType="real" columnNum="24"/>
+                        <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="24"/>
+                        <!-- omitted STRATA -->
+                        <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="25"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>24</ct:Real></Row>
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>25</ct:Real></Row>
                         <!-- omitted rows -->
                     </Table>
                 </VPC>
@@ -842,14 +845,16 @@
                     <Column columnId="CL" columnType="undefined" valueType="real" columnNum="12"/>
                     <!-- X_i -->
                     <Column columnId="KA" columnType="undefined" valueType="real" columnNum="20"/>
-                    <Column columnId="WT" columnType="undefined" valueType="real" columnNum="21"/>
-                    <Column columnId="SEX" columnType="undefined" valueType="real" columnNum="22"/>
+                    <Column columnId="WT" columnType="covariate" valueType="real" columnNum="21"/>
+                    <Column columnId="SEX" columnType="covariate" valueType="real" columnNum="22"/>
                     <!-- C_i -->
-                    <Column columnId="AGE" columnType="undefined" valueType="real" columnNum="30"/>
-                    <Column columnId="STRATA" columnType="undefined" valueType="real" columnNum="31"/>
+                    <Column columnId="AGE" columnType="covariate" valueType="real" columnNum="30"/>
+                    <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="31"/>
+                    <!-- omitted STRATA -->
+                    <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="32"/>
                 </Definition>
                 <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                    <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real><!-- omitted columns --><ct:Real>31</ct:Real></Row>
+                    <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real><!-- omitted columns --><ct:Real>32</ct:Real></Row>
                 </Table>
                 <!--ALTERNATIVE: external data file reference. -->
                 <!-- <ds:ExternalFile oid="ext100"> 
@@ -985,8 +990,6 @@
             1.	OED
             2.	AOD
         -->
-
     </SOBlock>
-    
 </SO>
 
