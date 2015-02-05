@@ -776,39 +776,42 @@
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                             <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
                             <Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
-                            <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="3"/>
+                            <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="3"/>
+                            <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="4"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real></Row>
+                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
                             <!-- omitted other pairs -->
-                            <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real></Row>
+                            <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real><ct:Real>14</ct:Real></Row>
                         </Table>
                     </ObservationTable>
                     <PredictionTable>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                             <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
                             <Column columnId="TIMEcont" columnType="time" valueType="real" columnNum="2"/>
-                            <Column columnId="PREDICTIONcont" columnType="dv" valueType="real" columnNum="3"/>
+                            <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="3"/>
+                            <Column columnId="PREDICTIONcont" columnType="dv" valueType="real" columnNum="4"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real></Row>
+                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
                             <!-- omitted other pairs -->
-                            <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real></Row>
+                            <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real><ct:Real>14</ct:Real></Row>
                         </Table>
                     </PredictionTable>
                 </IndivFits>
                 <IndivPredictionVsObserv>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Column columnId="PREDICTIONS" columnType="dv" valueType="real" columnNum="1"/>
-                        <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="2"/>
-                        <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="2"/>
+                        <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="3"/>
+                        <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="4"/>
                         <!-- omitted STRATA -->
-                        <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="4"/>
+                        <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="5"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
+                        <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real></Row>
                         <!-- omitted other rows -->
-                        <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
+                        <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>15</ct:Real></Row>
                     </Table>
                 </IndivPredictionVsObserv>
                 <VPC>
@@ -865,7 +868,6 @@
         
         <!-- SIMULATION -->
         <Simulation>
-            <ct:Description>Simulation results are storted here.</ct:Description>
             <OriginalDataset oid="oid40">
                 <ds:path>originalDataset.txt</ds:path>
             </OriginalDataset>
