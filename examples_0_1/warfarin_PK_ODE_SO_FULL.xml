@@ -23,16 +23,18 @@
                 <ct:Description>Original output wth population data</ct:Description>
                 <ds:path>dataFolder/estimates.txt</ds:path>
             </DataFile>
+
+            <GraphicsFile oid="g1">
+                <ct:Description>Observation VS prediction plot</ct:Description>
+                <ds:path>graphicsFolder/ObservationVSprediction.png</ds:path>
+            </GraphicsFile>
+
             <DataFile oid="d2">
                 <ds:path>dataFolder/indiv_parameters.csv</ds:path>
                 <ds:format>CSV</ds:format>
                 <ds:delimiter>COMMA</ds:delimiter>
             </DataFile>
             
-            <GraphicsFile oid="g1">
-                <ct:Description>Observation VS prediction plot</ct:Description>
-                <ds:path>graphicsFolder/ObservationVSprediction.png</ds:path>
-            </GraphicsFile>
             <GraphicsFile oid="g2">
                 <ds:path>graphicsFolder/figure2.png</ds:path>
             </GraphicsFile>
@@ -525,29 +527,6 @@
                     </Percentiles>
                 </MultiDimLLP>
 
-                <EtaShrinkage>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
-                        <Column columnId="ETA_SHRINKAGE_V" columnType="undefined" valueType="real" columnNum="2"/>
-                        <Column columnId="ETA_SHRINKAGE_KA" columnType="undefined" valueType="real" columnNum="3"/>
-                        <Column columnId="ETA_SHRINKAGE_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
-                        <!-- omitted other random effects shrinkage -->
-                    </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
-                    </Table>
-                </EtaShrinkage>
-                <EpsShrinkage>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Column columnId="EPS_SHRINKAGE_ADD" columnType="undefined" valueType="real" columnNum="1"/>
-                        <Column columnId="EPS_SHRINKAGE_PROP" columnType="undefined" valueType="real" columnNum="2"/>
-                        <!-- omitted other residual errror shrinkage -->
-                    </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
-                    </Table>
-                </EpsShrinkage>
-
             </PrecisionPopulationEstimates>
             
             <IndividualEstimates>
@@ -679,19 +658,33 @@
                         </Table>
                     </Samples>
                 </RandomEffects>
+                
+                <!-- RELOCATED -->
+                <EtaShrinkage>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Column columnId="ETA_SHRINKAGE_CL" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="ETA_SHRINKAGE_V" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="ETA_SHRINKAGE_KA" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="ETA_SHRINKAGE_TLAG" columnType="undefined" valueType="real" columnNum="4"/>
+                        <!-- omitted other random effects shrinkage -->
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
+                    </Table>
+                </EtaShrinkage>
+                
             </IndividualEstimates>
             
             <PrecisionIndividualEstimates>
-                <PosteriorDistributionIndividualEstimates>
-                    <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
-                        <logScale>
-                            <rVal>10</rVal>
-                        </logScale>
-                        <shape>
-                            <prVal>1.5</prVal>
-                        </shape>
-                    </LogNormalDistribution>
-<!--                    <DataSet>
+                <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
+                    <logScale>
+                        <rVal>10</rVal>
+                    </logScale>
+                    <shape>
+                        <prVal>1.5</prVal>
+                    </shape>
+                </LogNormalDistribution>
+                <!--                    <DataSet>
                         <ds:Definition>
                             <ds:Column columnId="ID" columnType="undefined" valueType="id" columnNum="1"/>
                             <ds:Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
@@ -702,35 +695,46 @@
                             <!-\- omitted other subjects -\->
                         </ds:Table>
                     </DataSet>-->
-                </PosteriorDistributionIndividualEstimates>
             </PrecisionIndividualEstimates>
             
-            <Residuals>
-                <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                    <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                    <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
-                    <Column columnId="RES" columnType="undefined" valueType="real" columnNum="3"/>
-                    <Column columnId="IRES" columnType="undefined" valueType="real" columnNum="4"/>
-                    <Column columnId="WRES" columnType="undefined" valueType="real" columnNum="5"/>
-                    <Column columnId="CWRES" columnType="undefined" valueType="real" columnNum="6"/>
-                    <Column columnId="IWRES" columnType="undefined" valueType="real" columnNum="7"/>
-                    <Column columnId="PD" columnType="undefined" valueType="real" columnNum="8"/>
-                    <Column columnId="NPDE" columnType="undefined" valueType="real" columnNum="9"/>
-                </Definition>
-                <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                    <Row>
-                        <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                        <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
-                        <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
-                    </Row>
-                    <Row>
-                        <ct:String>2</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                        <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
-                        <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
-                    </Row>
-                    <!-- omitted other subjects -->
-                </Table>
-            </Residuals>
+            <Residual>
+                <Residuals>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="RES" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="IRES" columnType="undefined" valueType="real" columnNum="4"/>
+                        <Column columnId="WRES" columnType="undefined" valueType="real" columnNum="5"/>
+                        <Column columnId="CWRES" columnType="undefined" valueType="real" columnNum="6"/>
+                        <Column columnId="IWRES" columnType="undefined" valueType="real" columnNum="7"/>
+                        <Column columnId="PD" columnType="undefined" valueType="real" columnNum="8"/>
+                        <Column columnId="NPDE" columnType="undefined" valueType="real" columnNum="9"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row>
+                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
+                            <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                        </Row>
+                        <Row>
+                            <ct:String>2</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
+                            <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                        </Row>
+                        <!-- omitted other subjects -->
+                    </Table>
+                </Residuals>
+                <EpsShrinkage>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Column columnId="EPS_SHRINKAGE_ADD" columnType="undefined" valueType="real" columnNum="1"/>
+                        <Column columnId="EPS_SHRINKAGE_PROP" columnType="undefined" valueType="real" columnNum="2"/>
+                        <!-- omitted other residual errror shrinkage -->
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
+                    </Table>
+                </EpsShrinkage>
+            </Residual>
             
             <Predictions>
                 <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
