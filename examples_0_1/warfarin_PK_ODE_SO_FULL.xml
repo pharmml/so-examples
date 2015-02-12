@@ -275,8 +275,8 @@
                     </CorrelationMatrix>
                     <StandardError>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="se" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="SE" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -286,8 +286,8 @@
                     </StandardError>
                     <RelativeStandardError>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="rse" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="RSE" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -297,10 +297,10 @@
                     </RelativeStandardError>
                     <AsymptoticCI>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="ci" columnType="undefined" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="lowerBound" columnType="undefined" valueType="real" columnNum="3"/>
-                            <ds:Column columnId="upperBound" columnType="undefined" valueType="real" columnNum="4"/>
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="CI" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="LowerBound" columnType="undefined" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="UpperBound" columnType="undefined" valueType="real" columnNum="4"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:String>95%</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real></ds:Row>
@@ -312,8 +312,8 @@
                 <Bayesian>
                     <StandardDeviationPosterior>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="sdp" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="SDP" columnType="undefined" valueType="real" columnNum="2"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
@@ -333,7 +333,7 @@
                         <!-- ALTERNATIVE with data set-->
  <!--                       <DataSet>
                             <ds:Definition>
-                                <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                                <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
                                 <ds:Column columnId="PD" columnType="undefined" valueType="real" columnNum="2"/>
                             </ds:Definition>
                             <ds:Table>
@@ -345,7 +345,7 @@
                     </PosteriorDistribution>
                     <PercentilesCI>
                         <ds:Definition>
-                            <ds:Column columnId="percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
                             <!-- omitted other parameters -->
                             <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
@@ -369,12 +369,12 @@
                 <Bootstrap>
                     <PrecisionEstimates>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="standardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="standardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="lowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="upperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -385,7 +385,7 @@
                     </PrecisionEstimates>
                     <Percentiles>
                         <ds:Definition>
-                            <ds:Column columnId="percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
                             <!-- omitted other parameters -->
                             <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
@@ -409,12 +409,12 @@
                 <LLP>
                     <PrecisionEstimates>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="standardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="standardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="lowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="upperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -425,7 +425,7 @@
                     </PrecisionEstimates>
                     <Percentiles>
                         <ds:Definition>
-                            <ds:Column columnId="percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
                             <!-- omitted other parameters -->
                             <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
@@ -449,12 +449,12 @@
                 <SIR>
                     <PrecisionEstimates>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="standardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="standardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="lowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="upperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -465,7 +465,7 @@
                     </PrecisionEstimates>
                     <Percentiles>
                         <ds:Definition>
-                            <ds:Column columnId="percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
                             <!-- omitted other parameters -->
                             <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
@@ -489,12 +489,12 @@
                 <MultiDimLLP>
                     <PrecisionEstimates>
                         <ds:Definition>
-                            <ds:Column columnId="parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="standardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="standardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="lowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="upperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -505,7 +505,7 @@
                     </PrecisionEstimates>
                     <Percentiles>
                         <ds:Definition>
-                            <ds:Column columnId="percentile" columnType="undefined" valueType="real" columnNum="1"/>
+                            <ds:Column columnId="Percentile" columnType="undefined" valueType="real" columnNum="1"/>
                             <ds:Column columnId="POP_CL " columnType="undefined" valueType="real" columnNum="2"/>
                             <!-- omitted other parameters -->
                             <ds:Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="10"/>
@@ -684,21 +684,10 @@
                         <prVal>1.5</prVal>
                     </shape>
                 </LogNormalDistribution>
-                <!--                    <DataSet>
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="undefined" valueType="id" columnNum="1"/>
-                            <ds:Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="PDIE" columnType="undefined" valueType="real" columnNum="3"/>
-                        </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:Id>i1</ct:Id><ct:Real>1</ct:Real><ct:Real>10</ct:Real></ds:Row>
-                            <!-\- omitted other subjects -\->
-                        </ds:Table>
-                    </DataSet>-->
             </PrecisionIndividualEstimates>
             
             <Residual>
-                <Residuals>
+                <ResidualTable>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <Column columnId="TIME" columnType="undefined" valueType="real" columnNum="2"/>
@@ -723,7 +712,7 @@
                         </Row>
                         <!-- omitted other subjects -->
                     </Table>
-                </Residuals>
+                </ResidualTable>
                 <EpsShrinkage>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Column columnId="EPS_SHRINKAGE_ADD" columnType="undefined" valueType="real" columnNum="1"/>
@@ -805,9 +794,9 @@
                 </IndivFits>
                 <IndivPredictionVsObserv>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Column columnId="predictions" columnType="dv" valueType="real" columnNum="1"/>
-                        <Column columnId="dvid" columnType="dvid" valueType="real" columnNum="2"/>
-                        <Column columnId="observations" columnType="dv" valueType="real" columnNum="3"/>
+                        <Column columnId="PREDICTION" columnType="dv" valueType="real" columnNum="1"/>
+                        <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="2"/>
+                        <Column columnId="OBSERVATION" columnType="dv" valueType="real" columnNum="3"/>
                         <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="4"/>
                         <!-- omitted STRATA -->
                         <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="5"/>
@@ -820,18 +809,18 @@
                 </IndivPredictionVsObserv>
                 <VPC>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
-                        <Column columnId="time" columnType="time" valueType="real" columnNum="1"/>
-                        <Column columnId="binLow" columnType="undefined" valueType="real" columnNum="2"/>
-                        <Column columnId="binHigh" columnType="undefined" valueType="real" columnNum="3"/>
-                        <Column columnId="percentile_1" columnType="undefined" valueType="real" columnNum="4"/>
-                        <Column columnId="observedPercentile" columnType="undefined" valueType="real" columnNum="5"/>
-                        <Column columnId="lowerBound" columnType="undefined" valueType="real" columnNum="6"/>
-                        <Column columnId="upperBound" columnType="undefined" valueType="real" columnNum="7"/>
+                        <Column columnId="TIME" columnType="time" valueType="real" columnNum="1"/>
+                        <Column columnId="BinLow" columnType="undefined" valueType="real" columnNum="2"/>
+                        <Column columnId="BinHigh" columnType="undefined" valueType="real" columnNum="3"/>
+                        <Column columnId="Percentile_1" columnType="undefined" valueType="real" columnNum="4"/>
+                        <Column columnId="ObservedPercentile_1" columnType="undefined" valueType="real" columnNum="5"/>
+                        <Column columnId="LowerBound" columnType="undefined" valueType="real" columnNum="6"/>
+                        <Column columnId="UpperBound" columnType="undefined" valueType="real" columnNum="7"/>
                         <!-- omitted columns -->
-                        <Column columnId="percentile_X" columnType="undefined" valueType="real" columnNum="20"/>
-                        <Column columnId="observedPercentile" columnType="undefined" valueType="real" columnNum="21"/>
-                        <Column columnId="lowerBound" columnType="undefined" valueType="real" columnNum="22"/>
-                        <Column columnId="upperBound" columnType="undefined" valueType="real" columnNum="23"/>
+                        <Column columnId="Percentile_X" columnType="undefined" valueType="real" columnNum="20"/>
+                        <Column columnId="ObservedPercentile_X" columnType="undefined" valueType="real" columnNum="21"/>
+                        <Column columnId="LowerBound" columnType="undefined" valueType="real" columnNum="22"/>
+                        <Column columnId="UpperBound" columnType="undefined" valueType="real" columnNum="23"/>
                         <Column columnId="STRATA_DOSE" columnType="undefined" valueType="real" columnNum="24"/>
                         <!-- omitted STRATA -->
                         <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="25"/>
