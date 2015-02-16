@@ -686,7 +686,7 @@
                 </LogNormalDistribution>
             </PrecisionIndividualEstimates>
             
-            <Residual>
+            <Residuals>
                 <ResidualTable>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
@@ -723,7 +723,7 @@
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
                     </Table>
                 </EpsShrinkage>
-            </Residual>
+            </Residuals>
             
             <Predictions>
                 <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
@@ -860,10 +860,7 @@
         </ModelDiagnostic>
         
         <!-- SIMULATION -->
-        <Simulation>
-            <OriginalDataset oid="oid40">
-                <ds:path>originalDataset.txt</ds:path>
-            </OriginalDataset>
+        <Simulation> 
             <SimulationBlock replicate="1">         <!-- OPTIONAL: if only one block required -->
                 <SimulatedProfiles>
                     <ds:Definition>

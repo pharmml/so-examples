@@ -33,13 +33,34 @@
             
             <Likelihood>...</Likelihood>
         </Estimation>
+
+
+        <!-- MODEL DIAGNOSTIC -->
+        <ModelDiagnostic>
+            <DiagnosticPlotsStructuralModel>...</DiagnosticPlotsStructuralModel>
+
+            <DiagnosticPlotsIndividualParams>...</DiagnosticPlotsIndividualParams>
+        </ModelDiagnostic>
         
-        <ModelDiagnostic>...</ModelDiagnostic>
-        
+        <!-- SIMULATION -->
         <Simulation>
-            <OriginalDataset>...</OriginalDataset>
-            <SimulationBlock replicate="1">...</SimulationBlock>
-            <!-- more replicates possible -->
+            <SimulationBlock replicate="1">         <!-- OPTIONAL: if only one block required -->
+
+                <SimulatedProfiles>...</SimulatedProfiles>
+
+                <IndivParameters>...</IndivParameters>
+
+                <RandomEffects>...</RandomEffects>
+
+                <Covariates>...</Covariates>
+
+                <PopulationParameters>...</PopulationParameters>
+
+                <Dosing>...</Dosing>
+            </SimulationBlock>
+            <!--            <SimulationBlock replicate="2">
+                ...
+            </SimulationBlock>-->
         </Simulation>
     </SOBlock>
     <!-- more blocks possible -->
