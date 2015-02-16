@@ -370,11 +370,11 @@
                     <PrecisionEstimates>
                         <ds:Definition>
                             <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -410,11 +410,11 @@
                     <PrecisionEstimates>
                         <ds:Definition>
                             <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -450,11 +450,11 @@
                     <PrecisionEstimates>
                         <ds:Definition>
                             <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
@@ -490,11 +490,11 @@
                     <PrecisionEstimates>
                         <ds:Definition>
                             <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>     <!-- stDeviation -->
-                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>         <!-- stError -->
-                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>               <!-- confInterval -->
-                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>               <!-- confInterval -->
-                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>                 <!-- alpha -->
+                            <ds:Column columnId="StandardDeviation" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="StandardError" columnType="undefined" valueType="real" columnNum="3"/>
+                            <ds:Column columnId="LowerCI" columnType="undefined" valueType="real" columnNum="4"/>
+                            <ds:Column columnId="UpperCI" columnType="undefined" valueType="real" columnNum="5"/>
+                            <ds:Column columnId="Alpha" columnType="undefined" valueType="real" columnNum="6"/>
                         </ds:Definition>
                         <ds:Table>
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.3</ct:Real>
