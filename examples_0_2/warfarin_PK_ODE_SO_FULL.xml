@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<SO xmlns="http://www.pharmml.org/so/0.1/StandardisedOutput"
+<SO xmlns="http://www.pharmml.org/so/0.2/StandardisedOutput"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ds="http://www.pharmml.org/pharmml/0.6/Dataset"
     xmlns:ct="http://www.pharmml.org/pharmml/0.6/CommonTypes"
-    xsi:schemaLocation="http://www.pharmml.org/so/0.1/StandardisedOutput 
-    http://www.pharmml.org/so/0.1/StandardisedOutput" 
-    implementedBy="MJS" writtenVersion="0.1"  
+    xsi:schemaLocation="http://www.pharmml.org/so/0.2/StandardisedOutput 
+    http://www.pharmml.org/so/0.2/StandardisedOutput" 
+    implementedBy="MJS" writtenVersion="0.2"  
     metadataFile="warfarin_PK_ODE_SO_FULL.rdf" id="i1">
     
     <PharmMLRef name="warfarin_PK_ODE.xml"/>                                        <!-- optional -->
@@ -976,6 +976,109 @@
                 ...
             </SimulationBlock>-->
         </Simulation>
-
+        
+        <!-- OPTIMAL DESIGN -->
+        <OptimalDesign>
+            <OptimalDesignBlock blockNumber="1">
+                <FIM>                               <!-- 4x4 matrix for simplicity -->
+                    <ct:Matrix matrixType="Any">
+                        <ct:RowNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:RowNames>
+                        <ct:ColumnNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:ColumnNames>
+                        <ct:MatrixRow>
+                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real><ct:Real>-1.01e-04</ct:Real>
+                        </ct:MatrixRow>
+                        <ct:MatrixRow>
+                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real><ct:Real>-1.24e-03</ct:Real>
+                        </ct:MatrixRow>
+                        <!-- omitted other matrix rows -->
+                    </ct:Matrix>
+                </FIM>
+                <CovarianceMatrix>                  <!-- 4x4 matrix for simplicity -->
+                    <ct:Matrix matrixType="Any">
+                        <ct:RowNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:RowNames>
+                        <ct:ColumnNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:ColumnNames>
+                        <ct:MatrixRow>
+                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real><ct:Real>-1.01e-04</ct:Real>
+                        </ct:MatrixRow>
+                        <ct:MatrixRow>
+                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real><ct:Real>-1.24e-03</ct:Real>
+                        </ct:MatrixRow>
+                        <!-- omitted other matrix rows -->
+                    </ct:Matrix>
+                </CovarianceMatrix>
+                <ParameterPrecision>    <!-- PARAMETER_NAME, PARMETER_VALUE, SE, RSE, SHRINKAGE -->
+                    <ds:Definition>
+                        <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="string" columnNum="2"/>
+                        <ds:Column columnId="SE" columnType="undefined" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="RSE" columnType="undefined" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="Shrinkage" columnType="undefined" valueType="real" columnNum="5"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row>
+                            <ct:String>CL</ct:String><ct:Real>10</ct:Real><ct:Real>1.0</ct:Real><ct:Real>2.0</ct:Real><ct:Real>3.0</ct:Real>
+                            <ct:String>V</ct:String><ct:Real>12</ct:Real><ct:Real>1.1</ct:Real><ct:Real>2.1</ct:Real><ct:Real>3.1</ct:Real>
+                            <!-- other parameters omitted -->
+                        </ds:Row>
+                    </ds:Table>
+                </ParameterPrecision>
+                <Criteria>    <!-- CRITERIA_NAME, CRITERIA_VALUE, COMMENTS -->
+                    <ds:Definition>
+                        <ds:Column columnId="CriteriumName" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="CriteriumValue" columnType="undefined" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="Comments" columnType="undefined" valueType="string" columnNum="3"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row>
+                            <ct:String>D-optimality</ct:String><ct:Real>100</ct:Real><ct:String>no too bad</ct:String>
+                            <ct:String>ED-optimality</ct:String><ct:Real>10</ct:Real><ct:String>even better</ct:String>
+                            <!-- other rows omitted -->
+                        </ds:Row>
+                    </ds:Table>
+                </Criteria>
+                <Tests> <!-- TEST_NAME (only ‘Wald’ for now), TEST_TYPE (controlled list: ‘comparison’, ‘equivalence’, ’non-inferiority’, ’non-superiority’), 
+                            PARAMETER_VALUE, DELTA, LOWER_LIMIT, UPPER_LIMIT, TYPE1_ERROR, PREDICTED_POWER, TARGET_POWER, NUMBER_SUBJECTS -->
+                    <ds:Definition>
+                        <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="TestName" columnType="undefined" valueType="string" columnNum="2"/>
+                        <ds:Column columnId="TestType" columnType="undefined" valueType="string" columnNum="3"/>
+                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="Delta" columnType="undefined" valueType="real" columnNum="5"/>
+                        <ds:Column columnId="LowerLimit" columnType="undefined" valueType="real" columnNum="6"/>
+                        <ds:Column columnId="UpperLimit" columnType="undefined" valueType="real" columnNum="7"/>
+                        <ds:Column columnId="Type1Error" columnType="undefined" valueType="real" columnNum="8"/>
+                        <ds:Column columnId="PredictedPower" columnType="undefined" valueType="real" columnNum="9"/>
+                        <ds:Column columnId="TargetPower" columnType="undefined" valueType="real" columnNum="10"/>
+                        <ds:Column columnId="NumberSubject" columnType="undefined" valueType="real" columnNum="11"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row>
+                            <ct:String>V</ct:String><ct:String>Wald</ct:String><ct:String>comparison</ct:String><ct:Real>1</ct:Real>
+                            <ct:Real>10</ct:Real><ct:Real>0</ct:Real><ct:Real>100</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><ct:Real>1000</ct:Real>
+                            <!-- omitted other rows -->
+                        </ds:Row>
+                    </ds:Table>
+                </Tests>
+                <SimulatedData oid="SimDataOid">
+                    <ds:path>SimulatedData.dat</ds:path>
+                </SimulatedData>
+                <Design oid="desingOid">
+                    <ds:path>Design.xml</ds:path>
+                </Design>
+                
+            </OptimalDesignBlock>
+<!--            <OptimalDesignBlock blockNumber="2">
+                ...
+            </OptimalDesignBlock>-->
+        </OptimalDesign>
     </SOBlock>
 </SO>
