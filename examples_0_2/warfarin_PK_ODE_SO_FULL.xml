@@ -978,7 +978,7 @@
         </Simulation>
         
         <!-- OPTIMAL DESIGN -->
-        <OptimalDesign>
+        <OptimalDesign type="evaluation">
             <OptimalDesignBlock blockNumber="1">
                 <FIM>                               <!-- 4x4 matrix for simplicity -->
                     <ct:Matrix matrixType="Any">
