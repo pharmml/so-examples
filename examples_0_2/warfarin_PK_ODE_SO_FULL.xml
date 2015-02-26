@@ -1014,59 +1014,54 @@
                         <!-- omitted other matrix rows -->
                     </ct:Matrix>
                 </CovarianceMatrix>
-                <ParameterPrecision>    <!-- PARAMETER_NAME, PARMETER_VALUE, SE, RSE, SHRINKAGE -->
-                    <ds:Definition>
+                <ParameterPrecision> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset"> 
                         <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
                         <ds:Column columnId="ParameterValue" columnType="undefined" valueType="string" columnNum="2"/>
                         <ds:Column columnId="SE" columnType="undefined" valueType="real" columnNum="3"/>
                         <ds:Column columnId="RSE" columnType="undefined" valueType="real" columnNum="4"/>
-                        <ds:Column columnId="Shrinkage" columnType="undefined" valueType="real" columnNum="5"/>
-                    </ds:Definition>
-                    <ds:Table>
-                        <ds:Row>
-                            <ct:String>CL</ct:String><ct:Real>10</ct:Real><ct:Real>1.0</ct:Real><ct:Real>2.0</ct:Real><ct:Real>3.0</ct:Real>
-                            <ct:String>V</ct:String><ct:Real>12</ct:Real><ct:Real>1.1</ct:Real><ct:Real>2.1</ct:Real><ct:Real>3.1</ct:Real>
-                            <!-- other parameters omitted -->
-                        </ds:Row>
-                    </ds:Table>
-                </ParameterPrecision>
-                <Criteria>    <!-- CRITERIA_NAME, CRITERIA_VALUE, COMMENTS -->
-                    <ds:Definition>
+                        <!--<ds:Column columnId="Shrinkage" columnType="undefined" valueType="real" columnNum="5"/>--> <!-- should not be used/populated if NaN -->
+                    </Definition> 
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:String>ka</ct:String><ct:Real>2</ct:Real><ct:Real>0.174918047946247</ct:Real><ct:Real>8.74590239731233</ct:Real></Row>
+                        <Row><ct:String>k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.0116434498869208</ct:Real><ct:Real>4.65737995476831</ct:Real></Row>
+                        <Row><ct:String>V</ct:String><ct:Real>15</ct:Real><ct:Real>0.50355898034057</ct:Real><ct:Real>3.35705986893713</ct:Real></Row>
+                        <Row><ct:String>omega2.ka</ct:String><ct:Real>1</ct:Real><ct:Real>0.133827154058613</ct:Real><ct:Real>13.3827154058613</ct:Real></Row>
+                        <Row><ct:String>omega2.k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.0389176843945328</ct:Real><ct:Real>15.5670737578131</ct:Real></Row>
+                        <Row><ct:String>omega2.V</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.0191908757812038</ct:Real><ct:Real>19.1908757812038</ct:Real></Row>
+                        <Row><ct:String>sig.interA</ct:String><ct:Real>0.5</ct:Real><ct:Real>0.0430207426749537</ct:Real><ct:Real>8.60414853499073</ct:Real></Row>
+                        <Row><ct:String>sig.slopeA</ct:String><ct:Real>0.15</ct:Real><ct:Real>0.0209432208304491</ct:Real><ct:Real>13.9621472202994</ct:Real></Row>
+                    </Table> 
+                </ParameterPrecision> 
+                <Criteria> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset"> 
                         <ds:Column columnId="CriteriumName" columnType="undefined" valueType="string" columnNum="1"/>
                         <ds:Column columnId="CriteriumValue" columnType="undefined" valueType="real" columnNum="2"/>
                         <ds:Column columnId="Comments" columnType="undefined" valueType="string" columnNum="3"/>
-                    </ds:Definition>
-                    <ds:Table>
-                        <ds:Row>
-                            <ct:String>D-optimality</ct:String><ct:Real>100</ct:Real><ct:String>no too bad</ct:String>
-                            <ct:String>ED-optimality</ct:String><ct:Real>10</ct:Real><ct:String>even better</ct:String>
-                            <!-- other rows omitted -->
-                        </ds:Row>
-                    </ds:Table>
+                    </Definition> 
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:String>D-optimality</ct:String><ct:Real>371.3125</ct:Real><ct:String>determinant of FIM</ct:String></Row>
+                    </Table> 
                 </Criteria>
-                <Tests> <!-- TEST_NAME (only ‘Wald’ for now), TEST_TYPE (controlled list: ‘comparison’, ‘equivalence’, ’non-inferiority’, ’non-superiority’), 
-                            PARAMETER_VALUE, DELTA, LOWER_LIMIT, UPPER_LIMIT, TYPE1_ERROR, PREDICTED_POWER, TARGET_POWER, NUMBER_SUBJECTS -->
-                    <ds:Definition>
+                <Tests> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset"> 
                         <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
                         <ds:Column columnId="TestName" columnType="undefined" valueType="string" columnNum="2"/>
                         <ds:Column columnId="TestType" columnType="undefined" valueType="string" columnNum="3"/>
                         <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="4"/>
-                        <ds:Column columnId="Delta" columnType="undefined" valueType="real" columnNum="5"/>
-                        <ds:Column columnId="LowerLimit" columnType="undefined" valueType="real" columnNum="6"/>
-                        <ds:Column columnId="UpperLimit" columnType="undefined" valueType="real" columnNum="7"/>
-                        <ds:Column columnId="Type1Error" columnType="undefined" valueType="real" columnNum="8"/>
-                        <ds:Column columnId="PredictedPower" columnType="undefined" valueType="real" columnNum="9"/>
-                        <ds:Column columnId="TargetPower" columnType="undefined" valueType="real" columnNum="10"/>
-                        <ds:Column columnId="NumberSubject" columnType="undefined" valueType="real" columnNum="11"/>
-                    </ds:Definition>
-                    <ds:Table>
-                        <ds:Row>
-                            <ct:String>V</ct:String><ct:String>Wald</ct:String><ct:String>comparison</ct:String><ct:Real>1</ct:Real>
-                            <ct:Real>10</ct:Real><ct:Real>0</ct:Real><ct:Real>100</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><ct:Real>1000</ct:Real>
-                            <!-- omitted other rows -->
-                        </ds:Row>
-                    </ds:Table>
+<!--                        <ds:Column columnId="Delta" columnType="undefined" valueType="real" columnNum="5"/>-->      <!-- omitted if contains NaN - NaN to be supported soon -->
+                        <ds:Column columnId="LowerLimit" columnType="undefined" valueType="real" columnNum="5"/>
+                        <ds:Column columnId="UpperLimit" columnType="undefined" valueType="real" columnNum="6"/>
+                        <ds:Column columnId="Type1Error" columnType="undefined" valueType="real" columnNum="7"/>
+                        <ds:Column columnId="PredictedPower" columnType="undefined" valueType="real" columnNum="8"/>
+                        <ds:Column columnId="TargetPower" columnType="undefined" valueType="real" columnNum="9"/>
+                        <ds:Column columnId="NumberSubject" columnType="undefined" valueType="real" columnNum="10"/>
+                    </Definition> 
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Row><ct:String>beta_V_Sex_F</ct:String><ct:String>Wald</ct:String><ct:String>equivalence</ct:String><ct:Real>0.1823216</ct:Real><ct:Real>-0.2231436</ct:Real><ct:Real>0.2231436</ct:Real><ct:Real>0.05</ct:Real><ct:Real>0.1042397</ct:Real><ct:Real>0.9</ct:Real><ct:Real>2286.081</ct:Real></Row>    
+                        <Row><ct:String>beta_Cl_Treat_B</ct:String><ct:String>Wald</ct:String><ct:String>equivalence</ct:String><ct:Real>0.09531018</ct:Real><ct:Real>-0.2231436</ct:Real><ct:Real>0.2231436</ct:Real><ct:Real>0.05</ct:Real><ct:Real>0.9818745</ct:Real><ct:Real>0.9</ct:Real><ct:Real>24.50351</ct:Real></Row>    
+                        <Row><ct:String>beta_V_Sex_F</ct:String><ct:String>Wald</ct:String><ct:String>comparison</ct:String><ct:Real>0.4054651</ct:Real><ct:Real>0.050000</ct:Real><ct:Real>0.978421</ct:Real><ct:Real>0.9</ct:Real><ct:Real>26.50458</ct:Real><ct:Real>0.9</ct:Real><ct:Real>24.50351</ct:Real></Row>
+                    </Table> 
                 </Tests>
                 <SimulatedData oid="SimDataOid">
                     <ds:path>SimulatedData.dat</ds:path>
