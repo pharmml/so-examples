@@ -858,26 +858,48 @@
                     </ds:ExternalFile>-->
             </DiagnosticPlotsIndividualParams>
         </ModelDiagnostic>
-        
+                
         <!-- SIMULATION -->
-        <Simulation> 
+        <Simulation>
             <SimulationBlock replicate="1">         <!-- OPTIONAL: if only one block required -->
-                <SimulatedProfiles>
+                <SimulatedProfiles name="DEMOGRAPHIC">
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="DVID" columnType="dvid" valueType="int" columnNum="2"/>
-                        <ds:Column columnId="time" columnType="time" valueType="real" columnNum="3"/>
-                        <ds:Column columnId="Observation" columnType="dv" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="DEMOGRAPHIC1" columnType="undefined" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="DEMOGRAPHIC2" columnType="undefined" valueType="real" columnNum="3"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
+                        <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
                         <!-- omitted other ID's -->
-                        <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
+                        <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
                     </ds:Table>
                     <!-- ALTERNATIVELY as DATASET - omitted in the elements below for simplicity
                 <ds:ExternalFile oid="oid1">
                     <ds:path>SimulatedProfiles.txt</ds:path>
                 </ds:ExternalFile>-->
+                </SimulatedProfiles>
+                <SimulatedProfiles name="ENZYMATIC_STATUS">
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="ENZYMATIC_STATUS" columnType="undefined" valueType="string" columnNum="2"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:String>Intermediate metabolizer</ct:String></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:String>Fast metabolizer</ct:String></ds:Row>
+                    </ds:Table>
+                </SimulatedProfiles>
+                <SimulatedProfiles name="AND NOW FOR SOMETHING COMPLETELY DIFFERENT">
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="time" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="SomethingDifferent" columnType="undefined" valueType="real" columnNum="3"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
+                    </ds:Table>
                 </SimulatedProfiles>
                 <IndivParameters>
                     <ds:Definition>
