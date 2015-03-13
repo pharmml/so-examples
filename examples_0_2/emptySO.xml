@@ -58,7 +58,7 @@
 
                 <Dosing>...</Dosing>
             </SimulationBlock>
-            <!--            <SimulationBlock replicate="2">
+            <!-- <SimulationBlock replicate="2">
                 ...
             </SimulationBlock>-->
         </Simulation>
@@ -80,7 +80,7 @@
                 <Design oid="desingOid">...</Design>
                 
             </OptimalDesignBlock>
-            <!--            <OptimalDesignBlock blockNumber="2">
+            <!-- <OptimalDesignBlock blockNumber="2">
                 ...
             </OptimalDesignBlock>-->
     </SOBlock>
