@@ -952,19 +952,14 @@
                 
         <!-- SIMULATION -->
         <Simulation>
-            <SimulationBlock replicate="1">                 <!-- OPTIONAL: if only one block required -->
-                <SimulatedProfiles name="DEMOGRAPHIC">      <!-- optional name attribute -->
-                    <ExtFile number="1">                    <!-- optional if column from multiple files are referrenced -->
+            <SimulationBlock replicate="1">                 <!-- OPTIONAL if only one block required -->
+                <SimulatedProfiles name="DEMOGRAPHIC">      <!-- OPTIONAL name attribute -->
+                    <ExtFile number="1">                    <!-- OPTIONAL element if columns from multiple files are referrenced -->
                         <ds:Definition>
                             <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                             <ds:Column columnId="DEMOGRAPHIC1" columnType="undefined" valueType="real" columnNum="2"/>
                             <ds:Column columnId="DEMOGRAPHIC4" columnType="undefined" valueType="real" columnNum="5"/>
                         </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
-                            <!-- omitted other ID's -->
-                            <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
-                        </ds:Table>
                         <ds:ExternalFile oid="oid1">
                             <ds:path>SimulatedProfiles_file1.txt</ds:path>
                         </ds:ExternalFile>
@@ -975,11 +970,6 @@
                             <ds:Column columnId="DEMOGRAPHIC11" columnType="undefined" valueType="real" columnNum="22"/>
                             <ds:Column columnId="DEMOGRAPHIC21" columnType="undefined" valueType="real" columnNum="53"/>
                         </ds:Definition>
-                        <ds:Table>
-                            <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
-                            <!-- omitted other ID's -->
-                            <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
-                        </ds:Table>
                         <ds:ExternalFile oid="oid1">
                             <ds:path>SimulatedProfiles_file1.txt</ds:path>
                         </ds:ExternalFile>
