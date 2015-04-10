@@ -954,7 +954,7 @@
         <Simulation>
             <SimulationBlock replicate="1">                 <!-- OPTIONAL: if only one block required -->
                 <SimulatedProfiles name="DEMOGRAPHIC">      <!-- optional name attribute -->
-                    <ExtFile number="1">
+                    <ExtFile number="1">                    <!-- optional if column from multiple files are referrenced -->
                         <ds:Definition>
                             <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                             <ds:Column columnId="DEMOGRAPHIC1" columnType="undefined" valueType="real" columnNum="2"/>
@@ -985,34 +985,6 @@
                         </ds:ExternalFile>
                     </ExtFile>
                 </SimulatedProfiles>
-                
-                <!-- SIMCYP -->
-<!--                <ExtFile number="1">
-                    <ds:Definition>
-                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="DEMOGRAPHIC1" columnType="undefined" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="DEMOGRAPHIC2" columnType="undefined" valueType="real" columnNum="3"/>
-                    </ds:Definition>
-                    <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
-                        <!-\- omitted other ID's -\->
-                        <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real></ds:Row>
-                    </ds:Table>
-                    <!-\- ALTERNATIVELY as DATASET
-                <ds:ExternalFile oid="oid1">
-                    <ds:path>SimulatedProfiles.txt</ds:path>
-                </ds:ExternalFile>-\->
-                </ExtFile>
-                <ExtFile number="2">
-                    <ds:Definition>
-                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="DEMOGRAPHIC1" columnType="undefined" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="DEMOGRAPHIC2" columnType="undefined" valueType="real" columnNum="3"/>
-                    </ds:Definition>
-                    <ds:ExternalFile oid="oid1">
-                        <ds:path>SimulatedProfiles.txt</ds:path>
-                    </ds:ExternalFile>                    
-                </ExtFile>-->
                 
                 <IndivParameters>
                     <ds:Definition>
