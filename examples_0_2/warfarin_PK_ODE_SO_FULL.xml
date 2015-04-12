@@ -917,7 +917,7 @@
         
         <!-- IDAES after Duncan's email -->
 <!--        <Simulation>
-            <SimulatedProfiles id="ConcProfiles">
+            <SimulatedProfiles name="ConcProfiles">
                 <ds:Definition>
                     <Header rowNumber="1" use="column name" headerType="string"/>
                     <Header rowNumber="2" use="second name" headerType="string"/>
@@ -929,6 +929,10 @@
                     <ds:Column columnId="Population" columnType="undefined" valueType="int" columnNum="5"/>
                     <ds:Column columnId="Trial" columnType="undefined" valueType="int" columnNum="6"/>
                 </ds:Definition>
+                <ds:ExternalFile oid="oid1">
+                    <ds:path>SimulatedProfiles.txt</ds:path>
+                </ds:ExternalFile>
+                
                 <ds:Table>
                     <ds:HeaderRow>
                         <ct:String>mainName1</ct:String><ct:String>mainName2</ct:String><!-\- omitted header columns-\-><ct:String>mainName6</ct:String>
@@ -952,29 +956,28 @@
                 
         <!-- SIMULATION -->
         <Simulation>
-            <SimulationBlock replicate="1">                 <!-- OPTIONAL if only one block required -->
-                <SimulatedProfiles name="DEMOGRAPHIC">      <!-- OPTIONAL name attribute -->
-                    <ExtFile number="1">                    <!-- OPTIONAL element if columns from multiple files are referrenced -->
+            <SimulationBlock replicate="1">                             <!-- OPTIONAL if only one block required -->
+                <SimulatedProfiles name="DEMOGRAPHIC" extFileNo="1">    <!-- OPTIONAL name/extFileNo attributes -->
                         <ds:Definition>
                             <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="DEMOGRAPHIC1" columnType="undefined" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="DEMOGRAPHIC4" columnType="undefined" valueType="real" columnNum="5"/>
+                            <ds:Column columnId="DEMOGRAPHIC11" columnType="undefined" valueType="real" columnNum="2"/>
+                            <ds:Column columnId="DEMOGRAPHIC14" columnType="undefined" valueType="real" columnNum="5"/>
                         </ds:Definition>
                         <ds:ExternalFile oid="oid1">
                             <ds:path>SimulatedProfiles_file1.txt</ds:path>
                         </ds:ExternalFile>
-                    </ExtFile>
-                    <ExtFile number="2">
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="DEMOGRAPHIC11" columnType="undefined" valueType="real" columnNum="22"/>
-                            <ds:Column columnId="DEMOGRAPHIC21" columnType="undefined" valueType="real" columnNum="53"/>
-                        </ds:Definition>
-                        <ds:ExternalFile oid="oid1">
-                            <ds:path>SimulatedProfiles_file1.txt</ds:path>
-                        </ds:ExternalFile>
-                    </ExtFile>
                 </SimulatedProfiles>
+                <SimulatedProfiles name="DEMOGRAPHIC" extFileNo="2">
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="DEMOGRAPHIC21" columnType="undefined" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="DEMOGRAPHIC24" columnType="undefined" valueType="real" columnNum="15"/>
+                    </ds:Definition>
+                    <ds:ExternalFile oid="oid1">
+                        <ds:path>SimulatedProfiles_file2.txt</ds:path>
+                    </ds:ExternalFile>
+                </SimulatedProfiles>
+                
                 
                 <IndivParameters>
                     <ds:Definition>
