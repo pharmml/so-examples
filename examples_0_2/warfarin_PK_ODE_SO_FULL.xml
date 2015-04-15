@@ -363,6 +363,9 @@
                             <!-- omitted other parameters -->
                         </ds:Table>
                     </AsymptoticCI>
+                    <ConditionNumber>
+                        <ct:Real>.0001</ct:Real>
+                    </ConditionNumber>
                 </MLE>
                 <Bayesian>
                     <StandardDeviationPosterior>
