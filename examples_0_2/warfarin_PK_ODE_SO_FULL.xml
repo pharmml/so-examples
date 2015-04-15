@@ -975,7 +975,7 @@
                             <ds:path>SimulatedProfiles_file1.txt</ds:path>
                         </ds:ExternalFile>
                 </SimulatedProfiles>
-                <SimulatedProfiles name="DEMOGRAPHIC" extFileNo="2">
+                <SimulatedProfiles name="DEMOGRAPHIC" extFileNo="2">    <!-- second OPTIONAL SimulatedProfiles dataset here  -->
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <ds:Column columnId="DEMOGRAPHIC21" columnType="undefined" valueType="real" columnNum="4"/>
