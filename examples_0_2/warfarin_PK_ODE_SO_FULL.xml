@@ -13,8 +13,18 @@
     <SOBlock blkId="SO1"> <!-- optional, needed when multiple SOblocks are reqiured e.g. for bootstrap -->
         
         <!-- TOOL SETTINGS -->
-        <ToolSettings oid="ts1">
-            <ds:path>algorithms.xmlx</ds:path>
+        <ToolSettings>
+            <File oid="ts1">
+                <ct:Description>Algorithm settings</ct:Description> <!-- OPTIONAL -->
+                <ds:path>algorithms.xmlx</ds:path>
+            </File>
+            <File oid="ts2">
+                <ct:Description>Solver settings</ct:Description>
+                <ds:path>solver.xmlx</ds:path>
+            </File>
+            <File oid="ts3">
+                <ds:path>andNowForSomethingCompletelyDifferent.xmlx</ds:path>
+            </File>
         </ToolSettings>
         
         <!-- RAW RESULTS -->
@@ -78,7 +88,7 @@
         <!-- ESTIMATION -->
         <Estimation>
             <PopulationEstimates>
-                <MLE id="i1">
+                <MLE>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
                         <Column columnId="POP_CL" columnType="undefined" valueType="real" columnNum="1"/>
                         <Column columnId="POP_V" columnType="undefined" valueType="real" columnNum="2"/>
