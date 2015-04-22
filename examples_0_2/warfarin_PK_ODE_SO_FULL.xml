@@ -974,26 +974,23 @@
                 
         <!-- SIMULATION -->
         <Simulation>
-            <SimulationBlock replicate="1">                             <!-- OPTIONAL if only one block required -->
-                <SimulatedProfiles name="DEMOGRAPHIC" extFileNo="1">    <!-- OPTIONAL name/extFileNo attributes -->
-                        <ds:Definition>
-                            <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                            <ds:Column columnId="DEMOGRAPHIC11" columnType="undefined" valueType="real" columnNum="2"/>
-                            <ds:Column columnId="DEMOGRAPHIC14" columnType="undefined" valueType="real" columnNum="5"/>
-                        </ds:Definition>
-                        <ds:ExternalFile oid="oid1">
-                            <ds:path>SimulatedProfiles_file1.txt</ds:path>
-                        </ds:ExternalFile>
-                </SimulatedProfiles>
-                <SimulatedProfiles name="DEMOGRAPHIC" extFileNo="2">    <!-- second OPTIONAL SimulatedProfiles dataset here  -->
+            <SimulationBlock replicate="1">             <!-- OPTIONAL if only one block required -->
+                <SimulatedProfiles>                     <!-- OPTIONAL name/extFileNo attributes -->
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="DEMOGRAPHIC21" columnType="undefined" valueType="real" columnNum="4"/>
-                        <ds:Column columnId="DEMOGRAPHIC24" columnType="undefined" valueType="real" columnNum="15"/>
+                        <ds:Column columnId="DVID" columnType="dvid" valueType="int" columnNum="2"/>
+                        <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="Observation" columnType="dv" valueType="real" columnNum="4"/>
                     </ds:Definition>
-                    <ds:ExternalFile oid="oid1">
-                        <ds:path>SimulatedProfiles_file2.txt</ds:path>
-                    </ds:ExternalFile>
+                    <ds:Table>
+                        <ds:Row><ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
+                        <!-- omitted other ID's -->
+                        <ds:Row><ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real></ds:Row>
+                    </ds:Table>
+                    <!-- ALTERNATIVELY as DATASET - omitted in the elements below for simplicity
+                <ds:ExternalFile oid="oid1">
+                    <ds:path>SimulatedProfiles.txt</ds:path>
+                </ds:ExternalFile>-->
                 </SimulatedProfiles>
                 
                 <IndivParameters>
