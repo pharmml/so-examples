@@ -993,11 +993,36 @@
                 </ds:ExternalFile>-->
                 </SimulatedProfiles>
                 
+                <!-- Simcyp examples -->
+                <SimulatedProfiles name="SimProfile1" extFileNo="1">                     <!-- OPTIONAL name/extFileNo attributes -->
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="Observation1" columnType="dv" valueType="real" columnNum="5"/>
+                        <ds:Column columnId="Observation3" columnType="dv" valueType="real" columnNum="29"/>
+                    </ds:Definition>
+                    <ds:ExternalFile oid="oid1">
+                        <ds:path>SimulatedProfiles_file1.txt</ds:path>
+                    </ds:ExternalFile>
+                </SimulatedProfiles>
+                
+                <SimulatedProfiles name="SimProfile2" extFileNo="2">                     <!-- OPTIONAL name/extFileNo attributes -->
+                    <ds:Definition>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="Observation2" columnType="dv" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="Observation13" columnType="dv" valueType="real" columnNum="9"/>
+                    </ds:Definition>
+                    <ds:ExternalFile oid="oid1">
+                        <ds:path>SimulatedProfiles_file2.txt</ds:path>
+                    </ds:ExternalFile>
+                </SimulatedProfiles>
+                
                 <IndivParameters>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="occasionStart" columnType="time" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="occasionEnd" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
                         <ds:Column columnId="PARAM_1" columnType="undefined" valueType="real" columnNum="4"/>
                         <!-- omitted other Parameters -->
                         <ds:Column columnId="PARAM_K" columnType="undefined" valueType="real" columnNum="5"/>
@@ -1015,8 +1040,8 @@
                 <RandomEffects>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="occasionStart" columnType="time" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="occasionEnd" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
                         <ds:Column columnId="ETA_1" columnType="undefined" valueType="real" columnNum="4"/>
                         <!-- omitted other RandomEffects -->
                         <ds:Column columnId="ETA_S" columnType="undefined" valueType="real" columnNum="5"/>
@@ -1034,8 +1059,8 @@
                 <Covariates>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="occasionStart" columnType="time" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="occasionEnd" columnType="time" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="3"/>
                         <ds:Column columnId="Covariate_1" columnType="undefined" valueType="real" columnNum="4"/>
                         <!-- omitted other Covariates -->
                         <ds:Column columnId="Covariate_D" columnType="undefined" valueType="real" columnNum="5"/>
@@ -1052,8 +1077,8 @@
                 
                 <PopulationParameters>
                     <ds:Definition>
-                        <ds:Column columnId="occasionStart" columnType="time" valueType="real" columnNum="1"/>
-                        <ds:Column columnId="occasionEnd" columnType="time" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="1"/>
+                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="2"/>
                         <ds:Column columnId="POPPARAM_1" columnType="undefined" valueType="real" columnNum="3"/>
                         <!-- omitted other Parameters -->
                         <ds:Column columnId="POPPARAM_Z" columnType="undefined" valueType="real" columnNum="4"/>
