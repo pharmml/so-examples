@@ -12,12 +12,13 @@
     
     
     <!-- IDAES after Duncan's email -->
-    <!--        <Simulation>
+            <Simulation>
             <SimulatedProfiles name="ConcProfiles">
                 <ds:Definition>
-                    <Header rowNumber="1" use="column name" headerType="string"/>
-                    <Header rowNumber="2" use="second name" headerType="string"/>
-                    <Header rowNumber="3" use="units" headerType="string"/>
+                    <ds:Header rowNumber="1" headerType="mainHeader"/>
+                    <ds:Header rowNumber="2" headerType="subHeader"/>
+                    <ds:Header rowNumber="3" headerType="userDefined"/>
+                    <ds:Header rowNumber="4" headerType="userDefined" valueType="string"/>
                     <ds:Column columnId="ID" columnType="id" valueType="int" columnNum="1"/>
                     <ds:Column columnId="DVID" columnType="dvid" valueType="string" columnNum="2"/>
                     <ds:Column columnId="DV" columnType="dv" valueType="real" columnNum="3"/>
@@ -31,13 +32,13 @@
                 
                 <ds:Table>
                     <ds:HeaderRow>
-                        <ct:String>mainName1</ct:String><ct:String>mainName2</ct:String><!-\- omitted header columns-\-><ct:String>mainName6</ct:String>
+                        <ct:String>mainName1</ct:String><ct:String>mainName2</ct:String><!-- omitted header columns--><ct:String>mainName6</ct:String>
                     </ds:HeaderRow>
                     <ds:HeaderRow>
-                        <ct:String>subName1</ct:String><ct:String>subName2</ct:String><!-\- omitted header columns-\-><ct:String>subName6</ct:String>
+                        <ct:String>subName1</ct:String><ct:String>subName2</ct:String><!-- omitted header columns--><ct:String>subName6</ct:String>
                     </ds:HeaderRow>
                     <ds:HeaderRow>
-                        <ct:String>unit1</ct:String><ct:String>unit2</ct:String><!-\- omitted header columns-\-><ct:String>unit6</ct:String>
+                        <ct:String>unit1</ct:String><ct:String>unit2</ct:String><!-- omitted header columns--><ct:String>unit6</ct:String>
                     </ds:HeaderRow>
                     <ds:Row>
                         <ct:Int>1</ct:Int><ct:String>Conc_Sub</ct:String><ct:Real>0.0</ct:Real><ct:Real>0.0</ct:Real><ct:Int>0</ct:Int><ct:Int>1</ct:Int>
@@ -45,10 +46,10 @@
                     <ds:Row>
                         <ct:Int>1</ct:Int><ct:String>Conc_Sub</ct:String><ct:Real>0.0</ct:Real><ct:Real>0.5</ct:Real><ct:Int>0</ct:Int><ct:Int>1</ct:Int>
                     </ds:Row>
-                    <!-\- omitted rows -\->
+                    <!-- omitted rows -->
                 </ds:Table>
             </SimulatedProfiles>
-        </Simulation>-->
+        </Simulation>
     
     
     <SOBlock blkId="SO1">
