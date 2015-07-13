@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SO xmlns="http://www.pharmml.org/so/0.2/StandardisedOutput"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ds="http://www.pharmml.org/pharmml/0.6/Dataset"
-    xmlns:ct="http://www.pharmml.org/pharmml/0.6/CommonTypes"
+    xmlns:ds="http://www.pharmml.org/pharmml/0.7/Dataset"
+    xmlns:ct="http://www.pharmml.org/pharmml/0.7/CommonTypes"
     xsi:schemaLocation="http://www.pharmml.org/so/0.2/StandardisedOutput 
     http://www.pharmml.org/so/0.2/StandardisedOutput" 
-    implementedBy="MJS" writtenVersion="0.2"  
+    implementedBy="MJS" writtenVersion="0.2" 
     metadataFile="xyzExample.rdf" id="i1">
     
     <PharmMLRef name="xyzExample.xml"/>

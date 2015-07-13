@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SO xmlns="http://www.pharmml.org/so/0.2/StandardisedOutput"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xmlns:ds="http://www.pharmml.org/pharmml/0.6/Dataset"
-    xmlns:ct="http://www.pharmml.org/pharmml/0.6/CommonTypes"
+    xmlns:ds="http://www.pharmml.org/pharmml/0.7/Dataset"
+    xmlns:ct="http://www.pharmml.org/pharmml/0.7/CommonTypes"
     xsi:schemaLocation="http://www.pharmml.org/so/0.2/StandardisedOutput 
     http://www.pharmml.org/so/0.2/StandardisedOutput" 
     implementedBy="MJS" writtenVersion="0.2"  
@@ -91,7 +91,7 @@
         <Estimation>
             <PopulationEstimates>
                 <MLE>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="POP_CL" columnType="popParameter" valueType="real" columnNum="1"/>
                         <Column columnId="POP_V" columnType="popParameter" valueType="real" columnNum="2"/>
                         <Column columnId="POP_KA" columnType="popParameter" valueType="real" columnNum="3"/>
@@ -106,7 +106,7 @@
                         <Column columnId="RUV_ADD" columnType="popParameter" valueType="real" columnNum="12"/>
                         <Column columnId="CORR_PPV_CL_V" columnType="popParameter" valueType="real" columnNum="13"/>
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                             <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
                             <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
@@ -122,7 +122,7 @@
                 
                 <Bayesian>
                     <PosteriorMean>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="POP_CL" columnType="popParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="popParameter" valueType="real" columnNum="2"/>
                             <Column columnId="POP_KA" columnType="popParameter" valueType="real" columnNum="3"/>
@@ -137,7 +137,7 @@
                             <Column columnId="RUV_ADD" columnType="popParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="popParameter" valueType="real" columnNum="13"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
                                 <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
@@ -153,7 +153,7 @@
                     </ds:ExternalFile>-->
                     </PosteriorMean>
                     <PosteriorMedian>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="POP_CL" columnType="popParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="popParameter" valueType="real" columnNum="2"/>
                             <Column columnId="POP_KA" columnType="popParameter" valueType="real" columnNum="3"/>
@@ -168,7 +168,7 @@
                             <Column columnId="RUV_ADD" columnType="popParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="popParameter" valueType="real" columnNum="13"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
                                 <ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
@@ -179,7 +179,7 @@
                         </Table>
                     </PosteriorMedian>
                     <PosteriorMode>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="POP_CL" columnType="popParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="popParameter" valueType="real" columnNum="2"/>
                             <Column columnId="POP_KA" columnType="popParameter" valueType="real" columnNum="3"/>
@@ -194,7 +194,7 @@
                             <Column columnId="RUV_ADD" columnType="popParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="popParameter" valueType="real" columnNum="13"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
                                 <ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
@@ -208,7 +208,7 @@
                 
                 <Bootstrap>
                     <Mean>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="POP_CL" columnType="popParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="popParameter" valueType="real" columnNum="2"/>
                             <Column columnId="POP_KA" columnType="popParameter" valueType="real" columnNum="3"/>
@@ -223,7 +223,7 @@
                             <Column columnId="RUV_ADD" columnType="popParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="popParameter" valueType="real" columnNum="13"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
                                 <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
@@ -233,7 +233,7 @@
                         </Table>
                     </Mean>
                     <Median>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="POP_CL" columnType="popParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="popParameter" valueType="real" columnNum="2"/>
                             <Column columnId="POP_KA" columnType="popParameter" valueType="real" columnNum="3"/>
@@ -248,7 +248,7 @@
                             <Column columnId="RUV_ADD" columnType="popParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="popParameter" valueType="real" columnNum="13"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
                                 <ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
                                 <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
@@ -650,7 +650,7 @@
             <IndividualEstimates>
                 <Estimates>
                     <Mean>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                             <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
                             <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
@@ -658,14 +658,14 @@
                             <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
                             <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </Mean>
                     <Median>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                             <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
                             <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
@@ -673,14 +673,14 @@
                             <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
                             <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </Median>
                     <Mode>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                             <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
                             <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
@@ -688,21 +688,21 @@
                             <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
                             <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </Mode>
                     <Samples>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="1"/>
                             <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="2"/>
                             <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="3"/>
                             <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="4"/>
                             <!-- omitted other parameters -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
                             <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
                             <!-- omitted other subjects -->
@@ -711,7 +711,7 @@
                 </Estimates>
                 <RandomEffects>
                     <EffectMean>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                             <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
                             <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="3"/>
@@ -719,7 +719,7 @@
                             <Column columnId="ETA_TLAG" columnType="randEffect" valueType="real" columnNum="5"/>
                             <!-- omitted other random effects -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
                                 <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
                                 <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
@@ -728,7 +728,7 @@
                         </Table>
                     </EffectMean>
                     <EffectMedian>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                             <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
                             <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="3"/>
@@ -736,7 +736,7 @@
                             <Column columnId="ETA_TLAG" columnType="randEffect" valueType="real" columnNum="5"/>
                             <!-- omitted other random effects -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
                                 <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
                                 <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
@@ -745,7 +745,7 @@
                         </Table>
                     </EffectMedian>
                     <EffectMode>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                             <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
                             <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="3"/>
@@ -753,7 +753,7 @@
                             <Column columnId="ETA_TLAG" columnType="randEffect" valueType="real" columnNum="5"/>
                             <!-- omitted other random effects -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
                                 <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
                                 <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
@@ -762,14 +762,14 @@
                         </Table>
                     </EffectMode>
                     <Samples>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="1"/>
                             <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="2"/>
                             <Column columnId="ETA_KA" columnType="randEffect" valueType="real" columnNum="3"/>
                             <Column columnId="ETA_TLAG" columnType="randEffect" valueType="real" columnNum="4"/>
                             <!-- omitted other parameters -->
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
                             <Row><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
                             <!-- omitted other subjects -->
@@ -779,14 +779,14 @@
                 
                 <!-- RELOCATED -->
                 <EtaShrinkage>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ETA_SHRINKAGE_CL" columnType="statPrecision" valueType="real" columnNum="1"/>
                         <Column columnId="ETA_SHRINKAGE_V" columnType="statPrecision" valueType="real" columnNum="2"/>
                         <Column columnId="ETA_SHRINKAGE_KA" columnType="statPrecision" valueType="real" columnNum="3"/>
                         <Column columnId="ETA_SHRINKAGE_TLAG" columnType="statPrecision" valueType="real" columnNum="4"/>
                         <!-- omitted other random effects shrinkage -->
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
                     </Table>
                 </EtaShrinkage>
@@ -806,7 +806,7 @@
             
             <Residuals>
                 <ResidualTable>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
                         <Column columnId="RES" columnType="residual" valueType="real" columnNum="3"/>
@@ -817,7 +817,7 @@
                         <Column columnId="PD" columnType="residual" valueType="real" columnNum="8"/>
                         <Column columnId="NPDE" columnType="residual" valueType="real" columnNum="9"/>
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row>
                             <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
                             <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
@@ -832,25 +832,25 @@
                     </Table>
                 </ResidualTable>
                 <EpsShrinkage>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="EPS_SHRINKAGE_ADD" columnType="statPrecision" valueType="real" columnNum="1"/>
                         <Column columnId="EPS_SHRINKAGE_PROP" columnType="statPrecision" valueType="real" columnNum="2"/>
                         <!-- omitted other residual errror shrinkage -->
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real></Row>
                     </Table>
                 </EpsShrinkage>
             </Residuals>
             
             <Predictions>
-                <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                     <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                     <Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
                     <Column columnId="PRED" columnType="dv" valueType="real" columnNum="3"/>
                     <Column columnId="IPRED" columnType="dv" valueType="real" columnNum="4"/>
                 </Definition>
-                <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                     <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>7.892</ct:Real><ct:Real>1.892</ct:Real></Row>
                     <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>7.670</ct:Real><ct:Real>6.802</ct:Real></Row>
                     <!-- omitted other subjects -->
@@ -861,11 +861,11 @@
                 <LogLikelihood>1.234</LogLikelihood>
                 <Deviance>2.345</Deviance>
                 <IndividualContribToLL>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                         <Column columnId="ICtoLL" columnType="statPrecision" valueType="real" columnNum="2"/>
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>7.892</ct:Real></Row>
                         <Row><ct:Id>i2</ct:Id><ct:Real>7.670</ct:Real></Row>
                         <!-- omitted other subjects -->
@@ -884,26 +884,26 @@
             <DiagnosticPlotsStructuralModel>
                 <IndivFits>
                     <ObservationTable>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
                             <Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
                             <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="3"/>
                             <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="4"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
                             <!-- omitted other pairs -->
                             <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real><ct:Real>14</ct:Real></Row>
                         </Table>
                     </ObservationTable>
                     <PredictionTable>
-                        <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
                             <Column columnId="TIMEcont" columnType="time" valueType="real" columnNum="2"/>
                             <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="3"/>
                             <Column columnId="PREDICTIONcont" columnType="dv" valueType="real" columnNum="4"/>
                         </Definition>
-                        <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                        <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
                             <!-- omitted other pairs -->
                             <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>13</ct:Real><ct:Real>14</ct:Real></Row>
@@ -911,7 +911,7 @@
                     </PredictionTable>
                 </IndivFits>
                 <IndivPredictionVsObserv>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="PREDICTION" columnType="dv" valueType="real" columnNum="1"/>
                         <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="2"/>
                         <Column columnId="OBSERVATION" columnType="dv" valueType="real" columnNum="3"/>
@@ -919,14 +919,14 @@
                         <!-- omitted STRATA -->
                         <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="5"/>
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real></Row>
                         <!-- omitted other rows -->
                         <Row><ct:Real>11</ct:Real><ct:Real>12</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>15</ct:Real></Row>
                     </Table>
                 </IndivPredictionVsObserv>
                 <VPC>
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="TIME" columnType="time" valueType="real" columnNum="1"/>
                         <Column columnId="BinLow" columnType="statPrecision" valueType="real" columnNum="2"/>
                         <Column columnId="BinHigh" columnType="statPrecision" valueType="real" columnNum="3"/>
@@ -943,7 +943,7 @@
                         <!-- omitted STRATA -->
                         <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="25"/>
                     </Definition>
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>25</ct:Real></Row>
                         <!-- omitted rows -->
                     </Table>
@@ -951,7 +951,7 @@
             </DiagnosticPlotsStructuralModel>
             
             <DiagnosticPlotsIndividualParams>
-                <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                     <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="1"/>
                     <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
                     <!-- ETA_i -->
@@ -968,7 +968,7 @@
                     <!-- omitted STRATA -->
                     <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="32"/>
                 </Definition>
-                <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                     <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real><!-- omitted columns --><ct:Real>32</ct:Real></Row>
                 </Table>
                 <!--ALTERNATIVE: external data file reference. -->
@@ -1162,14 +1162,14 @@
                 </CovarianceMatrix>
                 
                 <ParameterPrecision> 
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset"> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
                         <ds:Column columnId="ParameterName" columnType="popParameter" valueType="string" columnNum="1"/>
                         <ds:Column columnId="ParameterValue" columnType="popParameter" valueType="string" columnNum="2"/>
                         <ds:Column columnId="SE" columnType="statPrecision" valueType="real" columnNum="3"/>
                         <ds:Column columnId="RSE" columnType="statPrecision" valueType="real" columnNum="4"/>
                         <!--<ds:Column columnId="Shrinkage" columnType="undefined" valueType="real" columnNum="5"/>--> <!-- should not be used/populated if NaN -->
                     </Definition> 
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:String>ka</ct:String><ct:Real>2</ct:Real><ct:Real>0.174918047946247</ct:Real><ct:Real>8.74590239731233</ct:Real></Row>
                         <Row><ct:String>k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.0116434498869208</ct:Real><ct:Real>4.65737995476831</ct:Real></Row>
                         <Row><ct:String>V</ct:String><ct:Real>15</ct:Real><ct:Real>0.50355898034057</ct:Real><ct:Real>3.35705986893713</ct:Real></Row>
@@ -1182,18 +1182,18 @@
                 </ParameterPrecision>
                 
                 <Criteria> 
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset"> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
                         <ds:Column columnId="CriteriumName" columnType="undefined" valueType="string" columnNum="1"/>
                         <ds:Column columnId="CriteriumValue" columnType="undefined" valueType="real" columnNum="2"/>
                         <ds:Column columnId="Comments" columnType="undefined" valueType="string" columnNum="3"/>
                     </Definition> 
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:String>D-optimality</ct:String><ct:Real>371.3125</ct:Real><ct:String>determinant of FIM</ct:String></Row>
                     </Table> 
                 </Criteria>
                 
                 <Tests> 
-                    <Definition xmlns="http://www.pharmml.org/pharmml/0.6/Dataset"> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
                         <ds:Column columnId="ParameterName" columnType="popParameter" valueType="string" columnNum="1"/>
                         <ds:Column columnId="TestName" columnType="undefined" valueType="string" columnNum="2"/>
                         <ds:Column columnId="TestType" columnType="undefined" valueType="string" columnNum="3"/>
@@ -1206,7 +1206,7 @@
                         <ds:Column columnId="TargetPower" columnType="statPrecision" valueType="real" columnNum="9"/>
                         <ds:Column columnId="NumberSubject" columnType="undefined" valueType="real" columnNum="10"/>
                     </Definition> 
-                    <Table xmlns="http://www.pharmml.org/pharmml/0.6/Dataset">
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:String>beta_V_Sex_F</ct:String><ct:String>Wald</ct:String><ct:String>equivalence</ct:String><ct:Real>0.1823216</ct:Real><ct:Real>-0.2231436</ct:Real><ct:Real>0.2231436</ct:Real><ct:Real>0.05</ct:Real><ct:Real>0.1042397</ct:Real><ct:Real>0.9</ct:Real><ct:Real>2286.081</ct:Real></Row>    
                         <Row><ct:String>beta_Cl_Treat_B</ct:String><ct:String>Wald</ct:String><ct:String>equivalence</ct:String><ct:Real>0.09531018</ct:Real><ct:Real>-0.2231436</ct:Real><ct:Real>0.2231436</ct:Real><ct:Real>0.05</ct:Real><ct:Real>0.9818745</ct:Real><ct:Real>0.9</ct:Real><ct:Real>24.50351</ct:Real></Row>    
                         <Row><ct:String>beta_V_Sex_F</ct:String><ct:String>Wald</ct:String><ct:String>comparison</ct:String><ct:Real>0.4054651</ct:Real><ct:Real>0.050000</ct:Real><ct:Real>0.978421</ct:Real><ct:Real>0.9</ct:Real><ct:Real>26.50458</ct:Real><ct:Real>0.9</ct:Real><ct:Real>24.50351</ct:Real></Row>
