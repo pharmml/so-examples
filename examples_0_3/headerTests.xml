@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SO xmlns="http://www.pharmml.org/so/0.2/StandardisedOutput"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ds="http://www.pharmml.org/pharmml/0.7/Dataset"
+    xmlns:ct="http://www.pharmml.org/pharmml/0.7/CommonTypes"
+    xsi:schemaLocation="http://www.pharmml.org/so/0.2/StandardisedOutput 
+    http://www.pharmml.org/so/0.2/StandardisedOutput" 
+    implementedBy="MJS" writtenVersion="0.2" 
+    metadataFile="xyzExample.rdf" id="i1">
+    
+    <PharmMLRef name="xyzExample.xml"/>
+    
+    
+    <!-- IDAES after Duncan's email -->
+            <Simulation>
+            <SimulatedProfiles name="ConcProfiles">
+                <ds:Definition>
+                    <ds:Header rowNumber="1" headerType="mainHeader"/>
+                    <ds:Header rowNumber="2" headerType="subHeader"/>
+                    <ds:Header rowNumber="3" headerType="userDefined"/>
+                    <ds:Header rowNumber="4" headerType="userDefined" valueType="string"/>
+                    <ds:Column columnId="ID" columnType="id" valueType="int" columnNum="1"/>
+                    <ds:Column columnId="DVID" columnType="dvid" valueType="string" columnNum="2"/>
+                    <ds:Column columnId="DV" columnType="dv" valueType="real" columnNum="3"/>
+                    <ds:Column columnId="Time" columnType="time" valueType="real" columnNum="4"/>
+                    <ds:Column columnId="Population" columnType="undefined" valueType="int" columnNum="5"/>
+                    <ds:Column columnId="Trial" columnType="undefined" valueType="int" columnNum="6"/>
+                </ds:Definition>
+                <ds:ExternalFile oid="oid1">
+                    <ds:path>SimulatedProfiles.txt</ds:path>
+                </ds:ExternalFile>
+                
+                <ds:Table>
+                    <ds:HeaderRow>
+                        <ct:String>mainName1</ct:String><ct:String>mainName2</ct:String><!-- omitted header columns--><ct:String>mainName6</ct:String>
+                    </ds:HeaderRow>
+                    <ds:HeaderRow>
+                        <ct:String>subName1</ct:String><ct:String>subName2</ct:String><!-- omitted header columns--><ct:String>subName6</ct:String>
+                    </ds:HeaderRow>
+                    <ds:HeaderRow>
+                        <ct:String>unit1</ct:String><ct:String>unit2</ct:String><!-- omitted header columns--><ct:String>unit6</ct:String>
+                    </ds:HeaderRow>
+                    <ds:Row>
+                        <ct:Int>1</ct:Int><ct:String>Conc_Sub</ct:String><ct:Real>0.0</ct:Real><ct:Real>0.0</ct:Real><ct:Int>0</ct:Int><ct:Int>1</ct:Int>
+                    </ds:Row>
+                    <ds:Row>
+                        <ct:Int>1</ct:Int><ct:String>Conc_Sub</ct:String><ct:Real>0.0</ct:Real><ct:Real>0.5</ct:Real><ct:Int>0</ct:Int><ct:Int>1</ct:Int>
+                    </ds:Row>
+                    <!-- omitted rows -->
+                </ds:Table>
+            </SimulatedProfiles>
+        </Simulation>
+    
+    
+    <SOBlock blkId="SO1">
+        
+        <ToolSettings oid="ts1">...</ToolSettings>
+        
+        <RawResults>
+            <DataFile oid="d1">...</DataFile>
+
+            <GraphicsFile oid="g1">...</GraphicsFile>
+
+        </RawResults>
+        
+        <TaskInformation>
+            <Message type="ERROR">
+                <Toolname>...</Toolname>
+                
+                <Name>...</Name>
+                
+                <Content>...</Content>
+                
+                <Severity>...</Severity>
+            </Message>
+            
+            <OutputFilePath oid="o1">...</OutputFilePath>
+            
+            <RunTime>...</RunTime>
+
+            <NumberChains>...</NumberChains>
+
+            <NumberIterations>...</NumberIterations>
+        </TaskInformation>
+        
+        <Estimation>
+            <PopulationEstimates>
+                <MLE id="i1">...</MLE>
+                
+                <Bayesian>
+                    <PosteriorMean>...</PosteriorMean>
+                    
+                    <PosteriorMedian>...</PosteriorMedian>
+
+                    <PosteriorMode>...</PosteriorMode>
+                </Bayesian>
+                
+                <Bootstrap>
+                    <Mean>...</Mean>
+                    
+                    <Median>...</Median>
+                </Bootstrap>
+            </PopulationEstimates>
+            
+            <PrecisionPopulationEstimates>
+                <MLE>
+                    <FIM>...</FIM>
+                    
+                    <CovarianceMatrix>...</CovarianceMatrix>
+                    
+                    <CorrelationMatrix>...</CorrelationMatrix>
+                    
+                    <StandardError>...</StandardError>
+
+                    <RelativeStandardError>...</RelativeStandardError>
+                    
+                    <AsymptoticCI>...</AsymptoticCI>
+                </MLE>
+                
+                <Bayesian>
+                    <StandardDeviationPosterior>...</StandardDeviationPosterior>
+                    
+                    <PosteriorDistribution>...</PosteriorDistribution>
+                    
+                    <PercentilesCI>...</PercentilesCI>
+                </Bayesian>
+                
+                <Bootstrap>
+                    <PrecisionEstimates>...</PrecisionEstimates>
+                    
+                    <Percentiles>...</Percentiles>
+                </Bootstrap>
+                
+                <LLP>
+                    <PrecisionEstimates>...</PrecisionEstimates>
+                    
+                    <Percentiles>...</Percentiles>
+                </LLP>
+                
+                <SIR>
+                    <PrecisionEstimates>...</PrecisionEstimates>
+                    
+                    <Percentiles>...</Percentiles>
+                </SIR>
+                
+                <MultiDimLLP>
+                    <PrecisionEstimates>...</PrecisionEstimates>
+                    
+                    <Percentiles>...</Percentiles>
+                </MultiDimLLP>
+
+            </PrecisionPopulationEstimates>
+            
+            <IndividualEstimates>
+                <Estimates>
+                    <Mean>...</Mean>
+                    
+                    <Median>...</Median>
+
+                    <Mode>...</Mode>
+
+                    <Samples>...</Samples>
+                </Estimates>
+                <RandomEffects>
+                    <EffectMean>...</EffectMean>
+
+                    <EffectMedian>...</EffectMedian>
+
+                    <EffectMode>...</EffectMode>
+
+                    <Samples>...</Samples>
+                </RandomEffects>
+                
+                <EtaShrinkage>...</EtaShrinkage>
+                
+            </IndividualEstimates>
+            
+            <PrecisionIndividualEstimates>...</PrecisionIndividualEstimates>
+            
+            <Residuals>
+                <ResidualTable>...</ResidualTable>
+                
+                <EpsShrinkage>...</EpsShrinkage>
+            </Residuals>
+            
+            <Predictions>...</Predictions>
+            
+            <Likelihood>
+                <LogLikelihood>...</LogLikelihood>
+                
+                <Deviance>...</Deviance>
+                
+                <IndividualContribToLL>...</IndividualContribToLL>
+                
+                <InformationCriteria>
+                    <AIC>...</AIC>
+                    
+                    <BIC>...</BIC>
+                    
+                    <DIC>...</DIC>
+                </InformationCriteria>
+            </Likelihood>
+        </Estimation>
+
+        <ModelDiagnostic>
+            <DiagnosticPlotsStructuralModel>
+                <IndivFits>
+                    <ObservationTable>...</ObservationTable>
+
+                    <PredictionTable>...</PredictionTable>
+                </IndivFits>
+
+                <IndivPredictionVsObserv>...</IndivPredictionVsObserv>
+
+                <VPC>...</VPC>
+            </DiagnosticPlotsStructuralModel>
+            
+            <DiagnosticPlotsIndividualParams>...</DiagnosticPlotsIndividualParams>
+        </ModelDiagnostic>
+                
+        <Simulation>
+            <SimulationBlock replicate="1">
+                <SimulatedProfiles>...</SimulatedProfiles>
+                
+                <IndivParameters>...</IndivParameters>
+                
+                <RandomEffects>...</RandomEffects>
+                
+                <Covariates>...</Covariates>
+                
+                <PopulationParameters>...</PopulationParameters>
+                
+                <Dosing>...</Dosing>
+                
+                <RawResultsFile oid="rawR">...</RawResultsFile>
+            </SimulationBlock>
+        </Simulation>
+        
+        <OptimalDesign>
+            <OptimalDesignBlock blockNumber="1">
+                <FIM>...</FIM>
+                
+                <CovarianceMatrix>...</CovarianceMatrix>
+                
+                <ParameterPrecision>...</ParameterPrecision>
+                
+                <Criteria>...</Criteria>
+                
+                <Tests>...</Tests>
+                
+                <SimulatedData oid="SimDataOid">...</SimulatedData>
+                
+                <Design oid="desingOid">...</Design>
+            </OptimalDesignBlock>
+        </OptimalDesign>
+    </SOBlock>
+</SO>
