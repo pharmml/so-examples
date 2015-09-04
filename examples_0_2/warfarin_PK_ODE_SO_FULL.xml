@@ -796,6 +796,15 @@
                         <prVal>1.5</prVal>
                     </shape>
                 </LogNormalDistribution>
+                <!-- ALTERNATIVE
+                <DataSet>
+                    <ds:Definition>
+                        <ds:Column columnId="SAMPLES" columnType="statPrecision" valueType="real" columnNum="1"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:Real>1</ct:Real><ct:Real>1.5</ct:Real><!-\- ... -\-><ct:Real>3</ct:Real></ds:Row>
+                    </ds:Table>
+                </DataSet>-->
             </PrecisionIndividualEstimates>
             
             <Residuals>
@@ -963,7 +972,8 @@
                     <Column columnId="STRATA_STUDY" columnType="undefined" valueType="real" columnNum="32"/>
                 </Definition>
                 <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                    <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real><!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                    <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
+                        <!-- omitted columns --><ct:Real>32</ct:Real></Row>
                 </Table>
                 <!--ALTERNATIVE: external data file reference. -->
                 <!-- <ds:ExternalFile oid="ext100"> 
@@ -1163,7 +1173,7 @@
                 <ParameterPrecision> 
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
                         <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="string" columnNum="2"/>
+                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="2"/>
                         <ds:Column columnId="SE" columnType="undefined" valueType="real" columnNum="3"/>
                         <ds:Column columnId="RSE" columnType="undefined" valueType="real" columnNum="4"/>
                         <!--<ds:Column columnId="Shrinkage" columnType="undefined" valueType="real" columnNum="5"/>--> <!-- should not be used/populated if NaN -->
