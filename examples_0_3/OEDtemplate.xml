@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SO xmlns="http://www.pharmml.org/so/0.2/StandardisedOutput"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ds="http://www.pharmml.org/pharmml/0.7/Dataset"
+    xmlns:ct="http://www.pharmml.org/pharmml/0.7/CommonTypes"
+    xsi:schemaLocation="http://www.pharmml.org/so/0.2/StandardisedOutput 
+    http://www.pharmml.org/so/0.2/StandardisedOutput" 
+    implementedBy="MJS" writtenVersion="0.3"  
+    metadataFile="OEDtemplate.rdf" id="i1">
+    
+    <PharmMLRef name="warfarin_PK_ODE.xml"/>                               <!-- optional -->
+    
+    <SOBlock blkId="SO1"> <!-- optional, needed when multiple SOblocks are reqiured e.g. for bootstrap -->
+        
+        <!-- TOOL SETTINGS -->
+        <ToolSettings>
+            <File oid="ts1">
+                <ct:Description>Algorithm settings</ct:Description> <!-- OPTIONAL -->
+                <ds:path>algorithms.xmlx</ds:path>
+            </File>
+            <File oid="ts2">
+                <ct:Description>Solver settings</ct:Description>
+                <ds:path>solver.xmlx</ds:path>
+            </File>
+            <File oid="ts3">
+                <ds:path>andNowForSomethingCompletelyDifferent.xmlx</ds:path>
+            </File>
+        </ToolSettings>
+        
+        <!-- RAW RESULTS -->
+        <RawResults>
+            <DataFile oid="d1">
+                <ct:Description>Original output wth optimized design</ct:Description>
+                <ds:path>dataFolder/optimized.txt</ds:path>
+            </DataFile>
+
+            <GraphicsFile oid="g1">
+                <ct:Description>optimized VS prediction plot</ct:Description>
+                <ds:path>graphicsFolder/OptimizedVSprediction.png</ds:path>
+            </GraphicsFile>
+
+            <DataFile oid="d2">
+                <ds:path>dataFolder/optimized.csv</ds:path>
+                <ds:format>CSV</ds:format>
+                <ds:delimiter>COMMA</ds:delimiter>
+            </DataFile>
+            
+            <GraphicsFile oid="g2">
+                <ds:path>graphicsFolder/figure2.png</ds:path>
+            </GraphicsFile>
+            
+            <!-- any number of files is permited -->
+        </RawResults>
+        
+        <!-- TASK INFORMATION -->
+        <TaskInformation>
+            <!-- Messages from Target Software - any number of messages is permited -->
+            <Message type="ERROR">
+                <Toolname>
+                    <ct:String>PFIM</ct:String>
+                </Toolname>
+                <Name>
+                    <ct:String>pfim error</ct:String>
+                </Name>
+                <Content>
+                    <ct:String>Possibly long text...</ct:String>
+                </Content>
+                <Severity>
+                    <ct:Int>2</ct:Int>
+                </Severity>
+            </Message>
+            <OutputFilePath oid="o1">
+                <ds:path>/results/mainResultFile.txt</ds:path>
+            </OutputFilePath>
+            <RunTime>
+                <ct:Description>Run time in hours - for now - the metadata will be used for units annotation.</ct:Description>
+                <ct:Real>23232.5</ct:Real>
+            </RunTime>
+            <NumberIterations>
+                <ct:Real>1000000</ct:Real>
+            </NumberIterations>
+        </TaskInformation>
+
+        <!-- OPTIMAL DESIGN -->
+        <OptimalDesign type="evaluation">
+            <OptimalDesignBlock blockNumber="1">
+                <FIM>                               <!-- 4x4 matrix for simplicity -->
+                    <ct:Matrix matrixType="Any">
+                        <ct:RowNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:RowNames>
+                        <ct:ColumnNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:ColumnNames>
+                        <ct:MatrixRow>
+                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real><ct:Real>-1.01e-04</ct:Real>
+                        </ct:MatrixRow>
+                        <ct:MatrixRow>
+                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real><ct:Real>-1.24e-03</ct:Real>
+                        </ct:MatrixRow>
+                        <!-- omitted other matrix rows -->
+                    </ct:Matrix>
+                </FIM>
+                
+                <CovarianceMatrix>                  <!-- 4x4 matrix for simplicity -->
+                    <ct:Matrix matrixType="Any">
+                        <ct:RowNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:RowNames>
+                        <ct:ColumnNames>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                        </ct:ColumnNames>
+                        <ct:MatrixRow>
+                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real><ct:Real>-1.01e-04</ct:Real>
+                        </ct:MatrixRow>
+                        <ct:MatrixRow>
+                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real><ct:Real>-1.24e-03</ct:Real>
+                        </ct:MatrixRow>
+                        <!-- omitted other matrix rows -->
+                    </ct:Matrix>
+                </CovarianceMatrix>
+                
+                <ParameterPrecision> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
+                        <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="SE" columnType="undefined" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="RSE" columnType="undefined" valueType="real" columnNum="4"/>
+                        <!--<ds:Column columnId="Shrinkage" columnType="undefined" valueType="real" columnNum="5"/>--> <!-- should not be used/populated if NaN -->
+                    </Definition> 
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Row><ct:String>ka</ct:String><ct:Real>2</ct:Real><ct:Real>0.174918047946247</ct:Real><ct:Real>8.74590239731233</ct:Real></Row>
+                        <Row><ct:String>k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.0116434498869208</ct:Real><ct:Real>4.65737995476831</ct:Real></Row>
+                        <Row><ct:String>V</ct:String><ct:Real>15</ct:Real><ct:Real>0.50355898034057</ct:Real><ct:Real>3.35705986893713</ct:Real></Row>
+                        <Row><ct:String>omega2.ka</ct:String><ct:Real>1</ct:Real><ct:Real>0.133827154058613</ct:Real><ct:Real>13.3827154058613</ct:Real></Row>
+                        <Row><ct:String>omega2.k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.0389176843945328</ct:Real><ct:Real>15.5670737578131</ct:Real></Row>
+                        <Row><ct:String>omega2.V</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.0191908757812038</ct:Real><ct:Real>19.1908757812038</ct:Real></Row>
+                        <Row><ct:String>sig.interA</ct:String><ct:Real>0.5</ct:Real><ct:Real>0.0430207426749537</ct:Real><ct:Real>8.60414853499073</ct:Real></Row>
+                        <Row><ct:String>sig.slopeA</ct:String><ct:Real>0.15</ct:Real><ct:Real>0.0209432208304491</ct:Real><ct:Real>13.9621472202994</ct:Real></Row>
+                    </Table> 
+                </ParameterPrecision>
+                
+                <Criteria> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
+                        <ds:Column columnId="CriteriumName" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="CriteriumValue" columnType="undefined" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="Comments" columnType="undefined" valueType="string" columnNum="3"/>
+                    </Definition> 
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Row><ct:String>D-optimality</ct:String><ct:Real>371.3125</ct:Real><ct:String>determinant of FIM</ct:String></Row>
+                    </Table> 
+                </Criteria>
+                
+                <Tests> 
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
+                        <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="TestName" columnType="undefined" valueType="string" columnNum="2"/>
+                        <ds:Column columnId="TestType" columnType="undefined" valueType="string" columnNum="3"/>
+                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="4"/>
+<!--                        <ds:Column columnId="Delta" columnType="undefined" valueType="real" columnNum="5"/>-->      <!-- omitted if contains NaN - NaN to be supported soon -->
+                        <ds:Column columnId="LowerLimit" columnType="undefined" valueType="real" columnNum="5"/>
+                        <ds:Column columnId="UpperLimit" columnType="undefined" valueType="real" columnNum="6"/>
+                        <ds:Column columnId="Type1Error" columnType="undefined" valueType="real" columnNum="7"/>
+                        <ds:Column columnId="PredictedPower" columnType="undefined" valueType="real" columnNum="8"/>
+                        <ds:Column columnId="TargetPower" columnType="undefined" valueType="real" columnNum="9"/>
+                        <ds:Column columnId="NumberSubject" columnType="undefined" valueType="real" columnNum="10"/>
+                    </Definition> 
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Row><ct:String>beta_V_Sex_F</ct:String><ct:String>Wald</ct:String><ct:String>equivalence</ct:String><ct:Real>0.1823216</ct:Real><ct:Real>-0.2231436</ct:Real><ct:Real>0.2231436</ct:Real><ct:Real>0.05</ct:Real><ct:Real>0.1042397</ct:Real><ct:Real>0.9</ct:Real><ct:Real>2286.081</ct:Real></Row>    
+                        <Row><ct:String>beta_Cl_Treat_B</ct:String><ct:String>Wald</ct:String><ct:String>equivalence</ct:String><ct:Real>0.09531018</ct:Real><ct:Real>-0.2231436</ct:Real><ct:Real>0.2231436</ct:Real><ct:Real>0.05</ct:Real><ct:Real>0.9818745</ct:Real><ct:Real>0.9</ct:Real><ct:Real>24.50351</ct:Real></Row>    
+                        <Row><ct:String>beta_V_Sex_F</ct:String><ct:String>Wald</ct:String><ct:String>comparison</ct:String><ct:Real>0.4054651</ct:Real><ct:Real>0.050000</ct:Real><ct:Real>0.978421</ct:Real><ct:Real>0.9</ct:Real><ct:Real>26.50458</ct:Real><ct:Real>0.9</ct:Real><ct:Real>24.50351</ct:Real></Row>
+                    </Table> 
+                </Tests>
+                
+                <SimulatedData oid="SimDataOid">
+                    <ds:path>SimulatedData.dat</ds:path>
+                </SimulatedData>
+                
+                <Design oid="desingOid">
+                    <ds:path>Design.xml</ds:path>
+                </Design>
+            </OptimalDesignBlock>
+            <!-- <OptimalDesignBlock blockNumber="2">
+                ...
+            </OptimalDesignBlock>-->
+        </OptimalDesign>
+    </SOBlock>
+</SO>
