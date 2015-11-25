@@ -350,29 +350,31 @@
                         <!-- Default with SAMPLE-->
                         <Distribution>
                             <po:ProbOnto name="RandomSample">
-                                <po:DataSet>
-                                    <ds:Definition>
-                                        <ds:Column columnId="K" valueType="real" columnNum="1"/>
-                                        <ds:Column columnId="V" valueType="real" columnNum="2"/>
-                                        <ds:Column columnId="CL" valueType="real" columnNum="3"/>
-                                    </ds:Definition>
-                                    <ds:Table>
-                                        <ds:Row><ct:Real>2.006510</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.033333</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.045465</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.084421</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.123377</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.200000</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.162333</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.201288</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.240244</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.279200</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.318156</ct:Real><ct:Real>5.078318</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
-                                        <ds:Row><ct:Real>2.357111</ct:Real><ct:Real>5.078318</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
-                                    </ds:Table>
-                                    <!-- ALTERNATIVE
+                                <po:ExternalDataSet toolName="NONMEM" oid="noOID">
+                                    <ds:DataSet>
+                                        <ds:Definition>
+                                            <ds:Column columnId="K" valueType="real" columnNum="1"/>
+                                            <ds:Column columnId="V" valueType="real" columnNum="2"/>
+                                            <ds:Column columnId="CL" valueType="real" columnNum="3"/>
+                                        </ds:Definition>
+                                        <ds:Table>
+                                            <ds:Row><ct:Real>2.006510</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.033333</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.045465</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.084421</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.123377</ct:Real><ct:Real>5.050013</ct:Real><ct:Real>0.200000</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.162333</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.201288</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.240244</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.279200</ct:Real><ct:Real>5.064166</ct:Real><ct:Real>0.100000</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.318156</ct:Real><ct:Real>5.078318</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
+                                            <ds:Row><ct:Real>2.357111</ct:Real><ct:Real>5.078318</ct:Real><ct:Real>0.066667</ct:Real></ds:Row>
+                                        </ds:Table>
+                                        <!-- ALTERNATIVE
                                     <ExternalFile oid="eIod">
                                     <path>prior_bo1</path>
                                     </ExternalFile>-->
-                                </po:DataSet>
+                                    </ds:DataSet>
+                                </po:ExternalDataSet>
                             </po:ProbOnto>
                         </Distribution>
 <!--                        <!-\- ALTERNATIVE -\->
@@ -714,19 +716,20 @@
             </IndividualEstimates>
             
             <PrecisionIndividualEstimates>
-            <StandardDeviationPosterior>
-                <ds:Definition>
-                    <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                    <ds:Column columnId="SDP" columnType="statPrecision" valueType="real" columnNum="2"/>
-                </ds:Definition>
-                <ds:Table>
-                    <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-                    <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                    <!-- omitted other parameters -->
-                </ds:Table>
-            </StandardDeviationPosterior>
-            <PosteriorDistribution>
-<!--                <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
+                <StandardDeviation>
+                    <ds:Definition>
+                        <ds:Column columnId="Parameter" columnType="popParameter" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="SD" columnType="statPrecision" valueType="real" columnNum="2"/>
+                    </ds:Definition>
+                    <ds:Table>
+                        <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
+                        <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
+                        <!-- omitted other parameters -->
+                    </ds:Table>
+                </StandardDeviation>
+
+                <PosteriorDistribution>
+                    <!--                <LogNormalDistribution xmlns="http://www.uncertml.org/3.0" definition="">
                     <logScale>
                         <rVal>10</rVal>
                     </logScale>
@@ -734,21 +737,22 @@
                         <prVal>1.5</prVal>
                     </shape>
                 </LogNormalDistribution>-->
-                <!-- ALTERNATIVELY with dataset-->
-                <DataSet>
-                    <ds:Definition>
-                        <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="PD1" columnType="statPrecision" valueType="real" columnNum="2"/>
-                        <!-- ........ -->
-                        <ds:Column columnId="PD100" columnType="statPrecision" valueType="real" columnNum="100"/>
-                    </ds:Definition>
-                    <ds:Table>
-                        <ds:Row><ct:String>PD_POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-                        <ds:Row><ct:String>PD_POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                        <!-- omitted other parameters -->
-                    </ds:Table>
-                </DataSet>
-            </PosteriorDistribution>
+                    <!-- ALTERNATIVELY with dataset-->
+                    <DataSet>
+                        <ds:Definition>
+                            <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                            <ds:Column columnId="PD1" columnType="statPrecision" valueType="real" columnNum="2"/>
+                            <!-- ........ -->
+                            <ds:Column columnId="PD100" columnType="statPrecision" valueType="real" columnNum="100"/>
+                        </ds:Definition>
+                        <ds:Table>
+                            <ds:Row><ct:String>PD_POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
+                            <ds:Row><ct:String>PD_POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
+                            <!-- omitted other parameters -->
+                        </ds:Table>
+                    </DataSet>
+                </PosteriorDistribution>
+
                 <PercentilesCI>
                     <ds:Definition>
                         <ds:Column columnId="Percentile" columnType="statPrecision" valueType="real" columnNum="1"/>
@@ -832,7 +836,7 @@
                 <IndividualContribToLL>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="ICtoLL" columnType="statPrecision" valueType="real" columnNum="2"/>                   <!-- NADIA - PLEASE CHECK columnType! -->
+                        <Column columnId="ICtoLL" columnType="undefined" valueType="real" columnNum="2"/>                   <!-- NADIA - PLEASE CHECK columnType! -->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row><ct:Id>i1</ct:Id><ct:Real>7.892</ct:Real></Row>
@@ -935,32 +939,67 @@
             </DiagnosticPlotsStructuralModel>
             
             <DiagnosticPlotsIndividualParams>
-<!--                MISSING table names - Random eects  -->
-                <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                    <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="1"/>
-                    <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
-                    <!-- ETA_i -->
-                    <Column columnId="ETA_KA" columnType="randEffect" valueType="real" columnNum="10"/>
-                    <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="11"/>
-                    <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="12"/>
-                    <!-- X_i -->
-                    <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="20"/>
-                    <Column columnId="WT" columnType="covariate" valueType="real" columnNum="21"/>
-                    <Column columnId="SEX" columnType="covariate" valueType="real" columnNum="22"/>
-                    <!-- C_i -->
-                    <Column columnId="AGE" columnType="covariate" valueType="real" columnNum="30"/>
-                    <Column columnId="STRATA_DOSE" columnType="strataVariable" valueType="real" columnNum="31"/>
-                    <!-- omitted STRATA -->
-                    <Column columnId="STRATA_STUDY" columnType="strataVariable" valueType="real" columnNum="32"/>
-                </Definition>
-                <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                    <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
-                        <!-- omitted columns --><ct:Real>32</ct:Real></Row>
-                </Table>
-                <!--ALTERNATIVE: external data file reference. -->
-                <!-- <ds:ExternalFile oid="ext100"> 
-                        <ds:path>myData.csv</ds:path>
-                    </ds:ExternalFile>-->
+                <RandomEffects>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="2"/>
+                        <!-- omitted columns -->
+                        <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="10"/>
+                        <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="32"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
+                            <!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                    </Table>
+                </RandomEffects>
+                <RelationIndivParamsCovariates>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="1"/>
+                        <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
+                        <!-- ETA_i -->
+                        <Column columnId="ETA_KA" columnType="randEffect" valueType="real" columnNum="10"/>
+                        <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="11"/>
+                        <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="12"/>
+                        <!-- X_i -->
+                        <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="20"/>
+                        <Column columnId="WT" columnType="covariate" valueType="real" columnNum="21"/>
+                        <Column columnId="SEX" columnType="covariate" valueType="real" columnNum="22"/>
+                        <!-- C_i -->
+                        <Column columnId="AGE" columnType="covariate" valueType="real" columnNum="30"/>
+                        <Column columnId="STRATA_DOSE" columnType="strataVariable" valueType="real" columnNum="31"/>
+                        <!-- omitted STRATA -->
+                        <Column columnId="STRATA_STUDY" columnType="strataVariable" valueType="real" columnNum="32"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
+                            <!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                    </Table>
+                </RelationIndivParamsCovariates>
+                <PDFIndivParams>
+                    <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="1"/>
+                        <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
+                        <!-- ETA_i -->
+                        <Column columnId="ETA_KA" columnType="randEffect" valueType="real" columnNum="10"/>
+                        <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="11"/>
+                        <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="12"/>
+                        <!-- X_i -->
+                        <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="20"/>
+                        <Column columnId="WT" columnType="covariate" valueType="real" columnNum="21"/>
+                        <Column columnId="SEX" columnType="covariate" valueType="real" columnNum="22"/>
+                        <!-- C_i -->
+                        <Column columnId="AGE" columnType="covariate" valueType="real" columnNum="30"/>
+                        <Column columnId="STRATA_DOSE" columnType="strataVariable" valueType="real" columnNum="31"/>
+                        <!-- omitted STRATA -->
+                        <Column columnId="STRATA_STUDY" columnType="strataVariable" valueType="real" columnNum="32"/>
+                    </Definition>
+                    <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
+                            <!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                    </Table>
+                </PDFIndivParams>
             </DiagnosticPlotsIndividualParams>
         </ModelDiagnostic>
         
