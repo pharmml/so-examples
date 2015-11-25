@@ -948,32 +948,25 @@
                         <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="32"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
-                            <!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>32</ct:Real></Row>
                     </Table>
                 </RandomEffects>
                 <RelationIndivParamsCovariates>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="1"/>
-                        <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="2"/>
-                        <!-- ETA_i -->
-                        <Column columnId="ETA_KA" columnType="randEffect" valueType="real" columnNum="10"/>
-                        <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="11"/>
-                        <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="12"/>
-                        <!-- X_i -->
-                        <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="20"/>
-                        <Column columnId="WT" columnType="covariate" valueType="real" columnNum="21"/>
-                        <Column columnId="SEX" columnType="covariate" valueType="real" columnNum="22"/>
-                        <!-- C_i -->
-                        <Column columnId="AGE" columnType="covariate" valueType="real" columnNum="30"/>
+                        <Column columnId="V" columnType="structParameter" valueType="real" columnNum="2"/>
+                        <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="3"/>
+                        <!-- other parameters skipped -->
+                        <Column columnId="WT" columnType="covariate" valueType="real" columnNum="11"/>
+                        <Column columnId="SEX" columnType="covariate" valueType="real" columnNum="12"/>
+                        <Column columnId="AGE" columnType="covariate" valueType="real" columnNum="13"/>
+                        <!-- other covariates skipped -->
                         <Column columnId="STRATA_DOSE" columnType="strataVariable" valueType="real" columnNum="31"/>
-                        <!-- omitted STRATA -->
                         <Column columnId="STRATA_STUDY" columnType="strataVariable" valueType="real" columnNum="32"/>
+                        <!-- omitted STRATA -->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
-                            <!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>32</ct:Real></Row>
                     </Table>
                 </RelationIndivParamsCovariates>
                 <PDFIndivParams>
@@ -996,8 +989,7 @@
                         <Column columnId="STRATA_STUDY" columnType="strataVariable" valueType="real" columnNum="32"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>20</ct:Real>
-                            <!-- omitted columns --><ct:Real>32</ct:Real></Row>
+                        <Row><ct:Real>1</ct:Real><!-- omitted columns --><ct:Real>32</ct:Real></Row>
                     </Table>
                 </PDFIndivParams>
             </DiagnosticPlotsIndividualParams>
