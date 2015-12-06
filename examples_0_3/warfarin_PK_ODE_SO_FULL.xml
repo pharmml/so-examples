@@ -103,32 +103,6 @@
                     </ds:ExternalFile>-->
                 </MLE>
                 
-<!--                <Estimation>            COPY & PASTE COPY & PASTE COPY & PASTE
-                    <PopulationEstimates>
-                        <MLE>
-                            <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                                <Column columnId="POP_CL" columnType="structParameter" valueType="real" columnNum="1"/>
-                                <!-\- ommited parameters -\->
-                                <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                                <!-\- ommited parameters -\->
-                                <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
-                                <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
-                                <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
-                            </Definition>
-                            <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                                <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
-                                    <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
-                                    <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
-                                    <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
-                                    <ct:Real>0.07736</ct:Real>
-                                </Row>
-                            </Table>
-                            <!-\-ALTERNATIVE: external data file reference. -\->
-                            <!-\-                    <ds:ExternalFile oid="ext1">
-                        <ds:path>myData.csv</ds:path>
-                    </ds:ExternalFile>-\->
-                        </MLE>-->
-                
                 <Bayesian>
                     <PosteriorMean>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
@@ -155,26 +129,6 @@
                             </Row>
                         </Table>
                     </PosteriorMean>
-<!--                    <Bayesian>            COPY & PASTE COPY & PASTE COPY & PASTE
-                        <PosteriorMean>
-                            <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                                <Column columnId="POP_CL" columnType="structParameter" valueType="real" columnNum="1"/>
-                                <!-\- omitted columns -\->
-                                <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                                <!-\- omitted columns -\->
-                                <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
-                                <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
-                                <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
-                            </Definition>
-                            <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                                <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
-                                    <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
-                                    <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
-                                    <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
-                                    <ct:Real>0.07736</ct:Real>
-                                </Row>
-                            </Table>
-                        </PosteriorMean>-->
                         
                     <PosteriorMedian>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
@@ -230,28 +184,8 @@
                             </Row>
                         </Table>
                     </Mean>
-<!--                    <OtherMethod method="Bootstrap">            COPY & PASTE COPY & PASTE COPY & PASTE
-                        <Mean>
-                            <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                                <Column columnId="POP_CL" columnType="structParameter" valueType="real" columnNum="1"/>
-                                <!-\- omitted columns -\->
-                                <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                                <!-\- omitted columns -\->
-                                <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
-                                <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
-                                <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
-                            </Definition>
-                            <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                                <Row><ct:Real>0.93882</ct:Real><ct:Real>1.63219</ct:Real><ct:Real>8.10703</ct:Real>
-                                    <ct:Real>1</ct:Real><ct:Real>0.13426</ct:Real><ct:Real>0.75</ct:Real>
-                                    <ct:Real>0.54806</ct:Real><ct:Real>0.76833</ct:Real><ct:Real>0.13334</ct:Real>
-                                    <ct:Real>0.26875</ct:Real><ct:Real>0.16612</ct:Real><ct:Real>0.32349</ct:Real>
-                                    <ct:Real>0.07736</ct:Real>
-                                </Row>
-                            </Table>
-                        </Mean>-->
-                        
-                        <Median>
+                    
+                    <Median>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="POP_CL" columnType="structParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="structParameter" valueType="real" columnNum="2"/>
@@ -372,6 +306,9 @@
                             <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
                             <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
                             <!-- omitted other parameters -->
+                            <ds:Row><ct:String>PPV_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
+                            <ds:Row><ct:String>PPV_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
+                            <!-- omitted other parameters -->
                         </ds:Table>
                     </StandardError>
                     <RelativeStandardError>
@@ -412,19 +349,6 @@
                             <!-- omitted other parameters -->
                         </ds:Table>
                     </StandardDeviationPosterior>
-
-<!--                    <Bayesian>                              COPY & PASTE COPY & PASTE COPY & PASTE
-                        <StandardDeviationPosterior>
-                            <ds:Definition>
-                                <ds:Column columnId="Parameter" columnType="popParameter" valueType="string" columnNum="1"/>
-                                <ds:Column columnId="SDP" columnType="statPrecision" valueType="real" columnNum="2"/>
-                            </ds:Definition>
-                            <ds:Table>
-                                <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-                                <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                                <!-\- omitted other parameters -\->
-                            </ds:Table>
-                        </StandardDeviationPosterior>-->
                         
                     <PosteriorDistribution>
                         <!-- Default with SAMPLE-->
@@ -603,45 +527,26 @@
                             <!-- omitted other parameters -->
                         </ds:Table>
                     </AsymptoticCI>
-<!--              <OtherMethod method="LLP">                COPY & PASTE COPY & PASTE COPY & PASTE
-                        ...
-                        <AsymptoticCI>
-                            <ds:Definition>
-                                <ds:Column columnId="Parameter" columnType="popParameter" valueType="string" columnNum="1"/>
-                                <ds:Column columnId="CI" columnType="statPrecision" valueType="real" columnNum="2"/>
-                                <ds:Column columnId="LowerBound" columnType="statPrecision" valueType="real" columnNum="3"/>
-                                <ds:Column columnId="UpperBound" columnType="statPrecision" valueType="real" columnNum="4"/>
-                            </ds:Definition>
-                            <ds:Table>
-                                <ds:Row>
-                                    <ct:String>POP_CL</ct:String><ct:String>95%</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real>
-                                </ds:Row>
-                                <ds:Row>
-                                    <ct:String>POP_V</ct:String><ct:String>95%</ct:String><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real>
-                                </ds:Row>
-                                <!-\- omitted other parameters -\->
-                            </ds:Table>
-                        </AsymptoticCI>-->
-                  
-                        <PosteriorDistribution>
-                            <Distribution>
-                                <po:ProbOnto name="LogNormal1">
-                                    <po:Parameter name="meanLog">
-                                        <ct:Assign>
-                                            <ct:Real>10</ct:Real>
-                                        </ct:Assign>
-                                    </po:Parameter>
-                                    <po:Parameter name="stdevLog">
-                                        <ct:Assign>
-                                            <ct:Real>1.5</ct:Real>
-                                        </ct:Assign>
-                                    </po:Parameter>
-                                </po:ProbOnto>
-                            </Distribution>
-                            <!-- ALTERNATIVELY with Sample-->
-                        </PosteriorDistribution>
-
-<!--                    <Distribution>                      COPY & PASTE COPY & PASTE COPY & PASTE
+                    
+                    <PosteriorDistribution>
+                        <Distribution>
+                            <po:ProbOnto name="LogNormal1">
+                                <po:Parameter name="meanLog">
+                                    <ct:Assign>
+                                        <ct:Real>10</ct:Real>
+                                    </ct:Assign>
+                                </po:Parameter>
+                                <po:Parameter name="stdevLog">
+                                    <ct:Assign>
+                                        <ct:Real>1.5</ct:Real>
+                                    </ct:Assign>
+                                </po:Parameter>
+                            </po:ProbOnto>
+                        </Distribution>
+                        <!-- ALTERNATIVELY with Sample-->
+                    </PosteriorDistribution>
+                    
+                    <!--                    <Distribution>                      COPY & PASTE COPY & PASTE COPY & PASTE
                         <po:ProbOnto name="LogNormal1">
                             <po:Parameter name="meanLog">
                                 <ct:Assign>
@@ -656,7 +561,7 @@
                         </po:ProbOnto>
                     </Distribution>
                     <!-\- ALTERNATIVELY with Sample-\->
-                    </PosteriorDistribution>-->
+                    </PosteriorDistribution>--> 
                     
                     <PercentilesCI>
                         <ds:Definition>
@@ -682,45 +587,63 @@
                     <Mean>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                            <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="structParameter" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="structParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
-                            <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
+                            <Row>
+                                <ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real>
+                                <ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real>
+                            </Row>
+                            <Row>
+                                <ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real>
+                                <ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real>
+                            </Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </Mean>
                     <Median>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="structParameter" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="structParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
-                            <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
+                            <Row>
+                                <ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real>
+                                <ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real>
+                            </Row>
+                            <Row>
+                                <ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real>
+                                <ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real>
+                            </Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </Median>
                     <Mode>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="structParameter" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="structParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Row><ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real><ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real></Row>
-                            <Row><ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real><ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real></Row>
+                            <Row>
+                                <ct:Id>i1</ct:Id><ct:Real>0.28649</ct:Real><ct:Real>7.892</ct:Real>
+                                <ct:Real>0.3025</ct:Real><ct:Real>0.5588</ct:Real>
+                            </Row>
+                            <Row>
+                                <ct:Id>i2</ct:Id><ct:Real>0.11184</ct:Real><ct:Real>7.670</ct:Real>
+                                <ct:Real>1.3134</ct:Real><ct:Real>0.8290</ct:Real>
+                            </Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </Mode>
@@ -737,10 +660,12 @@
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
-                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real>
+                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real>
+                                <ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real>
                             </Row>
                             <Row>
-                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
+                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real>
+                                <ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
                             </Row>
                             <!-- omitted other subjects -->
                         </Table>
@@ -756,8 +681,12 @@
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
-                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
-                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
+                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real>
+                                <ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
+                            </Row>
+                            <Row>
+                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real>
+                                <ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
                                 <!-- omitted other subjects -->
                             </Row>
                         </Table>
@@ -773,40 +702,49 @@
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Row>
-                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real><ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
-                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real><ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
+                                <ct:Id>i1</ct:Id><ct:Real>0.79602</ct:Real><ct:Real>0.02201</ct:Real>
+                                <ct:Real>-1.4809</ct:Real><ct:Real>-3.913e-01</ct:Real> 
+                            </Row>
+                            <Row>
+                                <ct:Id>i2</ct:Id><ct:Real>-0.1446</ct:Real><ct:Real>-0.00652</ct:Real>
+                                <ct:Real>-0.012555</ct:Real><ct:Real>2.961e-03</ct:Real> 
                                 <!-- omitted other subjects -->
                             </Row>
                         </Table>
                     </EffectMode>
                 </RandomEffects>
                 
-                <!-- RELOCATED -->
                 <EtaShrinkage>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <Column columnId="ETA_SHRINKAGE_CL" columnType="statPrecision" valueType="real" columnNum="1"/>             <!-- NADIA - PLEASE CHECK columnType! -->
+                        <Column columnId="ETA_SHRINKAGE_CL" columnType="statPrecision" valueType="real" columnNum="1"/>
                         <Column columnId="ETA_SHRINKAGE_V" columnType="statPrecision" valueType="real" columnNum="2"/>
                         <Column columnId="ETA_SHRINKAGE_KA" columnType="statPrecision" valueType="real" columnNum="3"/>
                         <Column columnId="ETA_SHRINKAGE_TLAG" columnType="statPrecision" valueType="real" columnNum="4"/>
                         <!-- omitted other random effects shrinkage -->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <Row><ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real></Row>
+                        <Row>
+                            <ct:Real>-0.04671</ct:Real><ct:Real>11.073</ct:Real><ct:Real>51.076</ct:Real><ct:Real>59.033</ct:Real>
+                        </Row>
                     </Table>
                 </EtaShrinkage>
-                
             </IndividualEstimates>
             
-            <PrecisionIndividualEstimates>
-                <StandardDeviation>
+            <PrecisionIndividualEstimates>      <!-- CHECK NEEDED --><!-- CHECK NEEDED --><!-- CHECK NEEDED --><!-- CHECK NEEDED -->
+                <StandardDeviation>             <!-- P x N raws in table? --> 
                     <ds:Definition>
-                        <ds:Column columnId="Parameter" columnType="popParameter" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="SD" columnType="statPrecision" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="Parameter" columnType="indivParameter" valueType="string" columnNum="2"/>
+                        <ds:Column columnId="SD" columnType="statPrecision" valueType="real" columnNum="3"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>POP_CL</ct:String><ct:Real>0.1</ct:Real></ds:Row>
-                        <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
-                        <!-- omitted other parameters -->
+                        <ds:Row>
+                            <ct:String>i1</ct:String><ct:String>CL</ct:String><ct:Real>0.1</ct:Real>
+                        </ds:Row>
+                        <ds:Row>
+                            <ct:String>i1</ct:String><ct:String>V</ct:String><ct:Real>0.2</ct:Real>
+                        </ds:Row>
+                        <!-- omitted other subjects and parameters -->
                     </ds:Table>
                 </StandardDeviation>
                 <EstimatesDistribution>
@@ -820,14 +758,15 @@
                                     <ds:Column columnId="CL" columnType="structParameter" valueType="real" columnNum="4"/>
                                 </ds:Definition>
                                 <ds:Table>
-                                    <ds:Row><ct:String>1</ct:String><ct:Real>2.006510</ct:Real><ct:Real>5.050013</ct:Real>
-                                        <ct:Real>0.033333</ct:Real></ds:Row>
-                                    <ds:Row><ct:String>2</ct:String><ct:Real>2.045465</ct:Real><ct:Real>5.050013</ct:Real>
-                                        <ct:Real>0.100000</ct:Real></ds:Row>
-                                    <ds:Row><ct:String>3</ct:String><ct:Real>2.084421</ct:Real><ct:Real>5.050013</ct:Real>
-                                        <ct:Real>0.100000</ct:Real></ds:Row>
-                                    <ds:Row><ct:String>4</ct:String><ct:Real>2.123377</ct:Real><ct:Real>5.050013</ct:Real>
-                                        <ct:Real>0.200000</ct:Real></ds:Row>
+                                    <ds:Row>
+                                        <ct:String>i1</ct:String><ct:Real>2.06</ct:Real><ct:Real>5.05</ct:Real><ct:Real>0.03</ct:Real>
+                                    </ds:Row>
+                                    <ds:Row>
+                                        <ct:String>i2</ct:String><ct:Real>2.04</ct:Real><ct:Real>5.05</ct:Real><ct:Real>0.10</ct:Real>
+                                    </ds:Row>
+                                    <ds:Row>
+                                        <ct:String>i3</ct:String><ct:Real>2.08</ct:Real><ct:Real>5.05</ct:Real><ct:Real>0.10</ct:Real>
+                                    </ds:Row>
                                     <!-- other subjects skipped -->
                                 </ds:Table>
                                 <!-- 
@@ -843,42 +782,45 @@
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <ds:Column columnId="Percentile" columnType="statPrecision" valueType="real" columnNum="2"/>
                         <ds:Column columnId="POP_CL " columnType="structParameter" valueType="real" columnNum="3"/>
-                        <!-- omitted other parameters -->
-                        <ds:Column columnId="POP_V" columnType="structParameter" valueType="real" columnNum="10"/>
+                        <ds:Column columnId="POP_V" columnType="structParameter" valueType="real" columnNum="4"/>
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row>
-                            <ct:Real>0.05</ct:Real><ct:Real>0.1</ct:Real><!-- .... --><ct:Real>0.5</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>0.05</ct:Real><ct:Real>0.1</ct:Real><ct:Real>0.5</ct:Real>
                         </ds:Row>
+                        <!-- omitted other percentiles -->
                         <ds:Row>
-                            <ct:Real>0.95</ct:Real><ct:Real>0.2</ct:Real><!-- .... --><ct:Real>0.6</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>0.95</ct:Real><ct:Real>0.2</ct:Real><ct:Real>0.6</ct:Real>
                         </ds:Row>
+                        <!-- omitted other subjects -->
                     </ds:Table>
                 </PercentilesCI>
             </PrecisionIndividualEstimates>
+            
             <Residuals>
                 <ResidualTable>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                        <Column columnId="TIME" columnType="idv" valueType="real" columnNum="2"/>
-                        <Column columnId="RES" columnType="residual" valueType="real" columnNum="3"/>
-                        <Column columnId="IRES" columnType="residual" valueType="real" columnNum="4"/>
-                        <Column columnId="WRES" columnType="residual" valueType="real" columnNum="5"/>
-                        <Column columnId="CWRES" columnType="residual" valueType="real" columnNum="6"/>
-                        <Column columnId="IWRES" columnType="residual" valueType="real" columnNum="7"/>
-                        <Column columnId="PD" columnType="residual" valueType="real" columnNum="8"/>
-                        <Column columnId="NPDE" columnType="residual" valueType="real" columnNum="9"/>
+                        <Column columnId="DVID" columnType="dvid" valueType="string" columnNum="2"/>
+                        <Column columnId="TIME" columnType="idv" valueType="real" columnNum="3"/>
+                        <Column columnId="RES" columnType="residual" valueType="real" columnNum="4"/>
+                        <Column columnId="IRES" columnType="residual" valueType="real" columnNum="5"/>
+                        <Column columnId="WRES" columnType="residual" valueType="real" columnNum="6"/>
+                        <Column columnId="CWRES" columnType="residual" valueType="real" columnNum="7"/>
+                        <Column columnId="IWRES" columnType="residual" valueType="real" columnNum="8"/>
+                        <Column columnId="PD" columnType="residual" valueType="real" columnNum="9"/>
+                        <Column columnId="NPDE" columnType="residual" valueType="real" columnNum="10"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row>
-                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
-                            <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
+                            <ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real><ct:Real>7</ct:Real>
+                            <ct:Real>8</ct:Real><ct:Real>9</ct:Real><ct:Real>10</ct:Real>
                         </Row>
                         <Row>
-                            <ct:String>2</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
-                            <ct:Real>6</ct:Real><ct:Real>7</ct:Real><ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                            <ct:String>i2</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
+                            <ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real><ct:Real>7</ct:Real>
+                            <ct:Real>8</ct:Real><ct:Real>9</ct:Real><ct:Real>10</ct:Real>
                         </Row>
                         <!-- omitted other subjects -->
                     </Table>
@@ -894,30 +836,41 @@
                     </Table>
                 </EpsShrinkage>
             </Residuals>
+            
             <Predictions>
                 <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                     <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
                     <Column columnId="TIME" columnType="idv" valueType="real" columnNum="2"/>
-                    <Column columnId="PRED" columnType="undefined" valueType="real" columnNum="3"/>                                    <!-- NADIA - PLEASE CHECK columnType! -->
-                    <Column columnId="IPRED" columnType="undefined" valueType="real" columnNum="4"/>                                   <!-- NADIA - PLEASE CHECK columnType! -->
+                    <Column columnId="PRED" columnType="undefined" valueType="real" columnNum="3"/>
+                    <Column columnId="IPRED" columnType="undefined" valueType="real" columnNum="4"/>
+                    <!-- omitted other residuals -->
                 </Definition>
                 <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                    <Row><ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>7.892</ct:Real><ct:Real>1.892</ct:Real></Row>
-                    <Row><ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>7.670</ct:Real><ct:Real>6.802</ct:Real></Row>
+                    <Row>
+                        <ct:Id>i1</ct:Id><ct:Real>0</ct:Real><ct:Real>7.892</ct:Real><ct:Real>1.892</ct:Real>
+                    </Row>
+                    <Row>
+                        <ct:Id>i2</ct:Id><ct:Real>1</ct:Real><ct:Real>7.670</ct:Real><ct:Real>6.802</ct:Real>
+                    </Row>
                     <!-- omitted other subjects -->
                 </Table>
             </Predictions>
+            
             <Likelihood>
                 <LogLikelihood>1.234</LogLikelihood>
                 <Deviance>2.345</Deviance>
                 <IndividualContribToLL>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                        <Column columnId="ICtoLL" columnType="undefined" valueType="real" columnNum="2"/>                   <!-- NADIA - PLEASE CHECK columnType! -->
+                        <Column columnId="ICtoLL" columnType="undefined" valueType="real" columnNum="2"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <Row><ct:Id>i1</ct:Id><ct:Real>7.892</ct:Real></Row>
-                        <Row><ct:Id>i2</ct:Id><ct:Real>7.670</ct:Real></Row>
+                        <Row>
+                            <ct:Id>i1</ct:Id><ct:Real>7.892</ct:Real>
+                        </Row>
+                        <Row>
+                            <ct:Id>i2</ct:Id><ct:Real>7.670</ct:Real>
+                        </Row>
                         <!-- omitted other subjects -->
                     </Table>
                 </IndividualContribToLL>
@@ -935,25 +888,29 @@
                 <IndivFits>
                     <ObservationTable>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
+                            <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                             <Column columnId="TIME" columnType="time" valueType="real" columnNum="2"/>
                             <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="3"/>
-                            <Column columnId="OBSERVATIONS" columnType="dv" valueType="real" columnNum="4"/>
+                            <Column columnId="OBSERVATION" columnType="dv" valueType="real" columnNum="4"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
+                            <Row>
+                                <ct:String>i1</ct:String><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real>
+                            </Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </ObservationTable>
                     <PredictionTable>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Column columnId="ID" columnType="id" valueType="real" columnNum="1"/>
-                            <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="2"/>
-                            <Column columnId="TIMEcont" columnType="time" valueType="real" columnNum="3"/>
+                            <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
+                            <Column columnId="TIMEcont" columnType="time" valueType="real" columnNum="2"/>
+                            <Column columnId="DVID" columnType="dvid" valueType="real" columnNum="3"/>
                             <Column columnId="PREDICTIONcont" columnType="undefined" valueType="real" columnNum="4"/>
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Row><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real></Row>
+                            <Row>
+                                <ct:String>i1</ct:String><ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real>
+                            </Row>
                             <!-- omitted other subjects -->
                         </Table>
                     </PredictionTable>
@@ -970,8 +927,8 @@
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row>
-                            <ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>1</ct:Real>
+                            <ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real>
                         </Row>
                         <!-- omitted other subjects -->
                     </Table>
@@ -1005,20 +962,20 @@
                     </Table>
                 </VPC>
             </DiagnosticPlotsStructuralModel>
+            
             <DiagnosticPlotsIndividualParams>
                 <RandomEffects>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <Column columnId="ETA_V" columnType="randEffect" valueType="real" columnNum="2"/>
-                        <!-- omitted columns -->
-                        <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="10"/>
+                        <Column columnId="ETA_CL" columnType="randEffect" valueType="real" columnNum="3"/>
+                        <!-- omitted other random effects -->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row>
-                            <ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
-                            <ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real><ct:Real>7</ct:Real>
-                            <ct:Real>8</ct:Real><ct:Real>9</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>.1</ct:Real><ct:Real>.2</ct:Real><!-- ... -->
                         </Row>
+                        <!-- omitted other subjects -->
                     </Table>
                 </RandomEffects>
                 <IndivParamsCovariates>
@@ -1033,11 +990,11 @@
                         <!-- other covariates skipped -->
                         <Column columnId="STRATA_DOSE" columnType="strataVariable" valueType="real" columnNum="12"/>
                         <Column columnId="STRATA_STUDY" columnType="strataVariable" valueType="real" columnNum="13"/>
-                        <!-- omitted STRATA -->
+                        <!-- other strata skipped -->
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row>
-                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
                             <ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real><ct:Real>7</ct:Real>
                             <ct:Real>8</ct:Real><ct:Real>9</ct:Real><ct:Real>10</ct:Real><ct:Real>11</ct:Real>
                             <ct:Real>12</ct:Real>
@@ -1062,12 +1019,12 @@
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                         <Row>
-                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
                             <ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real><ct:Real>7</ct:Real>
                             <ct:Real>8</ct:Real><ct:Real>9</ct:Real><ct:Real>10</ct:Real><ct:Real>11</ct:Real>
                             <ct:Real>12</ct:Real>
                         </Row>
-                        <!-- omitted rows -->
+                        <!-- omitted other subjects -->
                     </Table>
                 </DistributionIndivParams>
             </DiagnosticPlotsIndividualParams>
@@ -1086,9 +1043,9 @@
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row>
-                            <ct:String>1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
+                            <ct:String>i1</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
                         </ds:Row>
-                        <!-- omitted other ID's -->
+                        <!-- omitted other subjects -->
                         <ds:Row>
                             <ct:String>10</ct:String><ct:Int>1</ct:Int><ct:Real>2</ct:Real><ct:Real>3</ct:Real>
                         </ds:Row>
@@ -1133,13 +1090,13 @@
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row>
-                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>6</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><!-- omitted columns --><ct:Real>6</ct:Real>
                         </ds:Row>
-                        <!-- omitted other ID's -->
+                        <!-- omitted other subjects -->
                         <ds:Row>
                             <ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>6</ct:Real>
+                            <ct:Real>3</ct:Real><!-- omitted columns --><ct:Real>6</ct:Real>
                         </ds:Row>
                     </ds:Table>
                 </IndivParameters>
@@ -1154,12 +1111,12 @@
                         <ds:Column columnId="OCC" columnType="occasion" valueType="real" columnNum="6"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>6</ct:Real>
+                        <ds:Row><ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><!-- omitted columns --><ct:Real>6</ct:Real>
                         </ds:Row>
-                        <!-- omitted other ID's -->
+                        <!-- omitted other subjects -->
                         <ds:Row><ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><!-- omitted Parameters --><ct:Real>6</ct:Real>
+                            <ct:Real>3</ct:Real><!-- omitted columns --><ct:Real>6</ct:Real>
                         </ds:Row>
                     </ds:Table>
                 </RandomEffects>
@@ -1174,33 +1131,29 @@
                         <ds:Column columnId="OCC" columnType="occasion" valueType="real" columnNum="6"/>
                     </ds:Definition>
                     <ds:Table>
-                        <ds:Row><ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><!-- omitted Covariates --><ct:Real>6</ct:Real>
+                        <ds:Row><ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><!-- omitted columns --><ct:Real>6</ct:Real>
                         </ds:Row>
-                        <!-- omitted other ID's -->
+                        <!-- omitted other subjects -->
                         <ds:Row>
                             <ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <ct:Real>3</ct:Real><!-- omitted Covariates --><ct:Real>6</ct:Real>
+                            <ct:Real>3</ct:Real><!-- omitted columns --><ct:Real>6</ct:Real>
                         </ds:Row>
                     </ds:Table>
                 </Covariates>
                 <PopulationParameters>
                     <ds:Definition>
-                        <ds:Column columnId="OccasionStart" columnType="time" valueType="real" columnNum="1"/>
-                        <ds:Column columnId="OccasionEnd" columnType="time" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="POP_PARAM_1" columnType="popParameter" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="POP_PARAM_1" columnType="structParameter" valueType="real" columnNum="3"/>
                         <!-- omitted other Parameters -->
-                        <ds:Column columnId="POP_PARAM_Z" columnType="popParameter" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="POP_PARAM_Z" columnType="structParameter" valueType="real" columnNum="4"/>
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row>
-                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <!-- omitted Parameters --><ct:Real>3</ct:Real>
+                            <ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted columns --><ct:Real>3</ct:Real>
                         </ds:Row>
-                        <!-- omitted other ID's -->
+                        <!-- omitted other subjects -->
                         <ds:Row>
-                            <ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
-                            <!-- omitted Parameters --><ct:Real>3</ct:Real>
+                            <ct:Real>1</ct:Real><ct:Real>2</ct:Real><!-- omitted columns --><ct:Real>3</ct:Real>
                         </ds:Row>
                     </ds:Table>
                 </PopulationParameters>
@@ -1216,18 +1169,16 @@
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row>
-                            <ct:String>1</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real>
-                            <ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real>
-                            <ct:Real>5</ct:Real><ct:Real>6</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real>
                         </ds:Row>
                         <ds:Row>
-                            <ct:String>1</ct:String><ct:Real>2</ct:Real><ct:Real>1</ct:Real>
-                            <ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real>
-                            <ct:Real>5</ct:Real><ct:Real>6</ct:Real>
+                            <ct:String>i1</ct:String><ct:Real>2</ct:Real><ct:Real>1</ct:Real><ct:Real>2</ct:Real>
+                            <ct:Real>3</ct:Real><ct:Real>4</ct:Real><ct:Real>5</ct:Real><ct:Real>6</ct:Real>
                         </ds:Row>
                         <!-- omitted other TIMES for ID=1 and other ID's -->
                         <ds:Row>
-                            <ct:String>10</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real>
+                            <ct:String>i10</ct:String><ct:Real>1</ct:Real><ct:Real>1</ct:Real>
                             <ct:Real>2</ct:Real><ct:Real>3</ct:Real><ct:Real>4</ct:Real>
                             <ct:Real>5</ct:Real><ct:Real>6</ct:Real>
                         </ds:Row>
@@ -1249,16 +1200,20 @@
                 <FIM>                               <!-- 4x4 matrix for simplicity -->
                     <ct:Matrix matrixType="Any">
                         <ct:RowNames>
-                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String>
+                            <ct:String>POP_TLAG</ct:String>
                         </ct:RowNames>
                         <ct:ColumnNames>
-                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String>
+                            <ct:String>POP_TLAG</ct:String>
                         </ct:ColumnNames>
                         <ct:MatrixRow>
-                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real><ct:Real>-1.01e-04</ct:Real>
+                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real>
+                            <ct:Real>-1.01e-04</ct:Real>
                         </ct:MatrixRow>
                         <ct:MatrixRow>
-                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real><ct:Real>-1.24e-03</ct:Real>
+                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real>
+                            <ct:Real>-1.24e-03</ct:Real>
                         </ct:MatrixRow>
                         <!-- omitted other matrix rows -->
                     </ct:Matrix>
@@ -1266,24 +1221,28 @@
                 <CovarianceMatrix>                  <!-- 4x4 matrix for simplicity -->
                     <ct:Matrix matrixType="Any">
                         <ct:RowNames>
-                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String>
+                            <ct:String>POP_TLAG</ct:String>
                         </ct:RowNames>
                         <ct:ColumnNames>
-                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String><ct:String>POP_TLAG</ct:String>
+                            <ct:String>POP_CL</ct:String><ct:String>POP_V</ct:String><ct:String>POP_KA</ct:String>
+                            <ct:String>POP_TLAG</ct:String>
                         </ct:ColumnNames>
                         <ct:MatrixRow>
-                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real><ct:Real>-1.01e-04</ct:Real>
+                            <ct:Real>4.21e-05</ct:Real><ct:Real>2.36e-04</ct:Real><ct:Real>-0.000124</ct:Real>
+                            <ct:Real>-1.01e-04</ct:Real>
                         </ct:MatrixRow>
                         <ct:MatrixRow>
-                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real><ct:Real>-1.24e-03</ct:Real>
+                            <ct:Real>2.36e-04</ct:Real><ct:Real>4.95e-02</ct:Real><ct:Real>-0.006150</ct:Real>
+                            <ct:Real>-1.24e-03</ct:Real>
                         </ct:MatrixRow>
                         <!-- omitted other matrix rows -->
                     </ct:Matrix>
                 </CovarianceMatrix>
                 <ParameterPrecision>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                        <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="Value" columnType="undefined" valueType="real" columnNum="2"/>
                         <ds:Column columnId="SE" columnType="statPrecision" valueType="real" columnNum="3"/>
                         <ds:Column columnId="RSE" columnType="statPrecision" valueType="real" columnNum="4"/>
                         <!--<ds:Column columnId="Shrinkage" columnType="statPrecision" valueType="real" columnNum="5"/>--> <!-- should not be used/populated if NaN -->
@@ -1298,17 +1257,27 @@
                         <Row>
                             <ct:String>V</ct:String><ct:Real>15</ct:Real><ct:Real>0.503</ct:Real><ct:Real>3.357</ct:Real>
                         </Row>
-                        <Row><ct:String>omega2.ka</ct:String><ct:Real>1</ct:Real><ct:Real>0.133</ct:Real><ct:Real>13.382</ct:Real></Row>
-                        <Row><ct:String>omega2.k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.038</ct:Real><ct:Real>15.567</ct:Real></Row>
-                        <Row><ct:String>omega2.V</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.0191</ct:Real><ct:Real>19.19</ct:Real></Row>
-                        <Row><ct:String>sig.interA</ct:String><ct:Real>0.5</ct:Real><ct:Real>0.043</ct:Real><ct:Real>8.60</ct:Real></Row>
-                        <Row><ct:String>sig.slopeA</ct:String><ct:Real>0.15</ct:Real><ct:Real>0.0209</ct:Real><ct:Real>13.96</ct:Real></Row>
+                        <Row>
+                            <ct:String>omega2.ka</ct:String><ct:Real>1</ct:Real><ct:Real>0.133</ct:Real><ct:Real>13.382</ct:Real>
+                        </Row>
+                        <Row>
+                            <ct:String>omega2.k</ct:String><ct:Real>0.25</ct:Real><ct:Real>0.038</ct:Real><ct:Real>15.567</ct:Real>
+                        </Row>
+                        <Row>
+                            <ct:String>omega2.V</ct:String><ct:Real>0.1</ct:Real><ct:Real>0.0191</ct:Real><ct:Real>19.19</ct:Real>
+                        </Row>
+                        <Row>
+                            <ct:String>sig.interA</ct:String><ct:Real>0.5</ct:Real><ct:Real>0.043</ct:Real><ct:Real>8.60</ct:Real>
+                        </Row>
+                        <Row>
+                            <ct:String>sig.slopeA</ct:String><ct:Real>0.15</ct:Real><ct:Real>0.0209</ct:Real><ct:Real>13.96</ct:Real>
+                        </Row>
                     </Table>
                 </ParameterPrecision>        
                 <Criteria>
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
-                        <ds:Column columnId="CriteriumName" columnType="undefined" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="CriteriumValue" columnType="undefined" valueType="real" columnNum="2"/>
+                        <ds:Column columnId="Criterium" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="Value" columnType="undefined" valueType="real" columnNum="2"/>
                         <ds:Column columnId="Comments" columnType="undefined" valueType="string" columnNum="3"/>
                     </Definition>
                     <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
@@ -1319,10 +1288,10 @@
                 </Criteria>
                 <Tests> 
                     <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset"> 
-                        <ds:Column columnId="ParameterName" columnType="undefined" valueType="string" columnNum="1"/>
-                        <ds:Column columnId="TestName" columnType="undefined" valueType="string" columnNum="2"/>
-                        <ds:Column columnId="TestType" columnType="undefined" valueType="string" columnNum="3"/>
-                        <ds:Column columnId="ParameterValue" columnType="undefined" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="Parameter" columnType="undefined" valueType="string" columnNum="1"/>
+                        <ds:Column columnId="Test" columnType="undefined" valueType="string" columnNum="2"/>
+                        <ds:Column columnId="Type" columnType="undefined" valueType="string" columnNum="3"/>
+                        <ds:Column columnId="Value" columnType="undefined" valueType="real" columnNum="4"/>
                         <ds:Column columnId="Delta" columnType="statPrecision" valueType="real" columnNum="5"/>
                         <ds:Column columnId="LowerLimit" columnType="statPrecision" valueType="real" columnNum="5"/>
                         <ds:Column columnId="UpperLimit" columnType="statPrecision" valueType="real" columnNum="6"/>
