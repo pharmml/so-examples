@@ -11,7 +11,7 @@
     
     <PharmMLRef name="warfarin_PK_ODE.xml"/>                               <!-- optional -->
     
-    <SOBlock blkId="SO1"> <!-- optional, needed when multiple SOblocks are reqiured e.g. for bootstrap -->
+    <SOBlock blkId="SO1">
         
         <!-- I. TOOL SETTINGS -->
         <ToolSettings>
@@ -79,10 +79,10 @@
                         <Column columnId="POP_TLAG" columnType="structParameter" valueType="real" columnNum="4"/>
                         <Column columnId="BETA_CL_WT" columnType="structParameter" valueType="real" columnNum="5"/>
                         <Column columnId="BETA_V_WT" columnType="structParameter" valueType="real" columnNum="6"/>
-                        <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                        <Column columnId="PPV_V" columnType="structParameter" valueType="real" columnNum="8"/>
-                        <Column columnId="PPV_KA" columnType="structParameter" valueType="real" columnNum="9"/>
-                        <Column columnId="PPV_TLAG" columnType="structParameter" valueType="real" columnNum="10"/>
+                        <Column columnId="PPV_CL" columnType="varParameter_var" valueType="real" columnNum="7"/>
+                        <Column columnId="PPV_V" columnType="varParameter_var" valueType="real" columnNum="8"/>
+                        <Column columnId="PPV_KA" columnType="varParameter_var" valueType="real" columnNum="9"/>
+                        <Column columnId="PPV_TLAG" columnType="varParameter_var" valueType="real" columnNum="10"/>
                         <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
                         <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
                         <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
@@ -110,10 +110,10 @@
                             <Column columnId="POP_TLAG" columnType="structParameter" valueType="real" columnNum="4"/>
                             <Column columnId="BETA_CL_WT" columnType="structParameter" valueType="real" columnNum="5"/>
                             <Column columnId="BETA_V_WT" columnType="structParameter" valueType="real" columnNum="6"/>
-                            <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                            <Column columnId="PPV_V" columnType="structParameter" valueType="real" columnNum="8"/>
-                            <Column columnId="PPV_KA" columnType="structParameter" valueType="real" columnNum="9"/>
-                            <Column columnId="PPV_TLAG" columnType="structParameter" valueType="real" columnNum="10"/>
+                            <Column columnId="PPV_CL" columnType="varParameter_var" valueType="real" columnNum="7"/>
+                            <Column columnId="PPV_V" columnType="varParameter_var" valueType="real" columnNum="8"/>
+                            <Column columnId="PPV_KA" columnType="varParameter_var" valueType="real" columnNum="9"/>
+                            <Column columnId="PPV_TLAG" columnType="varParameter_var" valueType="real" columnNum="10"/>
                             <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
                             <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
@@ -136,10 +136,10 @@
                             <Column columnId="POP_TLAG" columnType="structParameter" valueType="real" columnNum="4"/>
                             <Column columnId="BETA_CL_WT" columnType="structParameter" valueType="real" columnNum="5"/>
                             <Column columnId="BETA_V_WT" columnType="structParameter" valueType="real" columnNum="6"/>
-                            <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                            <Column columnId="PPV_V" columnType="structParameter" valueType="real" columnNum="8"/>
-                            <Column columnId="PPV_KA" columnType="structParameter" valueType="real" columnNum="9"/>
-                            <Column columnId="PPV_TLAG" columnType="structParameter" valueType="real" columnNum="10"/>
+                            <Column columnId="PPV_CL" columnType="varParameter_var" valueType="real" columnNum="7"/>
+                            <Column columnId="PPV_V" columnType="varParameter_var" valueType="real" columnNum="8"/>
+                            <Column columnId="PPV_KA" columnType="varParameter_var" valueType="real" columnNum="9"/>
+                            <Column columnId="PPV_TLAG" columnType="varParameter_var" valueType="real" columnNum="10"/>
                             <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
                             <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
@@ -165,10 +165,10 @@
                             <Column columnId="POP_TLAG" columnType="structParameter" valueType="real" columnNum="4"/>
                             <Column columnId="BETA_CL_WT" columnType="structParameter" valueType="real" columnNum="5"/>
                             <Column columnId="BETA_V_WT" columnType="structParameter" valueType="real" columnNum="6"/>
-                            <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                            <Column columnId="PPV_V" columnType="structParameter" valueType="real" columnNum="8"/>
-                            <Column columnId="PPV_KA" columnType="structParameter" valueType="real" columnNum="9"/>
-                            <Column columnId="PPV_TLAG" columnType="structParameter" valueType="real" columnNum="10"/>
+                            <Column columnId="PPV_CL" columnType="varParameter_var" valueType="real" columnNum="7"/>
+                            <Column columnId="PPV_V" columnType="varParameter_var" valueType="real" columnNum="8"/>
+                            <Column columnId="PPV_KA" columnType="varParameter_var" valueType="real" columnNum="9"/>
+                            <Column columnId="PPV_TLAG" columnType="varParameter_var" valueType="real" columnNum="10"/>
                             <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
                             <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
@@ -191,10 +191,10 @@
                             <Column columnId="POP_TLAG" columnType="structParameter" valueType="real" columnNum="4"/>
                             <Column columnId="BETA_CL_WT" columnType="structParameter" valueType="real" columnNum="5"/>
                             <Column columnId="BETA_V_WT" columnType="structParameter" valueType="real" columnNum="6"/>
-                            <Column columnId="PPV_CL" columnType="structParameter" valueType="real" columnNum="7"/>
-                            <Column columnId="PPV_V" columnType="structParameter" valueType="real" columnNum="8"/>
-                            <Column columnId="PPV_KA" columnType="structParameter" valueType="real" columnNum="9"/>
-                            <Column columnId="PPV_TLAG" columnType="structParameter" valueType="real" columnNum="10"/>
+                            <Column columnId="PPV_CL" columnType="varParameter_var" valueType="real" columnNum="7"/>
+                            <Column columnId="PPV_V" columnType="varParameter_var" valueType="real" columnNum="8"/>
+                            <Column columnId="PPV_KA" columnType="varParameter_var" valueType="real" columnNum="9"/>
+                            <Column columnId="PPV_TLAG" columnType="varParameter_var" valueType="real" columnNum="10"/>
                             <Column columnId="RUV_PROP" columnType="structParameter" valueType="real" columnNum="11"/>
                             <Column columnId="RUV_ADD" columnType="structParameter" valueType="real" columnNum="12"/>
                             <Column columnId="CORR_PPV_CL_V" columnType="varParameter_corr" valueType="real" columnNum="13"/>
@@ -341,7 +341,7 @@
                     <ConditionNumber>0.0001</ConditionNumber>
                 </MLE>
                 <Bayesian>
-                    <StandardDeviationPosterior>
+                    <StandardDeviation>
                         <ds:Definition>
                             <ds:Column columnId="Parameter" columnType="popParameter" valueType="string" columnNum="1"/>
                             <ds:Column columnId="SDP" columnType="statPrecision" valueType="real" columnNum="2"/>
@@ -351,7 +351,7 @@
                             <ds:Row><ct:String>POP_V</ct:String><ct:Real>0.2</ct:Real></ds:Row>
                             <!-- omitted other parameters -->
                         </ds:Table>
-                    </StandardDeviationPosterior>
+                    </StandardDeviation>
                     <PosteriorDistribution>
                         <!-- Default with SAMPLE-->
                         <Distribution>
@@ -592,10 +592,10 @@
                     <Mean>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                            <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="structParameter" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="structParameter" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
@@ -613,10 +613,10 @@
                     <Median>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="structParameter" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="structParameter" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
@@ -634,10 +634,10 @@
                     <Mode>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
                             <Column columnId="ID" columnType="id" valueType="id" columnNum="1"/>
-                            <Column columnId="CL" columnType="structParameter" valueType="real" columnNum="2"/>
-                            <Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
-                            <Column columnId="KA" columnType="structParameter" valueType="real" columnNum="4"/>
-                            <Column columnId="TLAG" columnType="structParameter" valueType="real" columnNum="5"/>
+                            <Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="2"/>
+                            <Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
+                            <Column columnId="KA" columnType="indivParameter" valueType="real" columnNum="4"/>
+                            <Column columnId="TLAG" columnType="indivParameter" valueType="real" columnNum="5"/>
                             <!-- omitted other parameters -->
                         </Definition>
                         <Table xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
@@ -735,8 +735,8 @@
                 </EtaShrinkage>
             </IndividualEstimates>
             
-            <PrecisionIndividualEstimates>      <!-- CHECK NEEDED --><!-- CHECK NEEDED --><!-- CHECK NEEDED --><!-- CHECK NEEDED -->
-                <StandardDeviation>             <!-- P x N raws in table? --> 
+            <PrecisionIndividualEstimates>
+                <StandardDeviation>
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <ds:Column columnId="Parameter" columnType="indivParameter" valueType="string" columnNum="2"/>
@@ -758,9 +758,9 @@
                             <ds:DataSet>
                                 <ds:Definition>
                                     <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
-                                    <ds:Column columnId="K" columnType="structParameter" valueType="real" columnNum="2"/>
-                                    <ds:Column columnId="V" columnType="structParameter" valueType="real" columnNum="3"/>
-                                    <ds:Column columnId="CL" columnType="structParameter" valueType="real" columnNum="4"/>
+                                    <ds:Column columnId="K" columnType="indivParameter" valueType="real" columnNum="2"/>
+                                    <ds:Column columnId="V" columnType="indivParameter" valueType="real" columnNum="3"/>
+                                    <ds:Column columnId="CL" columnType="indivParameter" valueType="real" columnNum="4"/>
                                 </ds:Definition>
                                 <ds:Table>
                                     <ds:Row>
@@ -786,8 +786,8 @@
                     <ds:Definition>
                         <ds:Column columnId="ID" columnType="id" valueType="string" columnNum="1"/>
                         <ds:Column columnId="Percentile" columnType="statPrecision" valueType="real" columnNum="2"/>
-                        <ds:Column columnId="POP_CL " columnType="structParameter" valueType="real" columnNum="3"/>
-                        <ds:Column columnId="POP_V" columnType="structParameter" valueType="real" columnNum="4"/>
+                        <ds:Column columnId="CL " columnType="indivParameter" valueType="real" columnNum="3"/>
+                        <ds:Column columnId="V" columnType="indivParameter" valueType="real" columnNum="4"/>
                     </ds:Definition>
                     <ds:Table>
                         <ds:Row>
