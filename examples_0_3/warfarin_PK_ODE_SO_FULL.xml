@@ -30,19 +30,15 @@
         
         <!-- II. RAW RESULTS -->
         <RawResults>
-            <DataFile oid="d1">
-                <ds:path>dataFolder/estimates.txt</ds:path>
+            <DataFile>
+                <ds:ExternalFile oid="d2">
+                    <ds:path>dataFolder/indiv_parameters.csv</ds:path>
+                </ds:ExternalFile>
             </DataFile>
-
+            
             <GraphicsFile oid="g1">
                 <ds:path>graphicsFolder/ObservationVSprediction.png</ds:path>
             </GraphicsFile>
-
-            <DataFile oid="d2">
-                <ds:path>dataFolder/indiv_parameters.csv</ds:path>
-                <ds:format>CSV</ds:format>
-                <ds:delimiter>COMMA</ds:delimiter>
-            </DataFile>
             
             <GraphicsFile oid="g2">
                 <ds:path>graphicsFolder/figure2.png</ds:path>
@@ -104,7 +100,7 @@
                 <Bayesian>
                     <PosteriorMean>
                         <Definition xmlns="http://www.pharmml.org/pharmml/0.7/Dataset">
-                            <Column columnId="POP_CL" columnType="structParameter" valueType="real" columnNum="1"/>
+                            <Column columnId="POP_CL" columnType="structParameter popParameter" valueType="real" columnNum="1"/>
                             <Column columnId="POP_V" columnType="structParameter" valueType="real" columnNum="2"/>
                             <Column columnId="POP_KA" columnType="structParameter" valueType="real" columnNum="3"/>
                             <Column columnId="POP_TLAG" columnType="structParameter" valueType="real" columnNum="4"/>
