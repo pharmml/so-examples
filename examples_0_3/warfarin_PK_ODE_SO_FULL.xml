@@ -9,18 +9,16 @@
     implementedBy="MJS" writtenVersion="0.3" 
     metadataFile="warfarin_PK_ODE_SO_FULL.rdf" id="i1">
     
-    <PharmMLRef name="warfarin_PK_ODE.xml"/>                               <!-- optional -->
+    <PharmMLRef name="warfarin_PK_ODE.xml"/>      <!-- optional -->
     
     <SOBlock blkId="SO1">
         
         <!-- I. TOOL SETTINGS -->
         <ToolSettings>
             <File oid="ts1">
-                <ct:Description>Algorithm settings</ct:Description> <!-- OPTIONAL -->
                 <ds:path>algorithms.xmlx</ds:path>
             </File>
             <File oid="ts2">
-                <ct:Description>Solver settings</ct:Description>
                 <ds:path>solver.xmlx</ds:path>
             </File>
             <File oid="ts3">
