@@ -805,7 +805,7 @@
                 </Table>
             </Predictions>
             
-            <OFmeasures>
+            <OFMeasures>
                 <Likelihood>1.23</Likelihood>
                 <LogLikelihood>2.23E-04</LogLikelihood>
                 <Deviance>-3.23</Deviance>
@@ -830,7 +830,7 @@
                     <BIC>4.567</BIC>
                     <DIC>5.678</DIC>
                 </InformationCriteria>
-            </OFmeasures>
+            </OFMeasures>
         </Estimation>
 
         <!-- V. MODEL DIAGNOSTIC -->
