@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SO xmlns="http://www.pharmml.org/so/0.3/StandardisedOutput"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ds="http://www.pharmml.org/pharmml/0.8/Dataset"
+    xmlns:ct="http://www.pharmml.org/pharmml/0.8/CommonTypes"
+    xmlns:po="http://www.pharmml.org/probonto/ProbOnto"
+    xsi:schemaLocation="http://www.pharmml.org/so/0.3/StandardisedOutput 
+    http://www.pharmml.org/so/0.3/StandardisedOutput" 
+    implementedBy="MJS" writtenVersion="0.3.1" 
+    metadataFile="warfarin_PK_ODE_SO_FULL.rdf" id="i1">
+    
+    <PharmMLRef name="warfarin_PK_ODE.xml"/>
+    
+    <SOBlock blkId="SO1">
+        
+        <ToolSettings>...</ToolSettings>
+        
+        <RawResults>...</RawResults>
+        
+        <TaskInformation>...</TaskInformation>
+        
+        <Estimation>
+            <PopulationEstimates>...</PopulationEstimates>
+            
+            <PrecisionPopulationEstimates>...</PrecisionPopulationEstimates>
+            
+            <IndividualEstimates>...</IndividualEstimates>
+            
+            <PrecisionIndividualEstimates>...</PrecisionIndividualEstimates>
+            
+            <Residuals>...</Residuals>
+            
+            <Predictions>...</Predictions>
+            
+            <OFMeasures>...</OFMeasures>
+        </Estimation>
+
+        <ModelDiagnostic>
+            <DiagnosticStructuralModel>...</DiagnosticStructuralModel>
+            
+            <DiagnosticIndividualParams>...</DiagnosticIndividualParams>
+        </ModelDiagnostic>
+        
+        <Simulation>
+            <SimulationBlock replicate="1"> 
+                <SimulatedProfiles extFileNo="1">...</SimulatedProfiles>
+                
+                <IndivParameters>...</IndivParameters>
+                
+                <RandomEffects>...</RandomEffects>
+                
+                <Covariates>...</Covariates>
+                
+                <Regressors>...</Regressors>
+                
+                <PopulationParameters>...</PopulationParameters>
+                
+                <Dosing>...</Dosing>
+                
+                <RawResultsFile oid="rawR">...</RawResultsFile>
+            </SimulationBlock>
+            <!-- <SimulationBlock replicate="2">
+                ...
+            </SimulationBlock>-->
+        </Simulation>
+        
+        <OptimalDesign type="evaluation">
+            <OptimalDesignBlock blockNumber="1">
+                <FIM>...</FIM>
+                
+                <CovarianceMatrix>...</CovarianceMatrix>
+                
+                <ParameterPrecision>...</ParameterPrecision> 
+                
+                <Criteria>...</Criteria>
+                
+                <Tests>...</Tests>
+                
+                <SimulatedData oid="SimDataOid">...</SimulatedData>
+                
+                <Design oid="desingOid">...</Design>
+            </OptimalDesignBlock>
+            <!-- <OptimalDesignBlock blockNumber="2">
+                ...
+            </OptimalDesignBlock>-->
+        </OptimalDesign>
+    </SOBlock>
+    <!-- more blocks if required -->
+</SO>
